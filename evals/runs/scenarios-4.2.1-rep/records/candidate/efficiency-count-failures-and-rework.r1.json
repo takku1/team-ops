@@ -1,0 +1,35 @@
+{
+  "case": "efficiency-count-failures-and-rework",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 16.8,
+  "subject_cost_usd": 0.059674399999999996,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:ai-evaluation\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer computes $2.00 per accepted task for both A and B from total costs, reports 100 vs 5 repair minutes, and keeps dollars and minutes separate, giving only a break-even threshold of about $5/hr rather than assuming a rate. It separates generation latency from end-to-end time, flags the small sample and the missing severity data before giving only a provisional pick of B, and makes no universal model ranking."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.11684499999999999
+}

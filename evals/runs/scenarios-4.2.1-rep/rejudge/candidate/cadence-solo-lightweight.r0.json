@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "Provides a lightweight pull board, explicit priorities and WIP limits, and history-based P85 guidance while correctly distinguishing Little\u2019s Law averages from percentiles without inventing Scrum roles. However, the weekly review examines delivery flow rather than outcomes, and the claim that promising the average causes misses about 40% of the time or more is unsupported."
+}

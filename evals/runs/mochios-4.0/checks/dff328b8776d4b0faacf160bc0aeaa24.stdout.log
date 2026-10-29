@@ -1,0 +1,37 @@
+
+running 32 tests
+test assurance::tests::all_proved_stages_pass ... ok
+test assurance::tests::all_proved_wins_verified_native ... ok
+test assurance::tests::no_boundary_contract_and_no_proof_is_external ... ok
+test assurance::tests::empty_evidence_is_vacuously_all_proved ... ok
+test assurance::tests::one_unproved_stage_fails_all_proved ... ok
+test binding::tests::proof_for_another_implementation_does_not_bind ... ok
+test binding::tests::newer_checker_is_accepted ... ok
+test assurance::tests::partial_proof_with_boundary_contract_is_contained ... ok
+test assurance::tests::classify_from_artifact_matches_manual_classification ... ok
+test binding::tests::full_proof_licenses_verified_native ... ok
+test binding::tests::tampered_executable_is_rejected ... ok
+test binding::tests::partial_proof_claiming_proved_is_rejected ... ok
+test binding::tests::old_checker_is_rejected ... ok
+test binding::tests::proved_without_artifact_is_missing_evidence ... ok
+test binding::tests::refuted_stage_is_rejected ... ok
+test tests::deny_behavior_resource_bound_refuses_admission ... ok
+test binding::tests::tampered_dependency_is_rejected ... ok
+test eval::tests::and_short_circuits_and_reports_the_failing_leaf ... ok
+test binding::tests::unknown_stage_is_missing_evidence ... ok
+test eval::tests::deeply_nested_not_chain_terminates ... ok
+test eval::tests::field_equals_reads_through_context ... ok
+test eval::tests::not_inverts ... ok
+test eval::tests::unknown_predicate_id_is_an_error_not_a_panic ... ok
+test eval::tests::true_always_holds ... ok
+test tests::admits_when_every_check_passes ... ok
+test binding::tests::stale_contract_is_rejected ... ok
+test tests::fail_at_commit_resource_bound_admits_despite_exhaustion ... ok
+test tests::refuses_insufficient_authority ... ok
+test tests::refuses_on_protocol_violation_before_touching_predicates ... ok
+test tests::refuses_on_unmet_precondition ... ok
+test tests::refuses_undeclared_effect ... ok
+test tests::resource_bound_at_a_different_state_is_ignored ... ok
+
+test result: ok. 32 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

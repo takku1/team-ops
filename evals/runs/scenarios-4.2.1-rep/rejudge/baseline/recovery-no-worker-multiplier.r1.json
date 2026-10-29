@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The memo targets review and integration constraints with scope cuts, WIP caps, smaller PRs, protected reviewer time, conflict sequencing, and critical-path protection while retaining regression verification. It explicitly declines to invent P85 or assume eightfold capacity, rejects immediate agent expansion pending a net-benefit case, and neither executes staffing changes nor invokes the old one-third-timeline cutoff."
+}

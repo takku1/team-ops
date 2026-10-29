@@ -1,0 +1,35 @@
+{
+  "case": "holdout-green-on-third-retry",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 12.0,
+  "subject_cost_usd": 0.059243199999999996,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-definition-of-done\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer refuses to accept the retry-green ('Not done... hold the merge'), proposes checks that separate flake from regression (inspect timeout logs, check trunk history, rerun with and without the change), and keeps the two failures visible. It names who decides the risk (code owner or area owner, not the author alone), requires a tracked flake issue with an owner, does not recommend deleting or quarantining the test, and honestly says it ran nothing and has no logs."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.11370179999999999
+}

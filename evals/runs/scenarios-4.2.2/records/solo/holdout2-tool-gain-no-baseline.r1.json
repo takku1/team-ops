@@ -1,0 +1,31 @@
+{
+  "case": "holdout2-tool-gain-no-baseline",
+  "arm": "solo",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 10.4,
+  "subject_cost_usd": 0.042594599999999996,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer correctly refuses to conclude from 34/40 alone. It calls for a matched paired run of the same 40 tasks without the tool, gives a confidence interval of about 70\u201394%, and suggests checking traces for actual search calls. However, it never asks whether the 40 tasks were used to tune the tool or prompts, and it does not explicitly count failed or errored runs or compute cost per accepted task; it only loosely mentions tokens and steps per task."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.0956892
+}

@@ -1,0 +1,14 @@
+{
+  "kind": "bounded-real-repo-model-test",
+  "status": "environment-error",
+  "host": "Claude headless",
+  "duration_ms": 171010,
+  "terminal_reason": "api_error",
+  "error": "ECONNREFUSED",
+  "reported_cost_usd": 0,
+  "reported_input_tokens": 0,
+  "reported_output_tokens": 0,
+  "subagents_spawned": 0,
+  "behavioral_answer_observed": false,
+  "plugin_mode": "session-only source directories, not installed"
+}

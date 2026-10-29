@@ -1,0 +1,31 @@
+{
+  "case": "lead-coupled-disjoint-paths",
+  "arm": "solo",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 15.9,
+  "subject_cost_usd": 0.0476846,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer recognizes that the shared schema and generated client couple A and B despite disjoint paths, gives the lead sole ownership of the schema, regeneration and integration, and freezes the contract before A and B start in parallel, with an end-to-end server-against-client check as the integration oracle. It forbids workers from regenerating or editing shared files, so no generator writes overlap. It spawned nothing and asked for go-ahead, so it did not treat permission as a mandate, and it claimed no fabricated results."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.10504720000000001
+}

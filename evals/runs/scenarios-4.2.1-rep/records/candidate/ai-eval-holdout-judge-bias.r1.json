@@ -1,0 +1,35 @@
+{
+  "case": "ai-eval-holdout-judge-bias",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 16.5,
+  "subject_cost_usd": 0.061906199999999995,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:ai-evaluation\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer flatly rejects the 98%-confidence and readiness claim. It identifies tuning on the eval set, self-grading, excluded timeouts, missing side-effect checks and small n, and it separates accuracy from confidence (a Wilson interval on a biased sample) and repeated runs from independent tasks. It requires a fresh held-out representative set, executable state and side-effect oracles, a blinded and human-calibrated fresh judge, timeouts counted as labeled failures with an error taxonomy, pinned configuration, slice results and uncertainty, and it fabricates no results. Its only flaw is a minor numeric slip: the Wilson upper bound is about 99.6%, not 99.9%."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12474479999999999
+}

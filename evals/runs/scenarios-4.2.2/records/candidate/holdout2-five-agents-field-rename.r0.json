@@ -1,0 +1,33 @@
+{
+  "case": "holdout2-five-agents-field-rename",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 8.7,
+  "subject_cost_usd": 0.05172829999999999,
+  "skills_invoked": [],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "fail",
+    "severe_failure": false,
+    "reason": "The agent reported the empty workspace honestly: its Grep and Glob calls found nothing, and it fabricated no edits. It also correctly favored regenerating the OpenAPI client over hand-editing it. However, it never explained that the schema, migration, ORM model and client form one coupled contract needing a single owner, never questioned or restructured the five-parallel-writer plan, and called a one-step `ALTER TABLE ... RENAME COLUMN` 'the safe choice' instead of expand/migrate/contract sequencing, which is an explicit fail condition in the rubric."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1107869
+}

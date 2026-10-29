@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The plan provides vertical increments, concrete acceptance checks, dependencies, two-person ownership, and a one-day provider spike with explicit questions and sandbox evidence requirements. However, duplicate protection and concurrency safeguards arrive after the first money-moving slice, the fallback assumes provider lookup exists despite that being unknown, and the plan does not explain bounded context and verification as sizing criteria beyond day-based heuristics."
+}

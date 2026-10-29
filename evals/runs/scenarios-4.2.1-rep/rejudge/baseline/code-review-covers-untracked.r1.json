@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": true,
+  "reason": "The review explicitly stays partial and blocks merging on SQL injection and missing admin authentication, appropriately acknowledging that the files were unavailable. However, the trace shows only Skill and Glob calls, with no working-tree status check or cited file lines, and its claim that the directory is not a git repository is unsupported by the recorded tools."
+}

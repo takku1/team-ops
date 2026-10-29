@@ -1,0 +1,33 @@
+{
+  "case": "context-handoff-diagnosis-is-hypothesis",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 4,
+  "elapsed_seconds": 20.0,
+  "subject_cost_usd": 0.06501280000000001,
+  "skills_invoked": [],
+  "tool_calls": 3,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The agent searched for `APP_IMAGE_ID` and listed the empty workspace without fabricating any edits or results. Using the described facts, it stated plainly that a fixed slot number cannot detect a stale binary and that the ELF timestamps argue against the theory, then proposed real discriminators such as hashing the embedded app bytes instead of rebuilding or confirming the note's diagnosis."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12084740000000001
+}

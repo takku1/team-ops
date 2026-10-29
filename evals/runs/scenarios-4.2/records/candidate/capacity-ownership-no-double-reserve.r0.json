@@ -1,0 +1,33 @@
+{
+  "case": "capacity-ownership-no-double-reserve",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 14.9,
+  "subject_cost_usd": 0.0578206,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer computes 40 \u00d7 0.75 = 30 hours and explicitly rejects the 6\u00d7 worker multiplier. It reserves a review and integration budget from the same 30 hours, sets write-scope limits per worker, and names the maintainer as accountable while flagging single-owner backup risk, without inventing a team or approval bureaucracy. The 25\u201340% reserve and the 1\u20132 worker start are framed as assumptions to measure and tune. One minor flaw: it reconstructs the planner's error as 22.5 rounded down to 20, a derivation the prompt doesn't support (the prompt implies 30 \u2212 10 = 20), but the corrected conclusion is still right."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1195426
+}

@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "Correctly computes $2 per accepted task including failed attempts and repair totals of 100 minutes for A versus 5 for B, keeping dollars and minutes separate without a supplied hourly rate. Recommends B provisionally, distinguishes generation latency from end-to-end time, and notes sample uncertainty and missing severe-risk evidence without claiming a universal ranking, although its assertion that repair will almost certainly outweigh latency is unsupported."
+}

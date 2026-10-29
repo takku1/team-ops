@@ -1,0 +1,35 @@
+{
+  "case": "lead-one-writer-per-scope",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 19.0,
+  "subject_cost_usd": 0.06596560000000001,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The plan identifies that both tasks write `abi/registry.rs` and `docs/wire/` and makes the lead the sole writer of the registry (R1). It regenerates the docs from the integrated registry and forbids hand edits (D1), and confines the parallel workers to disjoint `kernel/sys/` scopes. Every task has an owner, a write scope and a deciding check, and the lead integrates with a full build and test run on the combined tree (I1), so no per-worktree green checks are treated as proof and no results are fabricated."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12400420000000001
+}

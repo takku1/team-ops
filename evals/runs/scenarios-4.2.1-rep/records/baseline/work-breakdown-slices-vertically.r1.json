@@ -1,0 +1,35 @@
+{
+  "case": "work-breakdown-slices-vertically",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 31.4,
+  "subject_cost_usd": 0.07081130000000001,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The plan explicitly rejects slicing by layer and delivers vertical increments. S1 includes permission checks (403) and an audit write in the same transaction, and every slice has checkable oracles and dependencies. Concrete tests include replaying a request N times, boundary tests at balance+1, and an attempted UPDATE/DELETE of audit rows as the app role. The payment-provider unknown sits in a 1-day time-boxed spike (S0) with an explicit question and a fallback branch, sizes are framed as rough heuristics rather than forecasts, and no fabricated edits or results are claimed."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.13878590000000002
+}

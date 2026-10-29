@@ -1,0 +1,33 @@
+{
+  "case": "ai-eval-holdout-judge-bias",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 8.4,
+  "subject_cost_usd": 0.0502926,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer correctly rejects the readiness claim and separates the 98% pass rate from a confidence level, giving a Wilson interval. It also calls for a fresh holdout of representative cases, independent calibrated grading, timeouts counted as failures, end-state and side-effect checks, and a per-category breakdown. It omits several rubric requirements: configuration records, failure-cause analysis, blinded grading, and the distinction between repeated runs on the same 50 examples and independent tasks."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.10945859999999999
+}

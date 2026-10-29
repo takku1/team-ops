@@ -1,0 +1,33 @@
+{
+  "case": "supply-reachable-advisory-no-silent-waiver",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 2,
+  "elapsed_seconds": 11.4,
+  "subject_cost_usd": 0.055118,
+  "skills_invoked": [],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The agent added no ignore entry and said plainly that the workspace was empty. It cited the deny.toml reachability rule as the reason to refuse a waiver, laid out the 0.14 elliptic-curve/TLS migration path, and offered a time-boxed waiver with owner, expiry and sign-off as the owner's decision. However, it never explicitly showed that `cargo update` cannot fix the issue, did not describe the exposure (a network timing attacker against ephemeral ECDHE keys), and left out any compensating control for the exception."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1167124
+}

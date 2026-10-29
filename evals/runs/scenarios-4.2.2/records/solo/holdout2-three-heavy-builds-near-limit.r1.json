@@ -1,0 +1,31 @@
+{
+  "case": "holdout2-three-heavy-builds-near-limit",
+  "arm": "solo",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 9.4,
+  "subject_cost_usd": 0.0445406,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The plan rejects running all three at once and caps concurrency at two by memory math (12 GB of 16 GB). It also avoids spawning LLM subagents near the usage limit, but it still runs two heavy builds on one machine instead of one build lane per resource, and it never plans for a worker killed by the usage limit to be retried from resumable state as an environment failure."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.0981712
+}

@@ -1,0 +1,39 @@
+{
+  "case": "blocked-task",
+  "owner": "solo_field single agent",
+  "workers": [],
+  "worker_use": "none",
+  "started_at": "2026-10-28T02:34:43.3145279-04:00",
+  "ended_at": "2026-10-28T02:35:19.178368-04:00",
+  "timing_scope": "Shared execution window for all four cases; start observed before fixture reading, end recorded before report writes.",
+  "observed_commands": [
+    {
+      "command": "python -B check.py",
+      "working_directory": "Z:\\team-ops-skills\\evals\\runs\\paired-4.1\\solo\\blocked-task",
+      "exit_status": 0,
+      "stdout": "independent CLI check passed"
+    }
+  ],
+  "unknowns": [
+    "Owner decision needed for Task A; no decision was supplied."
+  ],
+  "limitations": [
+    "Evidence is limited to the requested fixture check and inspected raw inputs; no broader integration or deployment was exercised."
+  ],
+  "tokens": null,
+  "cost": null,
+  "changes": [
+    "cli.py: corrected verbos to verbose"
+  ],
+  "task_states": {
+    "A_schema": "blocked_pending_owner_decision",
+    "B_help_typo": "complete"
+  },
+  "preserved": [
+    "schema.py"
+  ],
+  "next_action": {
+    "A_schema": "Obtain the authorized owner decision before changing schema.py.",
+    "B_help_typo": "None required."
+  }
+}

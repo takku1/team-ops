@@ -1,0 +1,197 @@
+[
+ [
+  "frontmatter",
+  [
+   1,
+   4
+  ],
+  [
+   "name: secure-supply-chain",
+   "Use when adding a dependency, hardening CI/CD, responding to a CVE",
+   "Not for design-level threat analysis (use secure-threat-model)"
+  ]
+ ],
+ [
+  "title",
+  [
+   6,
+   6
+  ],
+  [
+   "# Supply Chain and Secure Build"
+  ]
+ ],
+ [
+  "intake",
+  [
+   8,
+   10
+  ],
+  [
+   "maintenance activity, license compatibility, OpenSSF Scorecard, transitive footprint, and whether a few lines of code would do instead",
+   "review-dependency:",
+   "verify intake covers maintenance, license, Scorecard, transitive footprint, and a few-lines alternative"
+  ]
+ ],
+ [
+  "pin-lock",
+  [
+   11,
+   11
+  ],
+  [
+   "Container base images pinned by digest"
+  ]
+ ],
+ [
+  "updates",
+  [
+   12,
+   12
+  ],
+  [
+   "grouped minor and patch updates merged weekly when CI is green"
+  ]
+ ],
+ [
+  "vuln-sla",
+  [
+   13,
+   13
+  ],
+  [
+   "Critical 7 days \u00b7 High 30 days \u00b7 Medium 90 days \u00b7 Low best effort",
+   "Exceptions need an owner, an expiry date, and a compensating control"
+  ]
+ ],
+ [
+  "license",
+  [
+   14,
+   14
+  ],
+  [
+   "Copyleft needs legal review"
+  ]
+ ],
+ [
+  "secrets",
+  [
+   16,
+   17
+  ],
+  [
+   "Secret scanning with push protection",
+   "vault or OIDC short-lived credentials"
+  ]
+ ],
+ [
+  "ci-tokens",
+  [
+   18,
+   18
+  ],
+  [
+   "Third-party CI actions are pinned to a commit SHA"
+  ]
+ ],
+ [
+  "slsa",
+  [
+   19,
+   19
+  ],
+  [
+   "SLSA Build L2 as baseline",
+   "Aim for L3 (hardened, isolated builds)"
+  ]
+ ],
+ [
+  "signing",
+  [
+   20,
+   20
+  ],
+  [
+   "verify the signatures at deploy"
+  ]
+ ],
+ [
+  "sbom",
+  [
+   21,
+   21
+  ],
+  [
+   "(SPDX or CycloneDX) per release artifact"
+  ]
+ ],
+ [
+  "pr-checks",
+  [
+   22,
+   22
+  ],
+  [
+   "SAST and dependency scanning are required PR checks"
+  ]
+ ],
+ [
+  "ssdf",
+  [
+   24,
+   28
+  ],
+  [
+   "map each control to its NIST SSDF group",
+   "**PO** Prepare the Organization",
+   "**PS** Protect the Software",
+   "**PW** Produce Well-Secured Software",
+   "**RV** Respond to Vulnerabilities",
+   "`SECURITY.md`"
+  ]
+ ],
+ [
+  "inventory",
+  [
+   30,
+   31
+  ],
+  [
+   "read manifests, lockfiles, CI config, secrets handling, and release artifacts from repository as inventory"
+  ]
+ ],
+ [
+  "score-rank",
+  [
+   32,
+   32
+  ],
+  [
+   "apply policy scoring with inventory as scores",
+   "rank gaps by exploitability and blast radius",
+   "with SLSA level and SSDF group"
+  ]
+ ],
+ [
+  "emit",
+  [
+   33,
+   33
+  ],
+  [
+   "update bots, scanners, branch protection, OIDC, signing, and SBOM steps with remediation owners",
+   "give every remediation an owner"
+  ]
+ ],
+ [
+  "sources",
+  [
+   35,
+   36
+  ],
+  [
+   "See the [research register](../../docs/current/research-evidence.md)"
+  ]
+ ]
+]

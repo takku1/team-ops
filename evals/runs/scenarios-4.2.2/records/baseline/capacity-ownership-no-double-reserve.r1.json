@@ -1,0 +1,33 @@
+{
+  "case": "capacity-ownership-no-double-reserve",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 15.0,
+  "subject_cost_usd": 0.0561406,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer computes 40 \u00d7 0.75 = 30 h, explicitly rejects the planner's double-subtracted 20 h, and refuses the 6\u00d7 multiplier. It treats the maintainer's review and integration time as the binding constraint and limits each worker to one write scope. It names the maintainer as sole accountable owner, flags the single-point-of-failure risk with a backup or runbook, and invents no team or approval bureaucracy. WIP and buffer targets are framed as tunable: the buffer is sized from past variance, work in flight is capped at weekly review capacity, and it starts with 1\u20132 workers and adds more only based on measurements."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1163032
+}

@@ -1,0 +1,35 @@
+{
+  "case": "design-ai-recovery-flow",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 40.2,
+  "subject_cost_usd": 0.08851260000000001,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:design-product-workflow\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer separates known requirements from the brief and untested assumptions in a framing table. It specifies source comparison, inline correction with revert, cancel/partial/upload-failure/retry states with keyboard and focus behavior, and reuse of existing library components as generic roles. It compares three cheap alternatives because the journey is uncertain, and it gives a task-based validation plan with seeded defects and thresholds the team defines before testing. It invents no interviews or confidence percentages, explicitly avoids an RFC, and says screenshots alone don't show usability."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1683152
+}

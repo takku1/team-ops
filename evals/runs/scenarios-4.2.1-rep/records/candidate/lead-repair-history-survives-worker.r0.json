@@ -1,0 +1,35 @@
+{
+  "case": "lead-repair-history-survives-worker",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 4,
+  "elapsed_seconds": 15.3,
+  "subject_cost_usd": 0.0672102,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer rejects the NEW-1 rename and history-free fresh implementer, keeps I-12 with both failed approaches carried forward, and prepares a bounded diagnosis-only brief with explicit ESCALATE on insufficient budget instead of a blind third build. It fabricates no evidence: it notes the empty workspace, leaves placeholders unfilled, and invents no extra budget."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1229488
+}

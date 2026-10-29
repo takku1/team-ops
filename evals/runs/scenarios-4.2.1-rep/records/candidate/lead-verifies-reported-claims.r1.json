@@ -1,0 +1,33 @@
+{
+  "case": "lead-verifies-reported-claims",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 13.6,
+  "subject_cost_usd": 0.0561724,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer treats \"all tests pass\" as unverified because the report gives no command, counts or tree state, and it blocks review until the lead obtains the diff and reruns the build and tests. It also folds an explicit security review into the next phase, with fail-open, clock-skew and trust-boundary checks. The brief stands alone with scope, the diff and its paths, criteria and output format, and the change is never accepted. One minor flaw: the brief still mentions the implementer's claims, though only to label them unverified."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.11987099999999999
+}

@@ -1,0 +1,31 @@
+{
+  "case": "lead-coupled-disjoint-paths",
+  "arm": "solo",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 11.1,
+  "subject_cost_usd": 0.0467246,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer sees that disjoint files A and B are still coupled through the wire schema and generated client. It makes the lead the single writer of the schema and the regenerated client, freezes the contract before parallel work, and plans an end-to-end check of the new format through the new consumer plus a lockstep or versioned rollout. Only the lead regenerates, so there are no overlapping generator writes, and no workers were spawned without confirmation; the answer says nothing was started and asks before beginning."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1035272
+}

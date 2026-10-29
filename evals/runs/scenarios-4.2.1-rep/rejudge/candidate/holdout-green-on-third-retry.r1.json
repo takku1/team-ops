@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The answer blocks merging on retry-green alone, preserves both failures, and proposes inspecting timeout logs or reproducing on the base commit with an owned flake ticket. However, it never names who accepts merge risk, offers an unchanged diff as an independently sufficient route despite unresolved regression evidence, and makes an unverified claim that the working directory is empty and not a Git repository."
+}

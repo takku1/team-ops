@@ -1,0 +1,35 @@
+{
+  "case": "context-stale-green-after-edit",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 9.8,
+  "subject_cost_usd": 0.0543464,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:ai-context-management\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer correctly rejects the snapshot-A exit 0 as evidence for the current state and explains that an unchanged SHA does not cover the edited untracked generated config. It requires a rerun with the command, exit status, log, and config hash, and it says not to treat the old run as a failure. However, it never asks for toolchain or environment identity, does not say the inputs must be held stable during the rerun, and does not separate the affected integration check from unaffected independent checks whose results could stand."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.11216100000000001
+}

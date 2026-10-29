@@ -1,0 +1,33 @@
+{
+  "case": "holdout-migration-and-code-one-commit",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 9.8,
+  "subject_cost_usd": 0.0539528,
+  "skills_invoked": [],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer does not approve. It correctly explains that old replicas fail when the column is dropped mid-rollout, says tests can't catch a mixed-version window, prescribes expand/contract sequencing (remove reads first, drop later), gives a request-changes verdict, and honestly notes the diff was never seen. However, the findings carry no explicit severity labels; the ordering issue is never marked as blocking, which the rubric requires."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1087714
+}

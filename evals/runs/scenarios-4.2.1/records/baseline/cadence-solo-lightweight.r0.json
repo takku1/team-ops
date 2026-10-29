@@ -1,0 +1,35 @@
+{
+  "case": "cadence-solo-lightweight",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 13.5,
+  "subject_cost_usd": 0.0649101,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\", \"args\": \"Solo builder, interrupt-heavy support plus feature queue. Wants a lightweight delivery rhythm (no meetings, no fictional Scrum roles). Question: can WIP / throughput be used as an 85th-percentile promise?\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer explains that WIP \u00f7 throughput (Little's Law) gives an average for a roughly stable system, not a P85. It derives the SLE from actual cycle-time history split by support and feature, labels the numbers uncalibrated until data exists, and asks for real completion dates without fabricating any. It gives a lightweight pull rhythm with an explicit WIP limit (one feature plus one support item), a re-ranked queue, reserved interrupt capacity, and weekly and monthly reviews, without inventing Scrum roles or ceremonies, though the weekly review leans toward flow metrics more than a true outcome review."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1286521
+}

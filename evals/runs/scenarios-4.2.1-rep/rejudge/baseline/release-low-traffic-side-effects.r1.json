@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The response blocks the ramp, rejects two HTTP 200s and fixed bake time as safety evidence, and requires charge reconciliation, stable idempotency keys, risk-sensitive exposure limits, and compensation distinct from rollback. However, it proposes a kill switch and compensation runbook without requiring tested containment and recovery before advancing; its proposed gates are not evidence of executed validation."
+}

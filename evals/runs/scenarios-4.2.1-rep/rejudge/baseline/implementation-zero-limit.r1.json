@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The scoped parser change preserves None\u2019s default and negative rejection, and the executable oracle confirms all four original tests pass without test changes. The trace shows test commands but no failing baseline output or workspace-copy operation, so the claimed failing-then-passing regression evidence and isolation are not fully verified."
+}

@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The response parks A pending the external schema decision and specifies a resumable record covering the decision, authority, prior work, acceptance checks, and protected contracts without inventing missing details. It chooses to proceed with B inline, preserves B's scope and verification requirements, and claims no unobserved edits or test results; its optional worker caveat weakens but does not override the explicit no-team decision."
+}

@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The plan assigns abi/registry.rs and any shared dispatch table to T0, restricts parallel workers to disjoint handler scopes, and reserves generated docs for regeneration by the lead after integration. Every task has an owner, write scope, and deciding check, with the lead designated to obtain merged-tree verification; the proposed npm commands are unverified assumptions, not claimed successful results."
+}

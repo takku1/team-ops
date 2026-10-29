@@ -1,0 +1,35 @@
+{
+  "case": "code-review-covers-untracked",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 5,
+  "elapsed_seconds": 13.0,
+  "subject_cost_usd": 0.0651659,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-code-review\"}"
+  ],
+  "tool_calls": 3,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The agent globbed the workspace, found it empty and not a git repo, and explicitly caveated the review as partial and based only on the quoted snippet, without fabricating file contents or a diff-only approval. It issued request-changes, with blocking labels on the f-string SQL injection and the missing auth on `/admin/export` and the quoted query cited in place of absent line numbers; the only flaw is a minor inaccuracy about Flask's KeyError handling (it returns a 400, not a 500)."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12529590000000002
+}

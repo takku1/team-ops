@@ -1,0 +1,35 @@
+{
+  "case": "lead-coupled-disjoint-paths",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 14.1,
+  "subject_cost_usd": 0.060596899999999995,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer flags the contract coupling despite disjoint files and puts schema and rollout (T0) and generated-client regeneration (T1) under a single owner before A and B start. It defines a shared fixture and an end-to-end integration oracle (T4), routes contract changes only through the T0 owner, and offers a single-worker alternative instead of treating permission as a mandate to spawn."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12053130000000001
+}

@@ -1,0 +1,34 @@
+{
+  "case": "stale-evidence",
+  "owner": "solo_field single agent",
+  "workers": [],
+  "worker_use": "none",
+  "started_at": "2026-10-28T02:34:43.3145279-04:00",
+  "ended_at": "2026-10-28T02:35:19.178368-04:00",
+  "timing_scope": "Shared execution window for all four cases; start observed before fixture reading, end recorded before report writes.",
+  "observed_commands": [
+    {
+      "command": "python -B check.py",
+      "working_directory": "Z:\\team-ops-skills\\evals\\runs\\paired-4.1\\solo\\stale-evidence",
+      "exit_status": 0,
+      "stdout": "current authorization check passed"
+    }
+  ],
+  "unknowns": [],
+  "limitations": [
+    "Evidence is limited to the requested fixture check and inspected raw inputs; no broader integration or deployment was exercised."
+  ],
+  "tokens": null,
+  "cost": null,
+  "changes": [],
+  "task_states": {
+    "current_verification": "complete"
+  },
+  "acceptance": "Current acceptance is supported by the newly executed check against the current strict config. The prior green record checked permissive mode and alone does not support current acceptance.",
+  "preserved": [
+    "prior-green.json",
+    "config.json",
+    "validator.py"
+  ],
+  "next_action": "Use the fresh current check as acceptance evidence; rerun if relevant inputs change."
+}

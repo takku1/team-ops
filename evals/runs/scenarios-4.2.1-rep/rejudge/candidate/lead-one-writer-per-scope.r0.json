@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The plan identifies the shared registry, assigns it to one writer, limits parallel workers to disjoint handler scopes, and regenerates docs from integrated sources. Tasks have owners, write scopes, and deciding checks, with fresh combined-tree verification assigned to one integration owner and worker reports explicitly rejected as proof."
+}

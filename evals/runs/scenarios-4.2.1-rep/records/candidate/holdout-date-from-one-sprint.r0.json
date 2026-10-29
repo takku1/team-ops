@@ -1,0 +1,35 @@
+{
+  "case": "holdout-date-from-one-sprint",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 15.6,
+  "subject_cost_usd": 0.06408749999999999,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\", \"args\": \"Last sprint: 9 tickets done. 45 remain. Boss wants a delivery date at 90% confidence by tomorrow. Only one sprint of throughput data.\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer says plainly that one sprint is one sample and cannot support an honest 90% date. It gives a labeled uncalibrated range (naive 5 sprints, ~Jan 7, 2027, with optimistic and pessimistic bounds) and discloses that the bound throughputs are placeholders and the sprints are assumed to be two weeks. It covers ticket-size variance, scope growth, and capacity risks with warning signals, re-forecasts after two more sprints, names six or more sprints of history plus a throughput simulation as what would justify a percentile, and presents the mid-February fallback as a chosen buffer rather than a calculated 90% figure."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12447809999999998
+}

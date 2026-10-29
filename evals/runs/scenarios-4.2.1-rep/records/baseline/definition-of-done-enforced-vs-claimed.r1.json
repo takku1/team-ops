@@ -1,0 +1,35 @@
+{
+  "case": "definition-of-done-enforced-vs-claimed",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 19.1,
+  "subject_cost_usd": 0.06768089999999999,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-definition-of-done\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer maps each adopted DoD item against what is configured and enforced, and it pairs the lint, integration-test, dependency-scanning, staging/smoke and docs gaps with concrete remedies (required checks, `npm audit`/OSV, automated staging with a scripted smoke status check). It explicitly calls a PR checkbox attestation rather than enforcement, keeps every adopted criterion ('I'm not suggesting any criterion be dropped'), and honestly marks unverified items as unknown. It does not explicitly require an authorized, recorded decision for policy changes, though the time-boxed waiver file partly covers that."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1317235
+}

@@ -1,0 +1,33 @@
+{
+  "case": "holdout2-worker-done-build-running",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 10.5,
+  "subject_cost_usd": 0.046876600000000004,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer refuses to accept the change, calls 'tests should pass' a prediction rather than a result, and says the worker's background build must finish and its exit status be collected. It keeps the task 'in progress, unverified' until the actual build and test commands run on the finished build. Two weaker points: it never explicitly asks for an input identity such as a hash or commit of the artifact, and it asserts there is no git repo without any tool call to check."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1010952
+}

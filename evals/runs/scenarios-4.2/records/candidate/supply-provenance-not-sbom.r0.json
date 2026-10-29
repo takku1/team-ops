@@ -1,0 +1,33 @@
+{
+  "case": "supply-provenance-not-sbom",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 10.6,
+  "subject_cost_usd": 0.052440600000000004,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer correctly refuses to certify L2, explaining that signing and an SBOM are not provenance and that hosted-platform-generated signed provenance is missing, so the evidenced status is Build L0 or not assessed. It names the Build track but never states a specification version (e.g., v1.0/v1.1). It does separate library compatibility ranges from lockfile-enforced CI resolution with evidence-grounded checks, avoids blanket range violations and makes no NIST claim."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1106026
+}

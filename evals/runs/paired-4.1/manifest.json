@@ -1,0 +1,71 @@
+{
+  "kind": "matched-development-fixtures",
+  "created_unix": 1793169259.388798,
+  "arms": [
+    "solo",
+    "controller"
+  ],
+  "cases": {
+    "small-fix": {
+      "starting_state_hash": "99c9a97bed0c7443a605d33ec2b1f891e2ba518024b9a466c4370ee6f65815ca",
+      "writable_source": [
+        "cli.py"
+      ]
+    },
+    "coupled-change": {
+      "starting_state_hash": "8b94218292144ec8678265e7f60a2757280e865368dac1fe3c8178d389f45766",
+      "writable_source": [
+        "server.py",
+        "client.py",
+        "wire.json"
+      ]
+    },
+    "stale-evidence": {
+      "starting_state_hash": "6ca0783c577952cb54080280c7519e95646be18346b1eda208980f9dfacd2775",
+      "writable_source": []
+    },
+    "blocked-task": {
+      "starting_state_hash": "5ec6c19ba4ce610d1ebf089f25993460cf10a8d9a3698fc9b64a6730a54968fb",
+      "writable_source": [
+        "cli.py"
+      ]
+    }
+  },
+  "tokens": null,
+  "cost": null,
+  "package_hashes": {
+    "team-ops\\README.md": "dedef9396ede340995311340133640a6d4f00723682e3a5d51e99b2493962752",
+    "team-ops-delivery\\README.md": "fce7b11cd9a9dad936a3a1050731c51bc80da9c875deb3aabb113799d9151f6e",
+    "team-ops\\.claude-plugin\\plugin.json": "5f022b8e68511e7a2cadefcef25c135e8580e349773009dc6d9bfb7c1f91c6cc",
+    "team-ops\\agents\\implementer.md": "54a943ae3f39f1109749be9fa5232a4247f1b0a676c6a97580c25f272da745b9",
+    "team-ops\\agents\\investigator.md": "f009e7dcaa8864eda6f3dda8d2fcf877bb19f2c92cf84ed0203245ef3f6238ae",
+    "team-ops\\agents\\reviewer.md": "65c22aec43977d2f1b4020c86bd94f6b0d7a665f654b39a0c4662f3977911c94",
+    "team-ops\\agents\\security-reviewer.md": "5f086b335c331a944b66fbdbebb27ec91b91d5abd6ed58fe4e3a4fce6d7b94f6",
+    "team-ops\\agents\\verifier.md": "4adb0e8908224258a904fb798483e1eb346cef4ce59028369db8bcf1c6bc97a2",
+    "team-ops\\references\\host-compatibility.md": "c10caabddc62320c73436c8801a6a74a837794ee056e65762ae92257ce806ccb",
+    "team-ops\\references\\research-evidence.md": "dc885a2d75e5bebe72ea52af95f820fbb487cdf81a03583ab4775b31e8b77b9b",
+    "team-ops\\skills\\ai-context-management\\SKILL.md": "830e58bc7df8ff67ae84c1344a908dca29fb65ada60de630bbc4fdfe891ac1f7",
+    "team-ops\\skills\\ai-evaluation\\SKILL.md": "d98bf8bfedcb7478e9ac7f84c93835c5b7916d5e0f6444c6790e023aa205d4c7",
+    "team-ops\\skills\\build-code-review\\SKILL.md": "014af9c1b5bbbeac21d67d89b607b5936b003b7720e32d43a8565ccb32705bf8",
+    "team-ops\\skills\\build-definition-of-done\\SKILL.md": "da19e6688714eec9920868107f6f429225b5213f74a69a8a0c22a12e3f36f717",
+    "team-ops\\skills\\build-implementation-loop\\SKILL.md": "de7e446073e04b5d2ecee83b552637662973bcfd85c7c5886242a4c1a1878d03",
+    "team-ops\\skills\\design-product-workflow\\SKILL.md": "32c945af7adbc24b12c7340757151e020d5bd725b21b4935be03989648879836",
+    "team-ops\\skills\\plan-design-review\\SKILL.md": "6fe2140eab333604015771841fc7d33276f5738540fe11e14531ad0d606957f1",
+    "team-ops\\skills\\plan-work-breakdown\\SKILL.md": "5f39856afe17ce1549a814d355fd5325c8016fe24632797e9843c1b6f3db2148",
+    "team-ops\\skills\\secure-review\\SKILL.md": "df5baa66729cc0dc621c661d66d002f26a271c350b5116f608aba4c946cd2bfd",
+    "team-ops\\skills\\team-lead\\SKILL.md": "3bc7321717921ffcb13766b9ec3413f0fa67b884a7e7cfa8e67cec20507f94c5",
+    "team-ops\\skills\\plan-design-review\\references\\adr.md": "94d0be1ea2249ea39f7972c6151cb720716e114e0b266e66b9453ebbb8aff5ce",
+    "team-ops\\skills\\secure-review\\references\\supply-chain.md": "fad3882b0b19fb9558e5f4257e5d192a8e25c119ea4b0711513315c81b48cf50",
+    "team-ops\\skills\\team-lead\\references\\coordination.md": "2593d18c7004932a592a9b122190e2c6155a743a4c53dc1d56004a5ee72a1d82",
+    "team-ops\\skills\\team-lead\\scripts\\check_runner.py": "66a35709fe7653972bc67e38b0fd1246da52f2eb17e6c2309736aba798ff5292",
+    "team-ops-delivery\\.claude-plugin\\plugin.json": "29672b61e3a40e38f32b3d066ce5730501327f50ef4b6708e1e252d6a61a842a",
+    "team-ops-delivery\\references\\host-compatibility.md": "c10caabddc62320c73436c8801a6a74a837794ee056e65762ae92257ce806ccb",
+    "team-ops-delivery\\references\\research-evidence.md": "dc885a2d75e5bebe72ea52af95f820fbb487cdf81a03583ab4775b31e8b77b9b",
+    "team-ops-delivery\\skills\\build-test-strategy\\SKILL.md": "5685715f62c8d1d92ef6fae03aad2b6dbe8a4a0b52cb9ff2a2fa02ce1d928197",
+    "team-ops-delivery\\skills\\build-trunk-integration\\SKILL.md": "3bd33c8d232b5fe0a84b8f20e6391ca3fc0a85994448300a6231c4aa61fb0f18",
+    "team-ops-delivery\\skills\\plan-forecast-recovery\\SKILL.md": "e534e0b75b8d106fbe52694509f473bc64e424cb9e499891df816baaa3dc3792",
+    "team-ops-delivery\\skills\\run-incident-postmortem\\SKILL.md": "6eda834cc1df66e3926babd5c0fa54e1e104c0e95d2e091909303d12f7462a7c",
+    "team-ops-delivery\\skills\\run-slo-error-budget\\SKILL.md": "adaaa0455bac8678c285e4431e12436ae05a700ba2f47dbf2dece1fc54284f8f",
+    "team-ops-delivery\\skills\\ship-release-rollout\\SKILL.md": "b2d54cdc0359fdab6ef33f5dec914336d0b5c238b036397745167f06bf3876be"
+  }
+}

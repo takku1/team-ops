@@ -1,0 +1,38 @@
+{
+  "case": "lead-small-fix-stays-inline",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 8,
+  "elapsed_seconds": 15.8,
+  "subject_cost_usd": 0.09636999999999998,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 6,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": {
+    "passed": true,
+    "output": "fixed=True scoped=True cargo_test_exit=0\n"
+  },
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The agent loaded the team-lead skill, made a scoped one-line edit to cli/args.rs fixing \"verbos\" to \"verbose\", and ran `cargo test -p cli` via Bash; the oracle confirms fixed=True, scoped=True, cargo_test_exit=0. It spawned no subagents and wrote no plan or brief, and its final report accurately describes the phases that ran and notes that the test does not cover the wording."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.15228039999999998
+}

@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "Correctly computes 30 hours, rejects multiplying capacity by six, budgets human review and integration, and treats allocations as adjustable assumptions. It names maintainer accountability and bus-factor risk, but does not address actual permission constraints and proposes naming a backup without establishing that another person is available."
+}

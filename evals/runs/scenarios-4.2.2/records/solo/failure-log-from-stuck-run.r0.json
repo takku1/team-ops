@@ -1,0 +1,31 @@
+{
+  "case": "failure-log-from-stuck-run",
+  "arm": "solo",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 9.8,
+  "subject_cost_usd": 0.0468946,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The write-up is blameless and names real system factors: the inherited diagnosis was accepted without checking that its discriminator could separate the cases, there was no stop after rounds that changed nothing, and handoffs don't label claim confidence. It proposes concrete changes such as a one-round tripwire and handoff labels. However, no action says how to tell whether it worked, cost and impact are not recorded as such, and it does not say where the entry is kept or that the next run reads it; it only offers to save it to /docs later."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1066532
+}

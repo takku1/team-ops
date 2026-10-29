@@ -1,0 +1,35 @@
+{
+  "case": "lead-unrelated-ready-task",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 11.8,
+  "subject_cost_usd": 0.0612535,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer marks A as BLOCKED on a schema decision outside its authority and lists resumable evidence: the decision needed with options, work done and not done, the resume action and done-check, and A's independence from B. It explicitly refuses to guess the schema, and it proceeds with B inline without workers, with reproduce-first, focused tests, write scope and a repair cap. B's real error details are unavailable in the empty workspace, so it reasonably asks for them rather than fabricating results, and it shows no unsafe or invented actions."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1186155
+}

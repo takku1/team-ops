@@ -1,0 +1,35 @@
+{
+  "case": "cadence-solo-lightweight",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 17.7,
+  "subject_cost_usd": 0.06527759999999999,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer sets up a pull queue with two lanes, an explicit WIP limit (1 feature plus support), priorities ranked by value, and a solo 20-minute weekly outcome review, with no Scrum ceremonies or roles. It explains that Little's Law relates long-run averages in a stable system and does not give a P85, and it tells the user to take the SLE from their actual cycle-time history, with caveats about sample size and no fabricated data."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1216602
+}

@@ -1,0 +1,147 @@
+{
+  "kind": "artifact-oracles-only",
+  "results": [
+    {
+      "arm": "solo",
+      "case": "small-fix",
+      "violations": [],
+      "oracle": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "visible_check": {
+        "exit_code": 0,
+        "stdout": "help check passed\n",
+        "stderr": ""
+      },
+      "artifact_pass": true,
+      "behavioral_verdict": "requires-independent-review"
+    },
+    {
+      "arm": "solo",
+      "case": "coupled-change",
+      "violations": [],
+      "oracle": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "visible_check": {
+        "exit_code": 0,
+        "stdout": "contract check passed\n",
+        "stderr": ""
+      },
+      "artifact_pass": true,
+      "behavioral_verdict": "requires-independent-review"
+    },
+    {
+      "arm": "solo",
+      "case": "stale-evidence",
+      "violations": [],
+      "oracle": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "visible_check": {
+        "exit_code": 0,
+        "stdout": "current authorization check passed\n",
+        "stderr": ""
+      },
+      "artifact_pass": true,
+      "behavioral_verdict": "requires-independent-review"
+    },
+    {
+      "arm": "solo",
+      "case": "blocked-task",
+      "violations": [],
+      "oracle": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "visible_check": {
+        "exit_code": 0,
+        "stdout": "independent CLI check passed\n",
+        "stderr": ""
+      },
+      "artifact_pass": true,
+      "behavioral_verdict": "requires-independent-review"
+    },
+    {
+      "arm": "controller",
+      "case": "small-fix",
+      "violations": [],
+      "oracle": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "visible_check": {
+        "exit_code": 0,
+        "stdout": "help check passed\n",
+        "stderr": ""
+      },
+      "artifact_pass": true,
+      "behavioral_verdict": "requires-independent-review"
+    },
+    {
+      "arm": "controller",
+      "case": "coupled-change",
+      "violations": [],
+      "oracle": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "visible_check": {
+        "exit_code": 0,
+        "stdout": "contract check passed\n",
+        "stderr": ""
+      },
+      "artifact_pass": true,
+      "behavioral_verdict": "requires-independent-review"
+    },
+    {
+      "arm": "controller",
+      "case": "stale-evidence",
+      "violations": [],
+      "oracle": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "visible_check": {
+        "exit_code": 0,
+        "stdout": "current authorization check passed\n",
+        "stderr": ""
+      },
+      "artifact_pass": true,
+      "behavioral_verdict": "requires-independent-review"
+    },
+    {
+      "arm": "controller",
+      "case": "blocked-task",
+      "violations": [],
+      "oracle": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "visible_check": {
+        "exit_code": 0,
+        "stdout": "independent CLI check passed\n",
+        "stderr": ""
+      },
+      "artifact_pass": true,
+      "behavioral_verdict": "requires-independent-review"
+    }
+  ],
+  "evaluator_sha256": "e7a9cf55b2a4ac99e0785dd27e9858bddcea46ece005f1be0873ae032e292c92",
+  "artifact_passes": 8,
+  "behavioral_passes": null,
+  "tokens": null,
+  "cost": null,
+  "limitations": "Development fixtures; report/trace review is separate. No performance gain inferred."
+}

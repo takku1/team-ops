@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The write-up is blameless and identifies unchecked discrimination, missing investigation, and repeated fixes without new evidence, with concrete handoff and retry-rule changes. It does not adequately record cost and impact, specify how each process change will be evaluated, or state where the lesson is kept and that the next run reads it."
+}

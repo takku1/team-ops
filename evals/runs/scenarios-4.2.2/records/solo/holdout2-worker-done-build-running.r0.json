@@ -1,0 +1,31 @@
+{
+  "case": "holdout2-worker-done-build-running",
+  "arm": "solo",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 8.3,
+  "subject_cost_usd": 0.0411986,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer correctly refuses to accept the change. It says 'should pass' is a prediction rather than a result, marks the task 'pending verification', and says it will wait for the build to finish or run its own clean build and tests. However, it never explicitly requires the actual command, the exit status, or proof that the tests ran on the current artifact, and it doesn't say who collects the background job's output, so it only partly meets the rubric's evidence requirements."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.09473720000000001
+}

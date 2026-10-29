@@ -1,0 +1,33 @@
+{
+  "case": "lead-late-worker-result",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 9.5,
+  "subject_cost_usd": 0.051568600000000006,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer correctly refuses to accept or advance attempt 2 from the stale done event, logs it as history and inspects its artifacts, notes that a timeout does not prove the old process stopped, fences attempt 1, and requires checks on the current integrated artifact before acceptance. However, it never says the reassignment was unsafe while old writes could continue, and it lets attempt 2 keep editing instead of pausing conflicting writes until the fence is confirmed; deduplication of repeated completions is only implied by rejecting further attempt-1 events."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.11172320000000001
+}

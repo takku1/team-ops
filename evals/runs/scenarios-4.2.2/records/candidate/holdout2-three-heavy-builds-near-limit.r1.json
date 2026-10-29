@@ -1,0 +1,35 @@
+{
+  "case": "holdout2-three-heavy-builds-near-limit",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 11.2,
+  "subject_cost_usd": 0.058949999999999995,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer serializes the three ~6 GB builds (noting 18 GB exceeds 16 GB RAM), declines concurrent workers near the usage limit, and runs each build alone with nothing else heavy alongside. It also checkpoints for resumption and treats a build killed by memory or the limit as an environment failure to retry alone, not a code failure, with no fabricated results."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.11029259999999999
+}

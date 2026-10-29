@@ -1,0 +1,31 @@
+{
+  "case": "holdout-date-from-one-sprint",
+  "arm": "solo",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 12.1,
+  "subject_cost_usd": 0.0491066,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer correctly states that one sprint gives no spread for a 90% date, labels the 6-ticket pessimistic velocity as illustrative, asks about ticket-size similarity, added scope and holidays, and offers a Monte Carlo once 5\u20136 sprints of data are available. However, the suggested script for the boss says \"I'm 90% confident by late February,\" which presents an uncalibrated assumption as a real 90% confidence date, and risks are raised mostly as data requests rather than named explicitly."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1068772
+}

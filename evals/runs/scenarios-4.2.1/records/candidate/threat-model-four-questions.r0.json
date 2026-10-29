@@ -1,0 +1,35 @@
+{
+  "case": "threat-model-four-questions",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 25.3,
+  "subject_cost_usd": 0.07411090000000001,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:secure-review\", \"args\": \"Threat model: desktop app clipboard paste. Any app can copy; paste served only to keyboard-focused app. Desktop shell can send \\\"paste\\\" commands to a window's app. Clips may hold passwords from a password manager.\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer follows all four Shostack questions with explicit sections and a trust-boundary diagram (TB1\u2013TB4). It covers background snooping and focus steal (T2), the shell as a forged or confused-deputy paste channel (T5/T6), and lingering password clips with expiry and history exclusion (T1), each with a mitigation, and it is honest that no code was inspected and every control is unknown."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1417053
+}

@@ -1,0 +1,33 @@
+{
+  "case": "context-handoff-diagnosis-is-hypothesis",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 17.7,
+  "subject_cost_usd": 0.0715049,
+  "skills_invoked": [],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The run checked the workspace, found no repo, and said so honestly without fabricating any edits. It also stated plainly that the slot-number id cannot discriminate a stale binary and that the ELF timestamps don't support the theory. It declined to rebuild on the note's theory and proposed a real discriminator: hashing the on-disk ELF against the bytes embedded in the kernel."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12778289999999998
+}

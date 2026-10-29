@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The audit correctly blocks readiness, ranks the Critical CVE, identifies supplied versus unverified evidence, names SLSA v1.0 Build, separates SBOM/signing from provenance, maps SSDF groups, assigns owners, and qualifies repository-variable access. However, it declares the CVE 23 days overdue without establishing adoption of the suite\u2019s seven-day SLA, speculates that missing scanning caused the delay, and incorrectly leaves higher SLSA Build levels unknown despite absent provenance."
+}

@@ -1,0 +1,33 @@
+{
+  "case": "holdout-migration-and-code-one-commit",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 13.1,
+  "subject_cost_usd": 0.0547001,
+  "skills_invoked": [],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The agent refused to sign off and labeled the same-deploy column drop a 'Blocker'. It explained that old replicas would fail during the rolling update, that passing tests don't cover mixed versions, and asked for an expand/contract split (remove the code first, drop the column later), which amounts to a request-changes/split-required verdict. It honestly said the workspace was empty and fabricated no diff findings, though secondary items lack explicit severity labels."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1116267
+}

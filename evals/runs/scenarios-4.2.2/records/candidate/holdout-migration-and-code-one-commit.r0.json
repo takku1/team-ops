@@ -1,0 +1,33 @@
+{
+  "case": "holdout-migration-and-code-one-commit",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 10.1,
+  "subject_cost_usd": 0.0532361,
+  "skills_invoked": [],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer refuses sign-off and labels the same-commit column drop as a **Blocker**. It explains that old replicas will hit `column does not exist` errors during the rolling update, and that passing tests only run new code against the new schema. It also prescribes expand/contract sequencing (stop reading first, wait, drop in a separate deploy) with an explicit 'request changes' verdict, and it honestly says the empty workspace meant no diff was read rather than inventing findings."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.10606270000000001
+}

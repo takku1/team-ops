@@ -1,0 +1,35 @@
+{
+  "case": "release-low-traffic-side-effects",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 18.8,
+  "subject_cost_usd": 0.0614536,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:ship-release-rollout\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer rejects inferring safety from two HTTP 200s and explicitly rejects time-based bake in favor of event-count gates (~300 reconciled charges, 3/n bound). It also requires charge-correctness reconciliation, idempotency keys, a tested kill switch, exposure caps, and a written compensation procedure, warns against shadow traffic to the real provider because it would duplicate charges, and distinguishes rollback from compensation, with no fabricated results."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1186322
+}

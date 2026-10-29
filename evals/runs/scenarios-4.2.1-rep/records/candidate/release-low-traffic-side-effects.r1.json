@@ -1,0 +1,35 @@
+{
+  "case": "release-low-traffic-side-effects",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 12.5,
+  "subject_cost_usd": 0.0592916,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:ship-release-rollout\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer refuses to ramp, notes that two 200s cannot show charge correctness (0.8^2\u224864% is computed correctly), and replaces the fixed bake with per-stage reconciled-event minimums, zero-discrepancy gates, exposure limits (internal or low-value accounts, per-charge caps), idempotency keys, and a kill switch with a defined refund and compensation procedure. It distinguishes code rollback from compensating irreversible charges and requires shadow and test-mode calls to make no real charges; the only minor gap is that it defines recovery steps without explicitly requiring that they be rehearsed."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1203342
+}

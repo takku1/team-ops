@@ -1,0 +1,33 @@
+{
+  "case": "context-stale-green-after-edit",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 7.6,
+  "subject_cost_usd": 0.0491106,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer correctly rejects the exit 0 as evidence for the current state, explains that the SHA does not cover the untracked generated config, and requires rerunning the integration check against the current tree while recording the command, exit code, timestamp and config hash. It never asks for toolchain or environment identity, and it does not say whether unaffected independent checks remain valid, so it only partly meets the rubric's evidence-identity and scoping requirements."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1065766
+}

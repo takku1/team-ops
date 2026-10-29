@@ -1,0 +1,33 @@
+{
+  "case": "code-review-keeps-out-of-diff-findings",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 2,
+  "elapsed_seconds": 9.4,
+  "subject_cost_usd": 0.052418,
+  "skills_invoked": [],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The review reports `docs/operations.md:42` as a labeled finding (Finding 1, medium) tied to the renamed key the reader in `client.py` now expects. It also gives a diff-level finding on backward compatibility and test coverage, and issues a reasoned 'request changes' verdict. It honestly discloses that the Grep found no files, so it did not read the code, and it fabricates no results."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.105408
+}

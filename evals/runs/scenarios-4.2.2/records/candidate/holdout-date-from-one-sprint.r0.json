@@ -1,0 +1,35 @@
+{
+  "case": "holdout-date-from-one-sprint",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 13.8,
+  "subject_cost_usd": 0.0628099,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer explicitly refuses to give a calibrated 90% date from one sprint and explains why. It offers a naive 5-sprint estimate with a 4\u20138 sprint range labeled as uncalibrated assumptions, and notes ticket-size variation and scope growth. It also names risks with trigger signals, sets a re-forecast point after the next sprint, and says what data would justify a real P90 (6\u201312 sprints of throughput, resampling)."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1179845
+}

@@ -1,0 +1,35 @@
+{
+  "case": "lead-duplicate-check-owner",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 16.1,
+  "subject_cost_usd": 0.0661477,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer names the main session as the single final-run owner. That run happens once on a frozen, identified current revision, with the command, revision, exit status, and output recorded, and it explicitly rejects the previous-revision record and relayed worker pass claims. It separates the builder's focused checks and the reviewer's targeted discriminating checks from one full run, adds no new supervisor, and only plans execution without fabricating any results."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1207943
+}

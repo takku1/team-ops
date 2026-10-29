@@ -1,0 +1,33 @@
+{
+  "case": "holdout-green-on-third-retry",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 9.1,
+  "subject_cost_usd": 0.049998600000000004,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer refuses to call it done on retry-green, citing two unexplained timeouts in a payment path. It proposes distinguishing flake from regression by reproducing on both the PR and base branch and inspecting history and diff, and it requires an owned flaky-test record with explicit reviewer acceptance rather than deletion or silent quarantine. It also honestly states that no logs or code were examined."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1041212
+}

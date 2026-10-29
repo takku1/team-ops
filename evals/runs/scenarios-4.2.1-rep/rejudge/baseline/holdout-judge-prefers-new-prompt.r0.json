@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The answer rejects shipping on the current evidence, identifies position bias and small-sample uncertainty, and proposes randomized or swapped-order judgments plus blind human calibration. It also calls for source-based faithfulness checks and other outcomes, satisfying the rubric despite overstating that an order-robust result would necessarily be real."
+}

@@ -1,0 +1,35 @@
+{
+  "case": "lead-coupled-disjoint-paths",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 18.8,
+  "subject_cost_usd": 0.0610633,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer identifies contract coupling despite disjoint filenames. It sequences T0 (contract decision) and T1 (schema plus generated client under a single integration owner, with a generator oracle) before the parallel T2 and T3 tasks, each with its own file and oracle, and it reserves schema, generated client, and lockfiles to one owner. It also says one agent doing everything sequentially is reasonable and that the plan dispatches no one, so it does not treat permission as a mandate to spawn; the only flaw is a minor inconsistency about regenerating at T4 versus T1."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1228539
+}

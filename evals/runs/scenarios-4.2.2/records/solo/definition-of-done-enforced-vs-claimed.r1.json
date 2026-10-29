@@ -1,0 +1,31 @@
+{
+  "case": "definition-of-done-enforced-vs-claimed",
+  "arm": "solo",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 14.7,
+  "subject_cost_usd": 0.0493586,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer maps each adopted DoD item against actual enforcement (CI is build and unit tests only; there is no scanner, no docs checkbox, and staging is manual) and pairs each gap with a concrete remedy. Those remedies are a scanner failing on high/critical findings, lint as a required check, branch protection, automated staging plus a smoke test, and integration tests later. It explicitly notes a PR checkbox is still self-attested, unlike required enforcement. It does not silently drop items: relaxing the DoD is presented as an explicit owner decision with a record of which items are tooling-enforced versus by convention, though it could have said more firmly that the change needs authorized sign-off."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.11127719999999999
+}

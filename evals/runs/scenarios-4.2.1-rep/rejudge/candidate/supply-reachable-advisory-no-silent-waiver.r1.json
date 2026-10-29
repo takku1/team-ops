@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The response correctly treats ECDHE reachability as disqualifying under the waiver rule, makes no edits, and offers the 0.14 migration with TLS dependency impact plus an owner-approved exception with owner and expiry. It does not explicitly establish why cargo update cannot fix the incompatible dependency stack, explain the network timing attacker exposure, or propose a concrete compensating control."
+}

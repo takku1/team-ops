@@ -1,0 +1,35 @@
+{
+  "case": "work-breakdown-slices-vertically",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 35.0,
+  "subject_cost_usd": 0.060582800000000006,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The plan delivers vertical slices (R3 walking skeleton with backend, UI and integration, then R4 duplicate safety, R5 partials, R6 audit view), each with a concrete deciding check and explicit dependencies, and puts the provider-idempotency unknown in a 1-day spike (R0) with four explicit questions and a three-way verdict. Authz, the same-transaction append-only audit row and the rejected-role test are all in the first slice, and the plan bounds scope per item (owner and write scope) with verification checks rather than claiming any work or estimates it did not do."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1293448
+}

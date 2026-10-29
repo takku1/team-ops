@@ -1,0 +1,33 @@
+{
+  "case": "supply-provenance-not-sbom",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 10.3,
+  "subject_cost_usd": 0.052906600000000005,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer refuses to certify Build L2 from the signature and SBOM alone, names the SLSA v1.0 Build track, and treats the level as L0 unless provenance turns up, while asking to see any provenance that exists. It separates library compatibility ranges from the committed-lockfile CI resolution without flagging every range as a violation, and makes no NIST claim; the one flaw is listing signing-credential isolation as an L2 step when that is closer to an L3 requirement."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.11176860000000001
+}

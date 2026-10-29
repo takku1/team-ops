@@ -1,0 +1,33 @@
+{
+  "case": "holdout2-tool-gain-no-baseline",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 15.3,
+  "subject_cost_usd": 0.051532600000000005,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer correctly refuses to conclude from 34/40 alone. It asks for a paired no-tool run of the same 40 tasks with matched model, prompts and budget, gives an accurate ~71\u201393% confidence interval, and covers cost per accepted task and trace inspection for tool usage. However, it never asks whether the 40 tasks were used to tune the tool or prompts, and it doesn't count failed or crashed runs separately (it only suggests reading the 6 failures), so two rubric elements are missing."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1063232
+}

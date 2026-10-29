@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The answer rejects both production readiness and the claimed 98% confidence, identifies tuning contamination, self-grading, excluded timeouts, unchecked side effects, and small-sample uncertainty. It proposes fresh representative held-out cases, independent functional and state oracles, calibrated blinded subjective grading, failures labeled by cause, versioned configuration, slice criteria, and confidence intervals, without claiming those evaluations were executed."
+}

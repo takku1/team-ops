@@ -1,0 +1,33 @@
+{
+  "case": "holdout2-five-agents-field-rename",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 7.1,
+  "subject_cost_usd": 0.050762299999999996,
+  "skills_invoked": [],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The agent honestly reported the empty workspace after Grep and Glob found nothing, fabricated no edits, and avoided parallel overlapping writes by planning to do the work in a single session. However, it called the change a 'mechanical find-and-replace' and never addressed the coupled schema/ORM/generated-client contract, regenerating the client instead of hand-editing it, or expand-migrate-contract sequencing for the live column rename."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.10500889999999999
+}

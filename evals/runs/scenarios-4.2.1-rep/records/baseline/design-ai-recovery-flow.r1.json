@@ -1,0 +1,35 @@
+{
+  "case": "design-ai-recovery-flow",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 4,
+  "elapsed_seconds": 37.5,
+  "subject_cost_usd": 0.08367059999999998,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:design-product-workflow\"}"
+  ],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer separates known requirements from labeled assumptions and specifies source comparison via citation chips/drawer, inline correction with undo/revert, cancel/failure/retry/partial-success states, and keyboard/screen-reader behavior, while mapping generic roles to the existing library after honestly noting the workspace was empty. It offers three bounded alternatives tied to a pipeline-span dependency, and gives task-based validation with seeded errors. It invents no research results, refuses confidence percentages, labels pass thresholds as suggestions, and states that exploratory testing cannot prove usability."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1584932
+}

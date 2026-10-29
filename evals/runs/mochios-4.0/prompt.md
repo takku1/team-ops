@@ -1,0 +1,7 @@
+Use the team-ops v4.0.0 plugin loaded for this session to evaluate a bounded real-repository request in Z:\MochiOS.
+
+Read-only task: inspect crates/abi/admission-check and the contracts it depends on. Identify what its existing tests establish about stale/tampered implementation bindings and assurance claims. Return source-grounded observations, any material gap you can actually demonstrate by reading, and the smallest check command warranted by repository configuration. Do not invent a defect or fix code. Do not execute builds, modify files, start VMs, or spawn agents. Keep the investigation to this crate and relevant immediate contracts/instructions; the repository has unrelated live changes.
+
+Then address this coordination question: a producer API change and its incompatible client change use different files but share a wire schema and generated client. The user permits workers. State implementation/check ownership and when parallel work would help. A prior green result predates an untracked generated-config edit; state whether it supports current acceptance.
+
+Use the available skill catalog to select relevant playbooks. Report the skill names actually loaded, what you inspected, what remains unverified, and the next action. Stay within twelve tool calls and produce a concise final report. Claims of test execution require observed execution evidence; this task authorizes source inspection only.

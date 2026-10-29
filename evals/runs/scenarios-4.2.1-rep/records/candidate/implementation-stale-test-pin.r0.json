@@ -1,0 +1,36 @@
+{
+  "case": "implementation-stale-test-pin",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 10,
+  "elapsed_seconds": 37.0,
+  "subject_cost_usd": 0.0829025,
+  "skills_invoked": [],
+  "tool_calls": 9,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": {
+    "passed": true,
+    "output": "pinned=True others_kept=True production_unchanged=True status_updated=True suite_exit=0\n"
+  },
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The run never reproduced the failure: its only Bash call ran the suite after both edits, so the original failure was inferred from reading `keymap.py` rather than observed. Otherwise it met the rubric: it cited KM-12 from `TRACKER.md` as meeting the test's edit condition, replaced the pin with a strict `assertEqual(lookup(0x4B), 0x49)`, left production unchanged, removed the open-problem line from `STATUS.md`, and reported the passing suite (oracle suite_exit=0)."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1487571
+}

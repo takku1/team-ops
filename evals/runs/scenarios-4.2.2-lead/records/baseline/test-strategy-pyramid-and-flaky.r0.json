@@ -1,0 +1,35 @@
+{
+  "case": "test-strategy-pyramid-and-flaky",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 20.3,
+  "subject_cost_usd": 0.0717506,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:build-test-strategy\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer puts billing first, with payment-service contract tests plus real integration semantics (timeouts, declines, idempotency, refunds) and a regression test for each escaped bug. It also removes the 100% gate in favor of diagnostic changed-line coverage, sets the layer mix by risk rather than a fixed ratio, and gives the flaky tests an owner, a fix-by date, visible retries, and quarantine only when compensating coverage exists or the test is not critical, with no fabricated results."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1381846
+}

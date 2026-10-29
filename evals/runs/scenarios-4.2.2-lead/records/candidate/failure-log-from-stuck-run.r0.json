@@ -1,0 +1,36 @@
+{
+  "case": "failure-log-from-stuck-run",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 6,
+  "elapsed_seconds": 16.9,
+  "subject_cost_usd": 0.07454580000000001,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\", \"args\": \"failed-run write-up: inherited diagnosis (\\\"stale app image embedded in kernel; compare image IDs\\\") accepted by implementer, three rebuild rounds, failure unchanged; image IDs are slot numbers repeating across builds so check could never discriminate.\"}",
+    "{\"skill\": \"team-ops:ai-context-management\"}"
+  ],
+  "tool_calls": 3,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The write-up is blameless and names the right system factors: a hypothesis taken as fact, a check that could not tell stale from fresh images, and no stop after rebuilds that changed nothing. Its actions are checkable (verified-vs-hypothesized brief split, two-strikes rework limit, a new eval case), but none says how to tell whether it worked, and the entry is not stored anywhere the next run will read, only deferred with an offer to append it later."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1377082
+}

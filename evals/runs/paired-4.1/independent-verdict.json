@@ -1,0 +1,49 @@
+{
+  "kind": "independent-task-and-artifact-review",
+  "review_basis": "Read raw TASK.md, all final source, REPORT.json and available check logs in both arms. Read artifact-results.json as execution evidence only. Did not read actor conversations or modify actor artifacts.",
+  "verdicts": [
+    {"arm":"solo","case":"small-fix","verdict":"pass","reason":"Only authorized CLI source changes are present; exact requested help text is returned. Report identifies owner, successful requested command, completed state and fixture verification limits."},
+    {"arm":"controller","case":"small-fix","verdict":"pass","reason":"Authorized typo correction returns exact requested text. Report and check.log agree on successful requested check; ownership, completion and limits are explicit."},
+    {"arm":"solo","case":"coupled-change","verdict":"pass","reason":"Producer and wire metadata use id; consumer reads id and rejects any payload containing session_id, including mixed payloads. Changes stay within three permitted source files. Report provides inline ownership and successful requested check with limited fixture scope."},
+    {"arm":"controller","case":"coupled-change","verdict":"pass","reason":"Same correct producer/consumer/metadata contract and explicit legacy/mixed rejection. Requested check and additional rejection log agree with report. Ownership remains inline and no independent worker review is claimed."},
+    {"arm":"solo","case":"stale-evidence","verdict":"pass","reason":"Implementation, strict config and permissive prior record are preserved. Report explicitly rejects prior green as current evidence and bases narrowly scoped acceptance on a newly reported successful current check."},
+    {"arm":"controller","case":"stale-evidence","verdict":"pass","reason":"All read-only inputs are preserved. Report distinguishes stale permissive evidence from current strict configuration; current check.log supports fixture-only acceptance and report disclaims broader verification."},
+    {"arm":"solo","case":"blocked-task","verdict":"pass","reason":"Schema remains unset, while authorized independent CLI typo is fixed. Report separately marks A blocked pending owner decision and B complete, with correct next action for each."},
+    {"arm":"controller","case":"blocked-task","verdict":"pass","reason":"Schema remains untouched and CLI work completes with matching check log. Report preserves external decision ownership for A and continues/completes B with separate states and next actions."}
+  ],
+  "genuine_actor_failures": [],
+  "unknowns": [
+    "Actor-time command execution and chronology cannot be independently reconstructed from final artifacts alone. Solo retains command/output claims in REPORT.json without separate logs; controller retains output logs, which also do not independently authenticate chronology. This is an evidence limitation, not a demonstrated task failure.",
+    "No conclusions about prohibited reads, dependencies/network use or actual skill-loading history can be proven solely from the permitted final artifacts.",
+    "Tokens and monetary cost are unavailable. Timing is a shared-machine batch with repeated per-case batch timestamps, not an independently controlled per-case latency experiment."
+  ],
+  "comparison": "Both arms satisfy all four fixture tasks. No quality superiority or performance advantage is established by this review.",
+  "script_review": {
+    "files": ["scripts/evaluate_field.py", "plugins/team-ops/skills/team-lead/scripts/check_runner.py"],
+    "actionable_defects": [
+      {
+        "file":"scripts/evaluate_field.py",
+        "line":106,
+        "severity":"medium",
+        "issue":"Scope grading examines only original case files outside the writable list. New unauthorized source/configuration files and changes to TASK.md are never inventoried and can coexist with artifact_pass=true.",
+        "impact":"Automated violations=[] cannot establish compliance with the raw task's write scope; added files can also affect imports after sys.path inserts the actor directory.",
+        "remedy":"Compare a complete final file inventory against the prepared inventory and explicit REPORT/log allowances, or label scope enforcement as partial and retain independent scope review. No extra unauthorized actor files were found in this run."
+      },
+      {
+        "file":"scripts/evaluate_field.py",
+        "line":94,
+        "severity":"low",
+        "issue":"The coupled-change oracle rejects legacy-only input but omits a mixed id/session_id payload, despite the task requiring rejection of the old name.",
+        "impact":"A consumer that accepts a mixed payload would escape this oracle. Both actual final consumers reject mixed payloads, so this does not change these verdicts.",
+        "remedy":"Add a mixed-payload rejection assertion to the independent oracle."
+      }
+    ],
+    "check_runner_conclusion":"No confirmed material correctness or cache-diagnostic defect found in the bounded source review. Category fingerprints, exact-key successful stable reuse, missing-log rejection, fresh-run invalidation, failure/unstable tombstones, and explanatory comparison against an exact/latest record are consistent with the documented single-host trusted-ledger scope. No dynamic cache or adversarial filesystem tests were performed.",
+    "security_limit":"The evaluator imports and executes actor code with the host interpreter; -I is interpreter isolation, not a sandbox. This is an execution trust boundary, not evidence of an exploit in these fixtures. The cache runner also explicitly disclaims command sandboxing and trusts its local ledger."
+  },
+  "limits": [
+    "Small development fixtures establish only the requested local behavior, not production deployment, integration coverage or general multi-agent effectiveness.",
+    "Artifact execution results are corroborating evidence, not behavioral verdict authority.",
+    "No grading was based on style, report length, worker count or presumed configuration superiority."
+  ]
+}

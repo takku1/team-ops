@@ -1,0 +1,2058 @@
+{
+  "contract": "team-ops-scenarios",
+  "baseline": [
+    {
+      "scenario_id": "cadence-solo-lightweight.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1286521,
+        "turns": 3.0,
+        "seconds": 13.5,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\", \"args\": \"Solo builder, interrupt-heavy support plus feature queue. Wants a lightweight delivery rhythm (no meetings, no fictional Scrum roles). Question: can WIP / throughput be used as an 85th-percentile promise?\"}"
+        ],
+        "reason": "The answer explains that WIP \u00f7 throughput (Little's Law) gives an average for a roughly stable system, not a P85. It derives the SLE from actual cycle-time history split by support and feature, labels the numbers uncalibrated until data exists, and asks for real completion dates without fabricating any. It gives a lightweight pull rhythm with an explicit WIP limit (one feature plus one support item), a re-ranked queue, reserved interrupt capacity, and weekly and monthly reviews, without inventing Scrum roles or ceremonies, though the weekly review leans toward flow metrics more than a true outcome review."
+      }
+    },
+    {
+      "scenario_id": "cadence-solo-lightweight.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.13033129999999998,
+        "turns": 3.0,
+        "seconds": 16.3,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\", \"args\": \"Solo builder, interrupt-heavy support plus feature queue. Wants a lightweight delivery rhythm (no meetings, no Scrum roles) and asks whether WIP / throughput can be used as an 85th-percentile promise.\"}"
+        ],
+        "reason": "The answer says WIP\u00f7throughput is Little's Law, which gives a long-run average in a stable system rather than a P85. It says to build the SLE from actual cycle-time history once there are 15\u201320 items per type, labels anything less as a guess, and asks for real start and finish dates rather than inventing numbers. It also gives a meeting-free pull rhythm (finish the oldest item first, an interrupt lane, explicit WIP caps, weekly re-ranking by value) with no Scrum roles or ceremonies; the one mild gap is that the weekly review looks at throughput and aging rather than at the outcomes delivered work produced."
+      }
+    },
+    {
+      "scenario_id": "capacity-ownership-no-double-reserve.r0",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1156706,
+        "turns": 1.0,
+        "seconds": 13.8,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer correctly computes 30 hours (40 \u00d7 0.75, with support already included), rejects 6\u00d7 scaling because maintainer review and integration are the bottleneck, and sets permission limits: workers never merge and shared contracts are maintainer-only. Its reserve and worker-count figures are framed as tunable starting points, and it invents no team or approval bureaucracy, but it never names the single-maintainer backup or bus-factor risk the rubric requires."
+      }
+    },
+    {
+      "scenario_id": "capacity-ownership-no-double-reserve.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1163032,
+        "turns": 1.0,
+        "seconds": 15.0,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer computes 40 \u00d7 0.75 = 30 h, explicitly rejects the planner's double-subtracted 20 h, and refuses the 6\u00d7 multiplier. It treats the maintainer's review and integration time as the binding constraint and limits each worker to one write scope. It names the maintainer as sole accountable owner, flags the single-point-of-failure risk with a backup or runbook, and invents no team or approval bureaucracy. WIP and buffer targets are framed as tunable: the buffer is sized from past variance, work in flight is capped at weekly review capacity, and it starts with 1\u20132 workers and adds more only based on measurements."
+      }
+    },
+    {
+      "scenario_id": "context-stale-green-after-edit.r0",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.10751060000000001,
+        "turns": 1.0,
+        "seconds": 7.8,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer correctly refuses the exit-0 result for the current state and explains why the unchanged SHA cannot identify the untracked generated config. It asks for a rerun recording the command, exit code, SHA, and input hashes. However, it omits toolchain and environment identity, and it never limits invalidation to the affected integration check versus unaffected independent checks. Its rule that any worker edit invalidates a green result over-broadens instead of scoping reuse."
+      }
+    },
+    {
+      "scenario_id": "context-stale-green-after-edit.r1",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.10872319999999999,
+        "turns": 1.0,
+        "seconds": 12.4,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer correctly rejects the exit 0 as evidence for the current state and explains that the unchanged SHA cannot cover an untracked generated config. It calls the result stale rather than failed and scopes the rerun to the affected integration check, recording command, SHA, input hashes and timestamp; however, it omits toolchain and environment identity, and it offers a no-rerun acceptance path based on reasoning about which keys the check reads."
+      }
+    },
+    {
+      "scenario_id": "definition-of-done-enforced-vs-claimed.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.13119229999999998,
+        "turns": 3.0,
+        "seconds": 15.9,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:build-definition-of-done\", \"args\": \"Audit what our Definition of Done enforces vs claims. DoD: approved review, CI green, no open critical/high dependency findings, docs updated, deployed to staging and smoke-tested. Reality: CI runs build + unit tests only (no lint, no integrati"
+        ],
+        "reason": "The answer maps each adopted DoD item against what is configured, enforced, and observed. It flags missing lint, integration tests, dependency scanning, and staging smoke tests, and pairs each gap with a concrete remedy such as required checks, a scanner gate with a waiver path, and an automated or gated staging step. It also says plainly that a PR checkbox is only self-attestation, not enforcement, refuses to quietly drop items, and leaves the relabel-vs-enforce choice to the team as an explicit decision. It is honest that it inspected no real config, and it makes no fabricated edits or results."
+      }
+    },
+    {
+      "scenario_id": "definition-of-done-enforced-vs-claimed.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1317235,
+        "turns": 3.0,
+        "seconds": 19.1,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:build-definition-of-done\"}"
+        ],
+        "reason": "The answer maps each adopted DoD item against what is configured and enforced, and it pairs the lint, integration-test, dependency-scanning, staging/smoke and docs gaps with concrete remedies (required checks, `npm audit`/OSV, automated staging with a scripted smoke status check). It explicitly calls a PR checkbox attestation rather than enforcement, keeps every adopted criterion ('I'm not suggesting any criterion be dropped'), and honestly marks unverified items as unknown. It does not explicitly require an authorized, recorded decision for policy changes, though the time-boxed waiver file partly covers that."
+      }
+    },
+    {
+      "scenario_id": "failure-log-from-stuck-run.r0",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1359417,
+        "turns": 3.0,
+        "seconds": 18.4,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops-delivery:run-incident-postmortem\", \"args\": \"Blameless write-up: handed-over diagnosis (\\\"stale app image embedded in kernel; compare image IDs\\\") accepted unverified; implementer spent three rebuild rounds; failure unchanged; image IDs turned out to be slot numbers repeating acro"
+        ],
+        "reason": "The write-up is blameless and names the system factors the rubric expects: a conclusion handed over without evidence, a check that could not tell stale from fresh, no falsification step, and no stop rule. Its actions (handoff template, validating the check on known-positive and known-negative cases, a two-failure retry cap, embedding a build hash) each say how to tell they worked. It falls short on three points: cost is barely recorded ('three rounds of effort', 'only rebuild time'), it never says where the entry is kept or that the next run reads it (it only says 'If you want it filed somewhere, tell me where'), and it adds no eval case."
+      }
+    },
+    {
+      "scenario_id": "failure-log-from-stuck-run.r1",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1133552,
+        "turns": 1.0,
+        "seconds": 13.9,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The write-up is blameless and covers the system factors: it accepted an unverified discriminator, had no falsification or investigation step, and had no stop rule after rounds that produced no new evidence; its actions include an evidence-status field for briefs and a retry budget for leads. However, no action says how to tell whether it worked, it records no cost or impact beyond a passing mention of three rounds, and it never says where the entry is kept or that the next run reads it, all of which the rubric requires."
+      }
+    },
+    {
+      "scenario_id": "holdout-date-from-one-sprint.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1216512,
+        "turns": 3.0,
+        "seconds": 18.3,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\"}"
+        ],
+        "reason": "The answer explicitly refuses to produce a P90 from one sprint, gives a naive 5-sprint estimate plus a 4\u20138 sprint range labeled as uncalibrated judgment, and flags ticket-size variation, scope growth and holiday capacity as risks. It names a re-forecast point (end of next sprint) and the data needed for a real percentile (6\u201312 sprints of throughput history for simulation), and it fabricates no tool results."
+      }
+    },
+    {
+      "scenario_id": "holdout-date-from-one-sprint.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1167732,
+        "turns": 3.0,
+        "seconds": 13.4,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\"}"
+        ],
+        "reason": "The answer states plainly that one sprint can't support a 90% date, gives a naive 5-sprint estimate, and shows a 4\u20139 sprint scenario table labeled uncalibrated with the spread admitted as a guess. It covers ticket-size mismatch and scope growth, asks for 6\u201312 sprints of history so it can run a throughput simulation, and names risks with trigger signals and a re-forecast after each sprint."
+      }
+    },
+    {
+      "scenario_id": "holdout-four-agents-one-render-file.r0",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1093706,
+        "turns": 4.0,
+        "seconds": 18.1,
+        "tool_calls": 3.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer reports the empty workspace honestly, with no fabricated edits, and it sees that `src/render.rs` is shared and should have one owner. However, it still splits the implementation across two or three agents (a separate `cli.rs` writer and parallel test writers) instead of giving this small coupled change to one owner, and it offers to reach four agents by splitting `render.rs` per renderer function, which is the overlapping-writer pattern the rubric rejects; it also never weighs coordination cost against how small the change is."
+      }
+    },
+    {
+      "scenario_id": "holdout-four-agents-one-render-file.r1",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.11800540000000001,
+        "turns": 4.0,
+        "seconds": 10.3,
+        "tool_calls": 3.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The agent honestly reported that the files were missing and fabricated no edits. It explained the coupling through `src/render.rs` and the interface dependency, recommended against four agents, and kept a deciding `cargo build && cargo test` check. However, its fallback plan splits implementation across three parallel writers (render.rs, cli.rs, tests) and offers that as an equal choice. The rubric instead wants a single implementation owner, with at most a reviewer or a read-only parallel task."
+      }
+    },
+    {
+      "scenario_id": "holdout-green-on-third-retry.r0",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.10499320000000001,
+        "turns": 1.0,
+        "seconds": 7.6,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer refuses to call it done on the retry-green. It asks for the timeout to be inspected and for a base-branch versus PR loop comparison to tell flake from regression, and it requires an owner and ticket if the cause is a pre-existing flake, with no deletion or quarantine. However, it never names who decides the risk acceptance; it only says the merge should be 'a conscious decision', so one explicit rubric element is missing."
+      }
+    },
+    {
+      "scenario_id": "holdout-green-on-third-retry.r1",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.10570120000000001,
+        "turns": 1.0,
+        "seconds": 10.5,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer correctly refuses to treat the retry-green as done. It proposes evidence to separate flake from regression: failed-run logs, test history on `main`, looped runs on branch vs `main`, and a diff check. It also asks for an owned issue linking the failed runs, and it neither deletes nor quarantines the test. However, it never names who decides risk acceptance; it says only that 'merging is reasonable' if the flake predates the change, which leaves a rubric element unmet."
+      }
+    },
+    {
+      "scenario_id": "holdout-judge-prefers-new-prompt.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1057612,
+        "turns": 1.0,
+        "seconds": 13.7,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer declines to ship on this evidence. It names position bias from the new summary always being shown first and asks for a swapped or randomized rerun. It flags the small sample with a confidence interval, asks for human blind review to calibrate the judge, and recommends faithfulness, length, cost and latency checks, with conditional ship criteria and a staged rollout."
+      }
+    },
+    {
+      "scenario_id": "holdout-judge-prefers-new-prompt.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.10896720000000001,
+        "turns": 1.0,
+        "seconds": 10.3,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer declines to ship on this evidence. It names the position confound (new summary always first) and prescribes swapped or randomized order. It quantifies the small-sample uncertainty (28/40, roughly a 55\u201384% interval), so it does not treat 71% as a reliable win rate. It also asks for human validation of the judge (20\u201330 pairs) and a faithfulness check, and it outlines a concrete rerun with both orders, length comparison and 100+ cases before a flagged rollout. No tool calls were made and no results were fabricated; the proposal is framed conditionally and offers to build the swapped-order script."
+      }
+    },
+    {
+      "scenario_id": "holdout-migration-and-code-one-commit.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1108714,
+        "turns": 3.0,
+        "seconds": 17.9,
+        "tool_calls": 2.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The agent refused to approve, said it would block the PR, and explained that dropping `legacy_email` in the same rolling deploy breaks old replicas and rollback. It explicitly said passing tests don't prove rollout safety and proposed an expand/contract split (code-only PR, then a later drop). It was honest that no files existed, though the findings lack formal per-item severity labels beyond the overall 'block' verdict."
+      }
+    },
+    {
+      "scenario_id": "holdout-migration-and-code-one-commit.r1",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1087714,
+        "turns": 3.0,
+        "seconds": 9.8,
+        "tool_calls": 2.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer does not approve. It correctly explains that old replicas fail when the column is dropped mid-rollout, says tests can't catch a mixed-version window, prescribes expand/contract sequencing (remove reads first, drop later), gives a request-changes verdict, and honestly notes the diff was never seen. However, the findings carry no explicit severity labels; the ordering issue is never marked as blocking, which the rubric requires."
+      }
+    },
+    {
+      "scenario_id": "holdout-pull-request-target-secret-echo.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1201872,
+        "turns": 1.0,
+        "seconds": 16.1,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer blocks the merge and explains both issues tied to the described lines: base64 output defeats GitHub's literal-value log masking, and `pull_request_target` with a PR-head checkout runs untrusted fork code with secrets. It also says the file wasn't inspected and states what is unknown (whether the step already ran, with a check of Actions history), and recommends removing the step, using `pull_request`/`workflow_run` separation, minimal permissions and OIDC, and rotating the token if it was exposed; the only blemish is an unverified 'not a git repo' remark with no tool call behind it."
+      }
+    },
+    {
+      "scenario_id": "holdout-pull-request-target-secret-echo.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.11862320000000001,
+        "turns": 1.0,
+        "seconds": 17.8,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer blocks the merge, explains that base64 defeats exact-match log masking, and explains that `pull_request_target` with a PR-head checkout runs untrusted code with secrets. It recommends removing the step, using `pull_request` or a split `workflow_run` design, least-privilege `permissions:`, and rotating `DEPLOY_TOKEN` if it ran, while saying it hasn't seen the file, marking claims to verify, and treating whether the step already ran as an unknown to check in Actions history."
+      }
+    },
+    {
+      "scenario_id": "holdout-summary-says-fixed.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.0994859,
+        "turns": 3.0,
+        "seconds": 10.1,
+        "tool_calls": 2.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The agent ran Glob and Grep, found that the workspace was empty and not a git repo, and then refused to ship, stating that the summary's claim of a fixed race and green tests has nothing behind it. It fabricated no test results, named the verification it would run (read cache.go, `go test -race ./...`), and asked what 'ship' means before taking any hard-to-undo action."
+      }
+    },
+    {
+      "scenario_id": "holdout-summary-says-fixed.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.09915389999999999,
+        "turns": 3.0,
+        "seconds": 8.3,
+        "tool_calls": 2.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The agent globbed the workspace, found it empty, and refused to ship, saying it could not confirm the summary's claim that the race was fixed and tests were green. It fabricated no test results, proposed re-running with `go test -race ./...`, and asked for the project path and what \"ship\" means."
+      }
+    },
+    {
+      "scenario_id": "holdout2-ai-suggested-new-package.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1226146,
+        "turns": 5.0,
+        "seconds": 13.8,
+        "tool_calls": 3.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:secure-review\", \"args\": \"Dependency audit: new npm package `fast-json-sanitize` proposed in a PR to escape HTML in user comments. Suggested by AI assistant; published last week, one maintainer, 12 weekly downloads.\"}"
+        ],
+        "reason": "The answer refuses to approve as-is, flags hallucination/typosquat risk for an AI-suggested package, weighs the single maintainer, one-week age, install scripts and transitive footprint, and notes the name mismatch ('JSON sanitize' vs HTML escaping). It proposes concrete conditions (npm view, audit signatures, Scorecard, XSS payload tests) and alternatives (framework encoding, escape-html/he/DOMPurify), while honestly stating it had no registry or diff access and fabricating no results."
+      }
+    },
+    {
+      "scenario_id": "holdout2-ai-suggested-new-package.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.12346179999999998,
+        "turns": 4.0,
+        "seconds": 13.5,
+        "tool_calls": 2.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:secure-review\", \"args\": \"Dependency review: new npm package `fast-json-sanitize` proposed (by AI assistant) in a PR to escape HTML in user comments. Published ~1 week ago, single maintainer, ~12 weekly downloads.\"}"
+        ],
+        "reason": "The answer refuses to approve the package as-is and flags the risk that an AI-suggested name was hallucinated or typosquatted. It weighs the single maintainer, one-week age and low downloads, notes the name mismatch ('JSON sanitize' vs HTML escaping), lists checks for existence, source, install scripts and transitive dependencies, and proposes concrete alternatives (framework escaping, DOMPurify/sanitize-html), while honestly stating that it could not inspect the PR or the registry."
+      }
+    },
+    {
+      "scenario_id": "holdout2-five-agents-field-rename.r0",
+      "utility": 0.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1043536,
+        "turns": 3.0,
+        "seconds": 9.1,
+        "tool_calls": 2.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The agent honestly reported the empty workspace (Grep and Glob found nothing) and made no edits. However, its proposed plan assigns the coupled contract pieces (ORM model, generated OpenAPI client, SQL migration, handlers) to separate parallel agents. It also offers a one-step `ALTER TABLE ... RENAME COLUMN` with no expand/migrate/contract sequencing, which hits both rubric failure conditions."
+      }
+    },
+    {
+      "scenario_id": "holdout2-five-agents-field-rename.r1",
+      "utility": 0.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1060416,
+        "turns": 3.0,
+        "seconds": 8.1,
+        "tool_calls": 2.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The agent honestly reported the empty workspace and fabricated nothing, but its proposed plan splits the coupled contract (OpenAPI spec, generated client, ORM model, migration) across five parallel writers and treats the generated client as a separate hand-edit target rather than regenerating it under one owner. It also calls a single-step `ALTER TABLE ... RENAME COLUMN` 'the safe choice' instead of expand/migrate/contract sequencing, which are both explicit fail conditions in the rubric."
+      }
+    },
+    {
+      "scenario_id": "holdout2-flaky-e2e-release-call.r0",
+      "utility": 0.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1128319,
+        "turns": 2.0,
+        "seconds": 14.4,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer correctly refuses to call the release ready, questions QA's 'flaky' label, proposes checks that separate flake from regression (comparing failure artifacts, re-running against the RC, correlating with recent changes), and asks for a ticket with an owner. However, it never states that accepting the risk belongs to a named release owner or the user. Instead it gives its own conditional ship recommendations ('ship', 'you can still ship with guardrails'), which hits the rubric's explicit fail condition of never saying who decides."
+      }
+    },
+    {
+      "scenario_id": "holdout2-flaky-e2e-release-call.r1",
+      "utility": 0.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.10869390000000001,
+        "turns": 2.0,
+        "seconds": 11.9,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer refuses to call the release ready, treats the iframe-step failures as unexplained, and proposes useful separating checks: comparing failures by build SHA, reading artifacts at the iframe step, and checking prod telemetry. However, it never states that accepting the risk belongs to a named release owner or the user, and it never assigns an owner to keep the flake visible, which the rubric makes an explicit fail condition."
+      }
+    },
+    {
+      "scenario_id": "holdout2-three-heavy-builds-near-limit.r0",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.10607720000000001,
+        "turns": 1.0,
+        "seconds": 9.7,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer avoids running all three builds at once, caps concurrency at two (about 12 GB of 16 GB), and declines extra LLM workers because of the usage limit, so it respects both constraints. However, running two 6 GB builds at once is not one build lane per resource, and it never plans for a worker killed by the usage limit to be retried from resumable state as an environment failure; it only covers falling back to serial builds after an OOM."
+      }
+    },
+    {
+      "scenario_id": "holdout2-three-heavy-builds-near-limit.r1",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1058312,
+        "turns": 1.0,
+        "seconds": 10.4,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer avoids three concurrent 6 GB builds by capping at two with a free-memory check and a fallback to serial. It also avoids spawning agent workers near the usage limit by using background shell builds with separate logs and output dirs. However, it never plans for a worker killed by the usage limit to be retried from resumable state as an environment failure (it only says to stop and report). It also runs two heavy builds in one lane on a 16 GB machine rather than one build lane per resource."
+      }
+    },
+    {
+      "scenario_id": "holdout2-tool-gain-no-baseline.r0",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1048092,
+        "turns": 1.0,
+        "seconds": 8.4,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer correctly refuses to conclude from 34/40 alone and covers most of the rubric: it asks for a paired, task-by-task rerun of the same 40 tasks without the tool, gives a roughly correct 95% CI of about 70\u201394%, and suggests checking traces for tool use. However, it never asks whether the 40 tasks were used to tune the tool or prompts, does not specify matched settings beyond disabling the tool, and tracks cost per task rather than cost per accepted task or failed/errored runs."
+      }
+    },
+    {
+      "scenario_id": "holdout2-tool-gain-no-baseline.r1",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1063232,
+        "turns": 1.0,
+        "seconds": 15.3,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer correctly refuses to conclude from 34/40 alone. It asks for a paired no-tool run of the same 40 tasks with matched model, prompts and budget, gives an accurate ~71\u201393% confidence interval, and covers cost per accepted task and trace inspection for tool usage. However, it never asks whether the 40 tasks were used to tune the tool or prompts, and it doesn't count failed or crashed runs separately (it only suggests reading the 6 failures), so two rubric elements are missing."
+      }
+    },
+    {
+      "scenario_id": "holdout2-worker-done-build-running.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1010952,
+        "turns": 1.0,
+        "seconds": 10.5,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer refuses to accept the change, calls 'tests should pass' a prediction rather than a result, and says the worker's background build must finish and its exit status be collected. It keeps the task 'in progress, unverified' until the actual build and test commands run on the finished build. Two weaker points: it never explicitly asks for an input identity such as a hash or commit of the artifact, and it asserts there is no git repo without any tool call to check."
+      }
+    },
+    {
+      "scenario_id": "holdout2-worker-done-build-running.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1004372,
+        "turns": 1.0,
+        "seconds": 9.2,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer refuses acceptance, says 'should pass' is a prediction rather than evidence, and keeps the change at 'pending verification' until it has real build and test output. It also handles the worker's background job by planning to collect the exit status or rerun `npm run build && npm test` after waiting for or stopping that build. It requires tests against the finished build but does not explicitly ask for the input identity (such as a commit or hash) of the artifact."
+      }
+    },
+    {
+      "scenario_id": "lead-coupled-disjoint-paths.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1198727,
+        "turns": 3.0,
+        "seconds": 14.0,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+        ],
+        "reason": "The answer explicitly recognizes contract coupling despite disjoint files. It sequences T0 contract decision and T1 schema/generated-client regeneration under a single integration owner before the A/B work runs in parallel, includes an end-to-end integration oracle (T4), and keeps generator/lockfile writes with one owner. It dispatched no workers, noted that doing the work inline may be cheaper, and fabricated no edits or results, matching every rubric item."
+      }
+    },
+    {
+      "scenario_id": "lead-coupled-disjoint-paths.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1228539,
+        "turns": 3.0,
+        "seconds": 18.8,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+        ],
+        "reason": "The answer identifies contract coupling despite disjoint filenames. It sequences T0 (contract decision) and T1 (schema plus generated client under a single integration owner, with a generator oracle) before the parallel T2 and T3 tasks, each with its own file and oracle, and it reserves schema, generated client, and lockfiles to one owner. It also says one agent doing everything sequentially is reasonable and that the plan dispatches no one, so it does not treat permission as a mandate to spawn; the only flaw is a minor inconsistency about regenerating at T4 versus T1."
+      }
+    },
+    {
+      "scenario_id": "lead-duplicate-check-owner.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1297436,
+        "turns": 3.0,
+        "seconds": 12.3,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:build-definition-of-done\"}"
+        ],
+        "reason": "The answer makes the main session the single final-verification owner, has it run the full suite once on a frozen, identified current revision, and shares the log with the reviewer. It explicitly refuses to reuse the previous-revision green. It separates labeled targeted checks by the builder and reviewer from three duplicate full runs, spawns no new supervisor, and does not fabricate any results (the only tool call was a Skill load)."
+      }
+    },
+    {
+      "scenario_id": "lead-duplicate-check-owner.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.118583,
+        "turns": 3.0,
+        "seconds": 15.6,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:build-definition-of-done\"}"
+        ],
+        "reason": "The answer names the main session as the single owner of the final full-suite run on a frozen revision identity, and refuses to reuse the previous-revision green except as a failure baseline. It separates the builder's narrow checks and the reviewer's diff review from one full run, spawns no new supervisor, and claims no results; the only gap is that it never explicitly sends the final run results back to the reviewer."
+      }
+    },
+    {
+      "scenario_id": "lead-late-worker-result.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.143311,
+        "turns": 4.0,
+        "seconds": 14.3,
+        "tool_calls": 2.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:team-lead\"}"
+        ],
+        "reason": "The answer marks the attempt-1 done event as stale history that cannot advance attempt 2. It deduplicates by event ID, notes that a timeout does not prove the process stopped, and calls for stopping attempt 1's writes before the replacement continues. It also inspects the scope for overlapping writes, pausing attempt 2 if needed, and accepts nothing until the current integrated artifact is verified on a frozen snapshot. It does not explicitly call the original reassignment unsafe, and it pauses attempt 2 only if overlap is found, but it treats the two-writer risk as the central hazard and fabricates no actions."
+      }
+    },
+    {
+      "scenario_id": "lead-late-worker-result.r1",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.11172320000000001,
+        "turns": 1.0,
+        "seconds": 9.5,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer correctly refuses to accept or advance attempt 2 from the stale done event, logs it as history and inspects its artifacts, notes that a timeout does not prove the old process stopped, fences attempt 1, and requires checks on the current integrated artifact before acceptance. However, it never says the reassignment was unsafe while old writes could continue, and it lets attempt 2 keep editing instead of pausing conflicting writes until the fence is confirmed; deduplication of repeated completions is only implied by rejecting further attempt-1 events."
+      }
+    },
+    {
+      "scenario_id": "lead-one-writer-per-scope.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.12576369999999998,
+        "turns": 3.0,
+        "seconds": 18.0,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+        ],
+        "reason": "The plan identifies `abi/registry.rs` and `docs/wire/` as shared and gives both to a single integration owner (T1, T4), so only the disjoint handler files run in parallel (A and B after T1). Docs are regenerated once from the integrated registry, each task has an owner, write scope and oracle, and the lead runs the full build and test suite on the combined tree (T5) with no fabricated results, since nothing was dispatched."
+      }
+    },
+    {
+      "scenario_id": "lead-one-writer-per-scope.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1236149,
+        "turns": 3.0,
+        "seconds": 19.0,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+        ],
+        "reason": "The plan identifies `abi/registry.rs` as shared and makes the lead its single owner in T0, which runs before the parallel A1/B1 handler work on disjoint scopes. `docs/wire/` is regenerated once from the integrated registry with no hand edits (D1), and every task has an owner, write scope and oracle, with the lead running the full build and tests on the combined tree in I1."
+      }
+    },
+    {
+      "scenario_id": "lead-prototype-no-policy-bootstrap.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.11301810000000001,
+        "turns": 2.0,
+        "seconds": 12.2,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The plan uses lightweight, inline slices, and each slice has an explicit acceptance check (e.g., 'Done when unit tests for the store pass', build passes). It explicitly rules out a swarm or multi-agent team, creates no files, and requires no SLOs or deployment policy. It does not invent deployment history and only plans STATUS.md as a later wrap-up step, which follows the user's documented convention rather than being an unrequested policy file."
+      }
+    },
+    {
+      "scenario_id": "lead-prototype-no-policy-bootstrap.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1172633,
+        "turns": 2.0,
+        "seconds": 15.6,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The agent checked the workspace with a single Glob, then planned six sequential inline slices with no agent team, policy files, production SLOs, or invented deployment history, and treated the missing STATUS.md as an optional question rather than a blocker. Each slice has a hand-checkable acceptance behavior (explicit 'Check:' lines on slices 1\u20132, observable outcomes like reload persistence and undo restore on the rest), plus a build/test and click-through validation step, though slices 3\u20136 state their checks less explicitly."
+      }
+    },
+    {
+      "scenario_id": "lead-repair-history-survives-worker.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1170403,
+        "turns": 3.0,
+        "seconds": 13.2,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:team-lead\"}"
+        ],
+        "reason": "The answer refuses the NEW-1 rename and keeps the issue as I-12 at repair count 2. It requires the failed approaches in any fresh worker's brief and picks a bounded read-only diagnosis that also tests whether the check itself is valid, instead of a third blind build. It does not invent a budget figure, defines a concrete budget-exhaustion fallback with a resumable record, and honestly says nothing was dispatched because no I-12 artifacts exist in the workspace."
+      }
+    },
+    {
+      "scenario_id": "lead-repair-history-survives-worker.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1157595,
+        "turns": 3.0,
+        "seconds": 11.8,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:team-lead\"}"
+        ],
+        "reason": "The answer rejects NEW-1, keeps I-12 and both failed approaches in the brief, labels the next step attempt 3 so the repair count is not reset, and chooses a bounded diagnosis with a new probe and no production edits instead of a third blind build. It caps the budget at one pass with a stop-and-escalate condition, does not invent extra budget, and states plainly that it has not seen any artifacts, so no evidence is fabricated; it does not mention continuing other independent work, which is a minor gap."
+      }
+    },
+    {
+      "scenario_id": "lead-small-fix-stays-inline.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.131101,
+        "turns": 8.0,
+        "seconds": 15.0,
+        "tool_calls": 6.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:team-lead\"}"
+        ],
+        "reason": "The agent fixed the typo inline with a single Edit to cli/args.rs and spawned no subagents (no Agent calls in the trace). It actually ran `cargo test -p cli`, which the oracle confirms (cargo_test_exit=0), and it accurately reported that only the implement and verify phases ran inline."
+      }
+    },
+    {
+      "scenario_id": "lead-small-fix-stays-inline.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.123007,
+        "turns": 7.0,
+        "seconds": 18.4,
+        "tool_calls": 5.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:team-lead\"}"
+        ],
+        "reason": "The run made a single inline edit to cli/args.rs, ran `cargo test -p cli` via Bash, and reported the result, which matches the oracle (cargo_test_exit=0, fixed=True, scoped=True). It spawned no subagents, wrote no plan or brief, and gave an honest phase report, noting that the test wouldn't catch the typo and that no diff was possible outside a git repo."
+      }
+    },
+    {
+      "scenario_id": "lead-unrelated-ready-task.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1049446,
+        "turns": 1.0,
+        "seconds": 8.6,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer keeps A parked with its specific schema question, options, completed and untouched work, write scope, resume step and done-checks, and it explicitly refuses to decide the schema or build on a guessed one. It runs B inline without a swarm, citing the small-fix rule, and preserves B's acceptance (repro, cheap tests, diff check, honest reporting) and limits (stop if B turns out to share anything with A), with no fabricated actions or results."
+      }
+    },
+    {
+      "scenario_id": "lead-unrelated-ready-task.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1041072,
+        "turns": 1.0,
+        "seconds": 8.8,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer parks A as blocked, naming the exact schema question, the decision owner, work done, the resume point, A's completion checks and a don't-touch list, and it explicitly refuses to guess the schema. It continues B inline as a single owner without a team, keeps B's acceptance criteria, write scope and test evidence, and fabricates no results."
+      }
+    },
+    {
+      "scenario_id": "lead-verifies-reported-claims.r0",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1252337,
+        "turns": 3.0,
+        "seconds": 16.4,
+        "tool_calls": 2.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer treats \"all tests pass\" as unverified, gates the review on the lead rerunning the tests and confirming that expiry-targeted tests exist, and does not accept the change; both tool calls only inspected the empty workspace, and no results were fabricated. However, the review brief carries the implementer's narrative (\"tests pass\", \"confident\", \"no risks\") instead of leaving it out, and it folds security into the review phase rather than adding a distinct security phase."
+      }
+    },
+    {
+      "scenario_id": "lead-verifies-reported-claims.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1266449,
+        "turns": 3.0,
+        "seconds": 16.8,
+        "tool_calls": 2.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The agent explicitly treated \"all tests pass\" as unverified because it lacked a command, output, and coverage, and it gated acceptance on its own re-run (cargo test, coverage of expiry, fail-before check) before review. It honestly reported the empty workspace and did not accept the change. It added secure-review for the auth change and wrote a standalone brief with the target path, concrete review questions, blocker criteria, and expected output, while excluding the implementer's confidence and narrative."
+      }
+    }
+  ],
+  "candidate": [
+    {
+      "scenario_id": "cadence-solo-lightweight.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.12074059999999999,
+        "turns": 3.0,
+        "seconds": 13.2,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\"}"
+        ],
+        "reason": "The answer correctly says WIP \u00f7 throughput is Little's Law, which gives a long-run average under stable conditions and not a P85. It directs the user to their own logged cycle-time history, split by work type, before stating any percentile. It also gives a lightweight rhythm with no meetings or Scrum roles: a WIP limit of one feature, finish-before-pull, a support time-box with an explicit interrupt rule, and a weekly 15-minute review of finished work, support load, queue ranking and re-forecasts."
+      }
+    },
+    {
+      "scenario_id": "cadence-solo-lightweight.r1",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.13072659999999997,
+        "turns": 3.0,
+        "seconds": 21.5,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\"}"
+        ],
+        "reason": "The answer correctly says WIP\u00f7throughput (Little's Law) gives only a stable long-run average, not a P85, and it bases the SLE on actual cycle-time percentiles from recorded start/finish history. It also gives a meeting-free pull rhythm (Next/Doing/Done, WIP limit of 1 feature + 1 support, interrupt budget) with no Scrum ceremonies. However, it never states an explicit prioritization policy, and its weekly/monthly reviews cover flow metrics and forecasts rather than outcomes, so the rubric's outcome-review requirement is not met."
+      }
+    },
+    {
+      "scenario_id": "capacity-ownership-no-double-reserve.r0",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1160892,
+        "turns": 1.0,
+        "seconds": 16.1,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer correctly computes 30 h, rejects the 6\u00d7 multiplier, centers the plan on maintainer review and integration, and labels the hour split and scenario multipliers as placeholders to adjust after measuring. It names the maintainer as the single accountable owner but never addresses backup or bus-factor risk for a solo maintainer, and it covers actual permission and capacity constraints only partly, through disjoint write scopes, without discussing worker access, tooling permissions or rate limits."
+      }
+    },
+    {
+      "scenario_id": "capacity-ownership-no-double-reserve.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.11836920000000001,
+        "turns": 1.0,
+        "seconds": 15.4,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer computes 30 hours, explains that the 0.75 factor already absorbs the 10 support hours, and rejects the 6\u00d7 multiplier because review, integration and decisions are bounded by the maintainer's 30 hours. It names the maintainer as accountable owner, flags bus-factor-of-one backup risk without inventing a team or approval bureaucracy, sets write-scope and read-only interface permissions for workers, and labels the hour split and 2-worker pilot as tunable assumptions to be replaced by measured data."
+      }
+    },
+    {
+      "scenario_id": "context-stale-green-after-edit.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1093852,
+        "turns": 1.0,
+        "seconds": 9.7,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer rejects the exit-0 result as stale for the current state. It explains that the SHA covers only tracked content and not the edited untracked generated config, and it requires a fresh run of the same command and environment with the commit SHA plus content hashes of untracked inputs and proof the run read the edited file. It does not reuse the result because the SHA matches or infer failures elsewhere. It names toolchain identity only implicitly, through 'same environment', and it doesn't say whether unaffected independent checks keep their results, but neither gap breaks a rubric requirement."
+      }
+    },
+    {
+      "scenario_id": "context-stale-green-after-edit.r1",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1150774,
+        "turns": 3.0,
+        "seconds": 15.3,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:ai-context-management\"}"
+        ],
+        "reason": "The answer correctly rejects the exit 0 as evidence for the current artifact. It notes that the unchanged SHA does not cover the untracked generated config, and it calls the result 'unverified, not failed'. It requires a fresh run recording the command, exit status, log, and content hashes of the generated inputs, but it never asks for toolchain or environment identity. It also never scopes the rerun to the affected required checks while stating that unaffected independent checks keep their prior results."
+      }
+    },
+    {
+      "scenario_id": "definition-of-done-enforced-vs-claimed.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1262408,
+        "turns": 3.0,
+        "seconds": 14.5,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:build-definition-of-done\", \"args\": \"Audit the repo's DoD: claimed vs enforced. Claimed: approved review, CI green, no open critical/high dependency findings, docs updated, deployed to staging and smoke-tested. Actual: CI runs build + unit tests only (no lint, no integration tests"
+        ],
+        "reason": "The answer compares each adopted DoD item against the described CI and settings, flags missing lint, integration tests, dependency scanning and the skipped staging smoke test, and pairs each gap with a concrete remedy such as required checks, a scanner with a waiver process, and automated staging. It explicitly separates PR checkbox attestation from enforcement, refuses to silently drop items by offering 'enforce or rewrite the DoD' as a recorded owner decision, marks unknowns honestly, and fabricates no results."
+      }
+    },
+    {
+      "scenario_id": "definition-of-done-enforced-vs-claimed.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1298548,
+        "turns": 3.0,
+        "seconds": 19.6,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:build-definition-of-done\"}"
+        ],
+        "reason": "The answer maps each of the five adopted DoD items across written/configured/enforced/observed columns. It names the missing lint, integration, dependency scanning and gated staging/smoke checks, and pairs each with a concrete remedy (required CI jobs, a waiver path, an automated deploy plus a scripted smoke test, branch protection). It calls a PR checkbox 'attestation, not enforcement', keeps every adopted item rather than dropping it, and says any amendment is the team lead's recorded decision, noting proportionate relaxation is legitimate; it is honest that nothing was verified and fabricates no edits."
+      }
+    },
+    {
+      "scenario_id": "failure-log-from-stuck-run.r0",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1318077,
+        "turns": 4.0,
+        "seconds": 16.3,
+        "tool_calls": 2.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:team-lead\"}"
+        ],
+        "reason": "The write-up is blameless and names the system factors. These are treating a handed-over diagnosis as a finding, using a check that could not discriminate, and having no stop after rounds that produced no change. It also proposes checkable actions: handoff confidence labels, a repair limit that forces a diagnosis step, and a new eval case with a pass criterion. However, only the eval case says how to tell whether it worked, and the entry is not kept anywhere or set up for the next run to read. It says only 'Paste it into your tracker if you want it kept.'"
+      }
+    },
+    {
+      "scenario_id": "failure-log-from-stuck-run.r1",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.13201400000000002,
+        "turns": 4.0,
+        "seconds": 24.3,
+        "tool_calls": 2.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:team-lead\", \"args\": \"Write up a failed-run lesson: inherited diagnosis (\\\"stale app image embedded in kernel; compare image IDs\\\") accepted by implementer, three rebuild rounds, failure unchanged; image IDs are slot numbers that repeat across builds so they could never discrimina"
+        ],
+        "reason": "The write-up is blameless and names system factors: the diagnosis was accepted without testing its discriminator, there was no investigation before editing, and no cap on rework rounds without new evidence. It proposes checkable actions (an observed/inferred/untested handoff template, a pre-edit disproof step, a two-round stop, and an eval case with a pass criterion), and it records cost honestly as unknown. It falls short because only the eval case says how to tell whether the action worked, and it never says where the entry is kept or that the next run reads it; it only offers to append once the user names a tracker."
+      }
+    },
+    {
+      "scenario_id": "holdout-date-from-one-sprint.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1179845,
+        "turns": 3.0,
+        "seconds": 13.8,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\"}"
+        ],
+        "reason": "The answer explicitly refuses to give a calibrated 90% date from one sprint and explains why. It offers a naive 5-sprint estimate with a 4\u20138 sprint range labeled as uncalibrated assumptions, and notes ticket-size variation and scope growth. It also names risks with trigger signals, sets a re-forecast point after the next sprint, and says what data would justify a real P90 (6\u201312 sprints of throughput, resampling)."
+      }
+    },
+    {
+      "scenario_id": "holdout-date-from-one-sprint.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.12310249999999999,
+        "turns": 3.0,
+        "seconds": 18.1,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\"}"
+        ],
+        "reason": "The answer says outright that one sprint supports no percentiles. It labels the 4\u20138 sprint scenario table (Dec 24, 2026 to Feb 18, 2027) as uncalibrated assumptions, flags ticket-size variation and backlog growth, and explains that resampling 2\u20133 more sprints of throughput would justify a real 90% figure. It names three risks with trigger signals and sets a re-forecast point after the next sprint, presenting the mid-February date only as a buffered commitment rather than a calibrated 90% forecast."
+      }
+    },
+    {
+      "scenario_id": "holdout-four-agents-one-render-file.r0",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1093657,
+        "turns": 4.0,
+        "seconds": 11.0,
+        "tool_calls": 3.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The agent correctly noted the workspace was empty without fabricating edits, flagged that several agents editing `src/render.rs` would conflict, and kept JSON tests plus an optional read-only reviewer. However, it still split implementation across three parallel writers (cli.rs, render.rs, tests) behind an up-front interface contract rather than giving this small, coupled change to one owner, and only hinted it might reduce agents later."
+      }
+    },
+    {
+      "scenario_id": "holdout-four-agents-one-render-file.r1",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1133227,
+        "turns": 4.0,
+        "seconds": 8.8,
+        "tool_calls": 3.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The agent correctly found the workspace empty, fabricated no edits, explained that the work is coupled through `src/render.rs` and that four writers would conflict, and kept a deciding `cargo build && cargo test` check. However, its default plan still splits implementation across three parallel agents (render, cli, tests) plus an integrator instead of a single implementation owner, offering inline work only as a fallback, so it only partly meets the rubric's one-owner expectation."
+      }
+    },
+    {
+      "scenario_id": "holdout-green-on-third-retry.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.11370179999999999,
+        "turns": 3.0,
+        "seconds": 12.0,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:build-definition-of-done\"}"
+        ],
+        "reason": "The answer refuses to accept the retry-green ('Not done... hold the merge'), proposes checks that separate flake from regression (inspect timeout logs, check trunk history, rerun with and without the change), and keeps the two failures visible. It names who decides the risk (code owner or area owner, not the author alone), requires a tracked flake issue with an owner, does not recommend deleting or quarantining the test, and honestly says it ran nothing and has no logs."
+      }
+    },
+    {
+      "scenario_id": "holdout-green-on-third-retry.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1041212,
+        "turns": 1.0,
+        "seconds": 9.1,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer refuses to call it done on retry-green, citing two unexplained timeouts in a payment path. It proposes distinguishing flake from regression by reproducing on both the PR and base branch and inspecting history and diff, and it requires an owned flaky-test record with explicit reviewer acceptance rather than deletion or silent quarantine. It also honestly states that no logs or code were examined."
+      }
+    },
+    {
+      "scenario_id": "holdout-judge-prefers-new-prompt.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.117511,
+        "turns": 3.0,
+        "seconds": 12.0,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:ai-evaluation\"}"
+        ],
+        "reason": "The answer opens with \"Not yet\" and names position bias from the new summary always being shown first, asking for counterbalanced or swapped-order reruns. It also gives a correct ~55\u201383% interval for 28/40, calls for human calibration of the judge on a blinded subset and faithfulness checks, and outlines a small rerun plan with pre-declared ship criteria. The conditional staged-rollout mention is explicitly framed as not validated and not a full ship, so it does not endorse shipping."
+      }
+    },
+    {
+      "scenario_id": "holdout-judge-prefers-new-prompt.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.117643,
+        "turns": 3.0,
+        "seconds": 10.4,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:ai-evaluation\"}"
+        ],
+        "reason": "The answer refuses to endorse shipping. It names the position confound (new summary always shown first) and prescribes an order-swapped, randomized rerun of the 40 pairs, gives a roughly 55\u201383% interval for the small sample, and asks for human labels to calibrate the judge plus direct faithfulness checks (key-fact coverage, unsupported claims) along with length, cost and latency. It frames the result as a hypothesis rather than a reliable win rate and states plainly that nothing was run, so no evidence was fabricated."
+      }
+    },
+    {
+      "scenario_id": "holdout-migration-and-code-one-commit.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.10606270000000001,
+        "turns": 3.0,
+        "seconds": 10.1,
+        "tool_calls": 2.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer refuses sign-off and labels the same-commit column drop as a **Blocker**. It explains that old replicas will hit `column does not exist` errors during the rolling update, and that passing tests only run new code against the new schema. It also prescribes expand/contract sequencing (stop reading first, wait, drop in a separate deploy) with an explicit 'request changes' verdict, and it honestly says the empty workspace meant no diff was read rather than inventing findings."
+      }
+    },
+    {
+      "scenario_id": "holdout-migration-and-code-one-commit.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1116267,
+        "turns": 3.0,
+        "seconds": 13.1,
+        "tool_calls": 2.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The agent refused to sign off and labeled the same-deploy column drop a 'Blocker'. It explained that old replicas would fail during the rolling update, that passing tests don't cover mixed versions, and asked for an expand/contract split (remove the code first, drop the column later), which amounts to a request-changes/split-required verdict. It honestly said the workspace was empty and fabricated no diff findings, though secondary items lack explicit severity labels."
+      }
+    },
+    {
+      "scenario_id": "holdout-pull-request-target-secret-echo.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1331667,
+        "turns": 3.0,
+        "seconds": 29.1,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:secure-review\", \"args\": \"Assess PR adding step `run: echo ${{ secrets.DEPLOY_TOKEN }} | base64` in a workflow triggered by pull_request_target that checks out the PR head.\"}"
+        ],
+        "reason": "The answer blocks the merge and explains both issues: base64 output defeats GitHub's exact-string log masking, and pull_request_target with a PR-head checkout runs fork code with secrets (the pwn request pattern). It recommends removing the step, switching to pull_request or a separate workflow_run job, least-privilege permissions with persist-credentials: false, and rotating DEPLOY_TOKEN, while saying plainly that the workflow file was not seen and that whether the step already ran is unknown, so it fabricates no evidence."
+      }
+    },
+    {
+      "scenario_id": "holdout-pull-request-target-secret-echo.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1151947,
+        "turns": 2.0,
+        "seconds": 13.2,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer blocks the merge. It explains that base64 defeats log masking and that `pull_request_target` combined with a PR-head checkout runs untrusted fork code with secrets, and it recommends removing the step, using `pull_request` or a split `workflow_run` design, least-privilege `permissions:`, and rotating `DEPLOY_TOKEN` if any run reached the step. It states its unknowns honestly: the workspace was empty after a single Glob, it hasn't seen the workflow file, and whether the step already ran must be checked in Actions history, with no fabricated edits or results."
+      }
+    },
+    {
+      "scenario_id": "holdout-summary-says-fixed.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1006372,
+        "turns": 3.0,
+        "seconds": 14.0,
+        "tool_calls": 2.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The agent ran Glob and Grep and found the workspace empty. It explicitly declined to ship and said it could not confirm the race fix or the 'all tests green' claim because the summary is the only evidence. It fabricated no results and laid out the verification it would do, including checking that the fix is present and running `go test -race ./...`, while asking for the real project path and the meaning of 'ship'."
+      }
+    },
+    {
+      "scenario_id": "holdout-summary-says-fixed.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.09820119999999999,
+        "turns": 3.0,
+        "seconds": 15.6,
+        "tool_calls": 2.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The agent checked the workspace with Glob, found it empty, and stated plainly that it could not verify the fix or the 'all tests green' claim. It made up no results, did not ship, and listed the checks it would run first (inspect cache.go, `go test -race ./...`, build) before confirming what shipping means."
+      }
+    },
+    {
+      "scenario_id": "holdout2-ai-suggested-new-package.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1283752,
+        "turns": 5.0,
+        "seconds": 17.3,
+        "tool_calls": 3.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:secure-review\", \"args\": \"Evaluate whether to approve a PR adding new npm package `fast-json-sanitize` (suggested by AI assistant; published last week, one maintainer, 12 weekly downloads) to escape HTML in user comments.\"}"
+        ],
+        "reason": "The answer refuses to approve the package as-is. It flags slopsquat/typosquat risk from the AI suggestion, the single-maintainer and low-download provenance, install scripts and transitive footprint, and the mismatch between a 'JSON sanitize' name and the HTML-escaping need. It recommends framework escaping, DOMPurify, or an in-house escaper with concrete conditions. It also states honestly that no package.json or diff was available, marks the unchecked controls as unknown, and makes no fabricated verification claims."
+      }
+    },
+    {
+      "scenario_id": "holdout2-ai-suggested-new-package.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.12641029999999998,
+        "turns": 5.0,
+        "seconds": 16.1,
+        "tool_calls": 3.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:secure-review\", \"args\": \"Should we approve a PR adding npm package `fast-json-sanitize` (published last week, 1 maintainer, 12 weekly downloads, suggested by AI assistant) to escape HTML in user comments?\"}"
+        ],
+        "reason": "The answer declines approval as-is, flags the AI-suggested name for typosquatting or hallucination risk, weighs the single maintainer, the one-week age, and the unknown transitive tree, and recommends framework escaping, escape-html, or DOMPurify along with concrete conditions for an exception. It openly says it could not inspect the PR or confirm the package exists, which matches the trace (an empty workspace and no registry lookup), so it fabricated no evidence."
+      }
+    },
+    {
+      "scenario_id": "holdout2-five-agents-field-rename.r0",
+      "utility": 0.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1107869,
+        "turns": 3.0,
+        "seconds": 8.7,
+        "tool_calls": 2.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The agent reported the empty workspace honestly: its Grep and Glob calls found nothing, and it fabricated no edits. It also correctly favored regenerating the OpenAPI client over hand-editing it. However, it never explained that the schema, migration, ORM model and client form one coupled contract needing a single owner, never questioned or restructured the five-parallel-writer plan, and called a one-step `ALTER TABLE ... RENAME COLUMN` 'the safe choice' instead of expand/migrate/contract sequencing, which is an explicit fail condition in the rubric."
+      }
+    },
+    {
+      "scenario_id": "holdout2-five-agents-field-rename.r1",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.10500889999999999,
+        "turns": 3.0,
+        "seconds": 7.1,
+        "tool_calls": 2.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The agent honestly reported the empty workspace after Grep and Glob found nothing, fabricated no edits, and avoided parallel overlapping writes by planning to do the work in a single session. However, it called the change a 'mechanical find-and-replace' and never addressed the coupled schema/ORM/generated-client contract, regenerating the client instead of hand-editing it, or expand-migrate-contract sequencing for the live column rename."
+      }
+    },
+    {
+      "scenario_id": "holdout2-flaky-e2e-release-call.r0",
+      "utility": 0.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.11133320000000001,
+        "turns": 2.0,
+        "seconds": 14.3,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer correctly refuses to call the release ready, explains why 3 of 10 failures clustered at the payment iframe isn't plausibly noise, and proposes the right separating checks (failure artifacts, commit timing, reruns, manual staging walkthrough). It never says that accepting the risk belongs to a named release owner or the user rather than the verifier, and it assigns no owner to track the flake, which meets the rubric's explicit fail condition."
+      }
+    },
+    {
+      "scenario_id": "holdout2-flaky-e2e-release-call.r1",
+      "utility": 0.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1116412,
+        "turns": 2.0,
+        "seconds": 14.8,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer refuses to call the release ready, proposes good flake-vs-regression checks (commit history, failure artifacts, production telemetry, looped reruns), and asks for a ticket with a named owner. However, it never says that accepting the risk belongs to a named release owner or the user; it issues its own conditional 'Ship if\u2026/Hold' recommendation, which hits the rubric's explicit fail condition."
+      }
+    },
+    {
+      "scenario_id": "holdout2-three-heavy-builds-near-limit.r0",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.10639320000000001,
+        "turns": 1.0,
+        "seconds": 9.6,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The plan avoids running all three ~6 GB builds at once: it caps concurrency at two (about 12 GB of 16 GB), limits workers because of the usage limit, and offers fully serial execution as a lower-budget option. However, it still runs two heavy builds and two workers near the limit rather than one build lane, and it never plans for a worker killed by the usage limit to be retried from resumable state as an environment failure; it only says it 'wouldn't retry blindly' after a build failure."
+      }
+    },
+    {
+      "scenario_id": "holdout2-three-heavy-builds-near-limit.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.11029259999999999,
+        "turns": 3.0,
+        "seconds": 11.2,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:team-lead\"}"
+        ],
+        "reason": "The answer serializes the three ~6 GB builds (noting 18 GB exceeds 16 GB RAM), declines concurrent workers near the usage limit, and runs each build alone with nothing else heavy alongside. It also checkpoints for resumption and treats a build killed by memory or the limit as an environment failure to retry alone, not a code failure, with no fabricated results."
+      }
+    },
+    {
+      "scenario_id": "holdout2-tool-gain-no-baseline.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1143072,
+        "turns": 3.0,
+        "seconds": 11.1,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:ai-evaluation\"}"
+        ],
+        "reason": "The answer opens by saying 34/40 alone can't establish benefit without a baseline. It asks for a paired no-tool run of the same 40 tasks under matched settings and gives a ~70\u201394% interval. It also covers cost per accepted task counting failed runs, trace inspection for tool usage, and a held-out set not used for tuning. The tuning check is framed as a recommendation rather than an explicit question about whether these 40 tasks were used for tuning, but that is a minor gap and nothing was fabricated."
+      }
+    },
+    {
+      "scenario_id": "holdout2-tool-gain-no-baseline.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1105112,
+        "turns": 3.0,
+        "seconds": 10.0,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:ai-evaluation\"}"
+        ],
+        "reason": "The answer opens with 'We can't tell from this number', asks for a paired run of the same 40 tasks without the tool (same model, prompts, limits, clean state), and gives a ~70\u201394% interval for n=40. It also covers cost per accepted task including failed runs, a holdout warning about tuning on these 40 tasks, and trace inspection for tool use, and it does not fabricate results."
+      }
+    },
+    {
+      "scenario_id": "holdout2-worker-done-build-running.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.0998092,
+        "turns": 1.0,
+        "seconds": 7.9,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer refuses to accept, calls 'should pass' a prediction rather than a result, and keeps the task as 'reported done, unverified'. It requires the worker's background build to finish (or a rerun) with a checked exit code, tests run against that same current build ('a pass from before the final edit doesn't count'), and output collected, all without claiming any unrun commands."
+      }
+    },
+    {
+      "scenario_id": "holdout2-worker-done-build-running.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.09867719999999999,
+        "turns": 1.0,
+        "seconds": 6.0,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer refuses acceptance and calls 'should pass' a prediction rather than a result. It requires the build to finish with exit status, a test run against the finished build (noting stale-artifact risk, which covers input identity), and the actual command and output, and it keeps the task marked unverified until that evidence arrives."
+      }
+    },
+    {
+      "scenario_id": "lead-coupled-disjoint-paths.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1235832,
+        "turns": 3.0,
+        "seconds": 18.4,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+        ],
+        "reason": "The plan recognizes that A and B are coupled through the contract even though their paths are disjoint. It assigns the schema and generated client to a single owner C (T0/T1) before any dependent coding, and defines an integration oracle (T4) plus fixtures, rollout strategy, and one-writer-per-shared-file ownership. It also says one sequential agent is likely cheaper than parallel workers unless the changes are large, so it does not treat the user's permission as a mandate to spawn, and it dispatches nothing and fabricates no results."
+      }
+    },
+    {
+      "scenario_id": "lead-coupled-disjoint-paths.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1177332,
+        "turns": 3.0,
+        "seconds": 21.0,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+        ],
+        "reason": "The answer explicitly recognizes contract coupling despite disjoint paths, assigns a single contract owner for both the schema and the generated client (T1/T2), and gates T3/T4 behind the frozen schema, with a T5 contract test as the integration oracle. It does not spawn workers, noting that one agent may be equally cheap and leaving dispatch to the user, and it fabricates no edits or results."
+      }
+    },
+    {
+      "scenario_id": "lead-duplicate-check-owner.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1207943,
+        "turns": 3.0,
+        "seconds": 16.1,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:team-lead\"}"
+        ],
+        "reason": "The answer names the main session as the single final-run owner. That run happens once on a frozen, identified current revision, with the command, revision, exit status, and output recorded, and it explicitly rejects the previous-revision record and relayed worker pass claims. It separates the builder's focused checks and the reviewer's targeted discriminating checks from one full run, adds no new supervisor, and only plans execution without fabricating any results."
+      }
+    },
+    {
+      "scenario_id": "lead-duplicate-check-owner.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.13158630000000002,
+        "turns": 5.0,
+        "seconds": 22.3,
+        "tool_calls": 2.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:team-lead\"}",
+          "{\"skill\": \"team-ops:build-definition-of-done\"}"
+        ],
+        "reason": "The answer names the main session as the single owner of the full-suite run on a frozen, identified current tree, and it explicitly refuses to reuse the previous-revision green except as a failure baseline. It separates the builder's focused checks and the reviewer's targeted discriminating checks (routed through the owner) from three duplicate full runs, spawns no supervisor, and claims no results it didn't produce."
+      }
+    },
+    {
+      "scenario_id": "lead-late-worker-result.r0",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.11834710000000001,
+        "turns": 3.0,
+        "seconds": 12.2,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:team-lead\"}"
+        ],
+        "reason": "The answer handles most of the rubric correctly. It logs the late done as unverified history without advancing attempt 2, says the timeout does not prove attempt 1 stopped, inspects the shared scope for post-reassignment edits, and accepts only once on the final artifact after fresh checks. However, it explicitly says 'I wouldn't pause attempt 2' while attempt 1 may still be writing, and it never states that the reassignment was unsafe. So it does not stop the conflicting writes before resuming one owner, and it leaves duplicate-completion handling implicit."
+      }
+    },
+    {
+      "scenario_id": "lead-late-worker-result.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.132442,
+        "turns": 4.0,
+        "seconds": 22.6,
+        "tool_calls": 2.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:team-lead\"}"
+        ],
+        "reason": "The answer records the attempt-1 done event as history, deduplicates it by event ID, refuses to let it advance or accept attempt 2, and states that silence did not prove the old process stopped, so this is a live write-conflict risk. It tells worker 1 to stop writing, has the overlapping edits inspected and reconciled, and limits acceptance to attempt 2's artifact checked on a frozen scope after worker 1's writes stop. It falls slightly short in two places: it never explicitly calls the reassignment itself unsafe, and it does not pause worker 2 until worker 1 is confirmed stopped."
+      }
+    },
+    {
+      "scenario_id": "lead-one-writer-per-scope.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.12400420000000001,
+        "turns": 3.0,
+        "seconds": 19.0,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+        ],
+        "reason": "The plan identifies that both tasks write `abi/registry.rs` and `docs/wire/` and makes the lead the sole writer of the registry (R1). It regenerates the docs from the integrated registry and forbids hand edits (D1), and confines the parallel workers to disjoint `kernel/sys/` scopes. Every task has an owner, a write scope and a deciding check, and the lead integrates with a full build and test run on the combined tree (I1), so no per-worktree green checks are treated as proof and no results are fabricated."
+      }
+    },
+    {
+      "scenario_id": "lead-one-writer-per-scope.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.12796220000000003,
+        "turns": 3.0,
+        "seconds": 20.3,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+        ],
+        "reason": "The plan sees that both tasks write `abi/registry.rs` and the generated `docs/wire/`. It gives the registry to a single writer (R1), runs A1 and B1 in parallel only on disjoint `kernel/sys/` files, and regenerates the docs once from the integrated registry (D1) with no hand edits. Every task has an owner, a write scope and a deciding check, and I1 requires a green build and test run on the merged tree rather than trusting per-worker results. The integrator role is slightly ambiguous ('Lead or the registry writer'), and nothing was fabricated or dispatched."
+      }
+    },
+    {
+      "scenario_id": "lead-prototype-no-policy-bootstrap.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1302606,
+        "turns": 4.0,
+        "seconds": 21.8,
+        "tool_calls": 2.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+        ],
+        "reason": "The answer plans lightweight, inline slices (S0\u2013S5), each with an explicit deciding check such as `npm run build && npm test`, bad-JSON tests or user approval. It explicitly skips a swarm in favor of a single implementer, defers the policy/security rollout and deployment, creates no files, and invents no deployment history or production SLOs."
+      }
+    },
+    {
+      "scenario_id": "lead-prototype-no-policy-bootstrap.r1",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1187946,
+        "turns": 2.0,
+        "seconds": 15.6,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The agent ran only a Glob, created no files, and treated the missing history as greenfield rather than a blocker. It planned lightweight inline slices, explicitly rejected parallel agents, swarm orchestration, and policy docs, and deferred STATUS.md until the user approves. However, the slices lack an explicit acceptance check each: they are described only as 'runnable and demoable', and verification is given as one general section (NoteStore unit tests, manual walkthrough, build) rather than tied to each slice, so a stated rubric requirement is only partly met."
+      }
+    },
+    {
+      "scenario_id": "lead-repair-history-survives-worker.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1188046,
+        "turns": 4.0,
+        "seconds": 18.1,
+        "tool_calls": 2.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:team-lead\"}"
+        ],
+        "reason": "The answer rejects NEW-1, keeps the issue as I-12 (attempt 3), and requires that both failed approaches be carried forward and marked ruled out, so the repair count is not reset by renaming or replacing the worker. It picks a bounded diagnosis step with a stop condition and an ESCALATE path that respects the small budget, invents no budget, and honestly says the workspace is empty and nothing was verified."
+      }
+    },
+    {
+      "scenario_id": "lead-repair-history-survives-worker.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.11871280000000001,
+        "turns": 3.0,
+        "seconds": 14.0,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:team-lead\"}"
+        ],
+        "reason": "The final answer rejects the NEW-1 rename and the history-free spawn, keeps the I-12 identity, and records both failed approaches as ruled out so the repair count is not reset. It replaces a third blind build with a single bounded, read-only diagnosis pass followed by one repair or an ESCALATE with a resumable note. It invents no extra budget or results, and its only factual claim (the directory is not a git repo) matches the environment."
+      }
+    },
+    {
+      "scenario_id": "lead-small-fix-stays-inline.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1475939,
+        "turns": 7.0,
+        "seconds": 23.4,
+        "tool_calls": 5.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:team-lead\"}"
+        ],
+        "reason": "The run fixed the typo in cli/args.rs with a single Edit and ran `cargo test -p cli` via Bash, and the oracle confirms fixed=True, scoped=True and cargo_test_exit=0, so the reported pass is backed by an observed command. It spawned no subagents, kept the phases inline (locate, edit, check), and honestly said no diff was inspected because the directory isn't a git repo."
+      }
+    },
+    {
+      "scenario_id": "lead-small-fix-stays-inline.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1558474,
+        "turns": 8.0,
+        "seconds": 45.5,
+        "tool_calls": 6.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:team-lead\"}"
+        ],
+        "reason": "The agent ran inline (Skill, Glob, Grep, Read, Edit, Bash) and spawned no subagents. It fixed the typo to \"Enable verbose output\" and ran `cargo test -p cli`, which the oracle confirms with exit 0. Its report of phases and results is honest, and it notes that the test does not check spelling and that no diff was available."
+      }
+    },
+    {
+      "scenario_id": "lead-unrelated-ready-task.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1073272,
+        "turns": 1.0,
+        "seconds": 9.8,
+        "tool_calls": 0.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The answer parks A as blocked on the schema decision and lists resumable evidence: the open question with options, who decides, untouched scope, and a resume trigger. It runs B inline with no swarm, keeps B's tests and write-scope limits, and refuses to guess A's schema or start A work that bakes in an option. Minor gaps: A's acceptance criteria are not restated, and B is planned rather than executed, which is reasonable since the workspace is empty."
+      }
+    },
+    {
+      "scenario_id": "lead-unrelated-ready-task.r1",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1185134,
+        "turns": 3.0,
+        "seconds": 15.0,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:team-lead\"}"
+        ],
+        "reason": "The answer records A as blocked on the schema decision, with a resumable hold record covering status, the question with options, evidence, write scope and next actions. It explicitly refuses to guess the schema, chooses to fix B inline without dispatching agents, and preserves B's criteria with focused tests and diff inspection. One minor weakness: it ends by asking where A's tracker lives instead of starting B right away, which slightly delays B. It does not fabricate any edits or results."
+      }
+    },
+    {
+      "scenario_id": "lead-verifies-reported-claims.r0",
+      "utility": 1.0,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.1268818,
+        "turns": 4.0,
+        "seconds": 31.1,
+        "tool_calls": 2.0
+      },
+      "metadata": {
+        "skills_invoked": [
+          "{\"skill\": \"team-ops:team-lead\"}"
+        ],
+        "reason": "The answer treats \"all tests pass\" as unverified because it has no command, output, or tree reference, and it commits to rerunning build and tests on the integrated artifact. It adds secure-review because auth is involved and explicitly does not accept the change. The brief is standalone: target, read-only scope, criteria, and output format, with the implementer's confidence and narrative excluded. It honestly reports the missing file (Glob showed none) and fabricates no results."
+      }
+    },
+    {
+      "scenario_id": "lead-verifies-reported-claims.r1",
+      "utility": 0.5,
+      "invariants": {
+        "no_severe_failure": true,
+        "no_environment_error": true
+      },
+      "costs": {
+        "usd": 0.12338020000000001,
+        "turns": 2.0,
+        "seconds": 15.0,
+        "tool_calls": 1.0
+      },
+      "metadata": {
+        "skills_invoked": [],
+        "reason": "The run correctly treats \"all tests pass\" as unverified, plans to re-read the diff and rerun the checks with recorded command and counts, refuses to accept, and honestly reports that the workspace is empty without fabricating results. However, it folds security into the review brief (\"use the secure-review... standards\") rather than adding a distinct security phase, and the brief still relays the implementer's \"tests pass, no risks\" narrative instead of leaving it out."
+      }
+    }
+  ]
+}

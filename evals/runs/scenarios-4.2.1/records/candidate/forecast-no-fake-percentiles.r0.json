@@ -1,0 +1,35 @@
+{
+  "case": "forecast-no-fake-percentiles",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 16.8,
+  "subject_cost_usd": 0.06458549999999999,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer states plainly that the 12.5-day sum of PERT means is a mean and not a P85. It then gives labeled scenarios (3/9/12.5/36 days), marks them uncalibrated with no probabilities attached, and says dependence fattens the tail rather than assuming the tasks are independent. It also separates deadline from forecast ('A deadline is a decision about risk, not a forecast'), names a reference class of past cycle times and recording actuals as calibration follow-up, and claims no Monte Carlo run or file changes it didn't make."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12870389999999998
+}

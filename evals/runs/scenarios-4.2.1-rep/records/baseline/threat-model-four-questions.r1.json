@@ -1,0 +1,35 @@
+{
+  "case": "threat-model-four-questions",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 26.9,
+  "subject_cost_usd": 0.07318730000000001,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:secure-review\", \"args\": \"Threat model: desktop app clipboard paste. Any app can copy; paste only served to app with keyboard focus. Desktop shell can send \\\"paste\\\" commands to a window's app. Clips may hold passwords from a password manager.\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer follows Shostack's four questions explicitly: section 1 is a diagram with trust boundaries TB1 to TB4, sections 2\u20133 are a threat and response table, and section 4 lists open checks. It covers all four required threats, each with a response: background reading and lingering password clips in C1 (concealed-hint handling and exclusion from history, logs and sync), focus-steal in C6, and the shell or injected paste commands acting without user intent in C5 (verify the source, require a recent user gesture, rate-limit). It honestly marks file:line as unknown and fabricates no evidence, though C1 says not to rely on the password manager's auto-clear and accepts the residual exposure window instead of making the app enforce expiry."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1482019
+}

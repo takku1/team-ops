@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The agent searched beyond the diff with two Glob calls, explicitly marked the review partial, and blocked on both SQL injection and missing authentication based on the supplied snippet. However, it provided no cited line numbers, and the trace does not verify its claim that the directory was not a Git repository or show a working-tree status check."
+}

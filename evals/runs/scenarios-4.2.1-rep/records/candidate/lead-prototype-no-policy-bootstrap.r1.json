@@ -1,0 +1,35 @@
+{
+  "case": "lead-prototype-no-policy-bootstrap",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 20.1,
+  "subject_cost_usd": 0.0650496,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:design-product-workflow\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The plan stays lightweight, with inline build slices handled by one builder and an explicit rejection of a swarm. Slice 1 has a stated done condition and Step 4 defines self-test tasks, though slices 2 and 3 lack their own explicit acceptance lines. It created no files, required no SLOs or policy, and treated the missing deployment history as not needed rather than inventing any or blocking on it."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1260922
+}

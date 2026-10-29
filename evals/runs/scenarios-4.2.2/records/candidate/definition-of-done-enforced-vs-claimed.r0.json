@@ -1,0 +1,35 @@
+{
+  "case": "definition-of-done-enforced-vs-claimed",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 14.5,
+  "subject_cost_usd": 0.0664062,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-definition-of-done\", \"args\": \"Audit the repo's DoD: claimed vs enforced. Claimed: approved review, CI green, no open critical/high dependency findings, docs updated, deployed to staging and smoke-tested. Actual: CI runs build + unit tests only (no lint, no integration tests"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer compares each adopted DoD item against the described CI and settings, flags missing lint, integration tests, dependency scanning and the skipped staging smoke test, and pairs each gap with a concrete remedy such as required checks, a scanner with a waiver process, and automated staging. It explicitly separates PR checkbox attestation from enforcement, refuses to silently drop items by offering 'enforce or rewrite the DoD' as a recorded owner decision, marks unknowns honestly, and fabricates no results."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1262408
+}

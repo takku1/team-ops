@@ -1,0 +1,202 @@
+{
+ "original_sha256": "28a51c33a3a9d71c01406f3009b937bfc3de88d4b2deb4db615fedcd71baaf19",
+ "logic_sha256": "f99bf393e75c7cbfd5bfdcd9cb34cfe1d3669482f4458f762f4b504bd5d549f9",
+ "review": "Manual conversion review (prose v2 -> SkillWren 0.5). Anchors check bookkeeping, not semantic parity.",
+ "requirements": [
+  {
+   "id": "frontmatter",
+   "original_lines": [
+    1,
+    4
+   ],
+   "logic_contains": [
+    "name: secure-supply-chain",
+    "Use when adding a dependency, hardening CI/CD, responding to a CVE",
+    "Not for design-level threat analysis (use secure-threat-model)"
+   ]
+  },
+  {
+   "id": "title",
+   "original_lines": [
+    6,
+    6
+   ],
+   "logic_contains": [
+    "# Supply Chain and Secure Build"
+   ]
+  },
+  {
+   "id": "intake",
+   "original_lines": [
+    8,
+    10
+   ],
+   "logic_contains": [
+    "maintenance activity, license compatibility, OpenSSF Scorecard, transitive footprint, and whether a few lines of code would do instead",
+    "review-dependency:",
+    "verify intake covers maintenance, license, Scorecard, transitive footprint, and a few-lines alternative"
+   ]
+  },
+  {
+   "id": "pin-lock",
+   "original_lines": [
+    11,
+    11
+   ],
+   "logic_contains": [
+    "Container base images pinned by digest"
+   ]
+  },
+  {
+   "id": "updates",
+   "original_lines": [
+    12,
+    12
+   ],
+   "logic_contains": [
+    "grouped minor and patch updates merged weekly when CI is green"
+   ]
+  },
+  {
+   "id": "vuln-sla",
+   "original_lines": [
+    13,
+    13
+   ],
+   "logic_contains": [
+    "Critical 7 days \u00b7 High 30 days \u00b7 Medium 90 days \u00b7 Low best effort",
+    "Exceptions need an owner, an expiry date, and a compensating control"
+   ]
+  },
+  {
+   "id": "license",
+   "original_lines": [
+    14,
+    14
+   ],
+   "logic_contains": [
+    "Copyleft needs legal review"
+   ]
+  },
+  {
+   "id": "secrets",
+   "original_lines": [
+    16,
+    17
+   ],
+   "logic_contains": [
+    "Secret scanning with push protection",
+    "vault or OIDC short-lived credentials"
+   ]
+  },
+  {
+   "id": "ci-tokens",
+   "original_lines": [
+    18,
+    18
+   ],
+   "logic_contains": [
+    "Third-party CI actions are pinned to a commit SHA"
+   ]
+  },
+  {
+   "id": "slsa",
+   "original_lines": [
+    19,
+    19
+   ],
+   "logic_contains": [
+    "SLSA Build L2 as baseline",
+    "Aim for L3 (hardened, isolated builds)"
+   ]
+  },
+  {
+   "id": "signing",
+   "original_lines": [
+    20,
+    20
+   ],
+   "logic_contains": [
+    "verify the signatures at deploy"
+   ]
+  },
+  {
+   "id": "sbom",
+   "original_lines": [
+    21,
+    21
+   ],
+   "logic_contains": [
+    "(SPDX or CycloneDX) per release artifact"
+   ]
+  },
+  {
+   "id": "pr-checks",
+   "original_lines": [
+    22,
+    22
+   ],
+   "logic_contains": [
+    "SAST and dependency scanning are required PR checks"
+   ]
+  },
+  {
+   "id": "ssdf",
+   "original_lines": [
+    24,
+    28
+   ],
+   "logic_contains": [
+    "map each control to its NIST SSDF group",
+    "**PO** Prepare the Organization",
+    "**PS** Protect the Software",
+    "**PW** Produce Well-Secured Software",
+    "**RV** Respond to Vulnerabilities",
+    "`SECURITY.md`"
+   ]
+  },
+  {
+   "id": "inventory",
+   "original_lines": [
+    30,
+    31
+   ],
+   "logic_contains": [
+    "read manifests, lockfiles, CI config, secrets handling, and release artifacts from repository as inventory"
+   ]
+  },
+  {
+   "id": "score-rank",
+   "original_lines": [
+    32,
+    32
+   ],
+   "logic_contains": [
+    "apply policy scoring with inventory as scores",
+    "rank gaps by exploitability and blast radius",
+    "with SLSA level and SSDF group"
+   ]
+  },
+  {
+   "id": "emit",
+   "original_lines": [
+    33,
+    33
+   ],
+   "logic_contains": [
+    "update bots, scanners, branch protection, OIDC, signing, and SBOM steps with remediation owners",
+    "give every remediation an owner"
+   ]
+  },
+  {
+   "id": "sources",
+   "original_lines": [
+    35,
+    36
+   ],
+   "logic_contains": [
+    "See the [research register](../../docs/current/research-evidence.md)"
+   ]
+  }
+ ]
+}

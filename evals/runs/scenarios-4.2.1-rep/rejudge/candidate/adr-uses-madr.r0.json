@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The final answer provides a MADR-shaped record with title, accepted status, context, decision drivers, all four required options, and a justified choice of Postgres SKIP LOCKED. It records concrete downsides including primary database contention, vacuum maintenance, and custom retry handling, and explicitly states that no file was saved, consistent with the artifact listing."
+}

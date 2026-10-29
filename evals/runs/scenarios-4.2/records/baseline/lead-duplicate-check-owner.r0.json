@@ -1,0 +1,35 @@
+{
+  "case": "lead-duplicate-check-owner",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 12.3,
+  "subject_cost_usd": 0.0609698,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-definition-of-done\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer makes the main session the single final-verification owner, has it run the full suite once on a frozen, identified current revision, and shares the log with the reviewer. It explicitly refuses to reuse the previous-revision green. It separates labeled targeted checks by the builder and reviewer from three duplicate full runs, spawns no new supervisor, and does not fabricate any results (the only tool call was a Skill load)."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1297436
+}

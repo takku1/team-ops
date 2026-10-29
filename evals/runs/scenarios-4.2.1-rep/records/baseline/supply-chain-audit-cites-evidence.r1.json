@@ -1,0 +1,35 @@
+{
+  "case": "supply-chain-audit-cites-evidence",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 4,
+  "elapsed_seconds": 26.8,
+  "subject_cost_usd": 0.0758234,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:secure-review\", \"args\": \"Supply chain audit before security review. Facts supplied by user: package.json uses ranges, no lockfile committed; CI has no secret scanning/push protection, keys in repo vars; dependency scanning planned but not configured; Critical CVE in direct depend"
+  ],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer ranks the open Critical CVE first and labels 7 days as a suite default rather than a NIST mandate. It grounds every finding in the user's statements and states that nothing was inspected. It also handles SLSA correctly: no provenance means no evidenced Build L1/L2, and SBOM and signing are separate controls. It names SLSA v1.x Build track, maps SSDF groups, marks planned scanning as absent, and leaves repo-var access semantics unknown instead of assuming exposure. However, it never confirms whether the 7-day SLA was actually adopted; it only notes that no waiver was mentioned. It also gives no remediation owners per finding, only a general 'route to the implementation owner', so the owner-assignment requirement is not met."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1581052
+}

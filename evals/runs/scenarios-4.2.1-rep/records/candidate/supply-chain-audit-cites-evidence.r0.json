@@ -1,0 +1,35 @@
+{
+  "case": "supply-chain-audit-cites-evidence",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 5,
+  "elapsed_seconds": 26.8,
+  "subject_cost_usd": 0.0744663,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:secure-review\", \"args\": \"Supply chain audit verdict before security review. Facts given by user: package.json uses ranges, no lockfile committed; CI has no secret scanning/push protection, keys in repo vars; dependency scanning planned but not configured; Critical CVE in direct d"
+  ],
+  "tool_calls": 3,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer ranks the 30-day Critical CVE first and labels 7 days as a suite default rather than a mandate. It states that everything rests on user-supplied facts with no files inspected, lists unknowns separately from observed absences, and marks planned scanning as unimplemented. It correctly says no provenance means no evidenced SLSA v1.0 Build L1/L2, treats SBOM and signing as separate controls, maps findings to SSDF groups with suggested owners, and leaves repo-var read access as unknown instead of assuming exposure. The one weakness is that it calls the CVE '23 days overdue' without confirming the org actually adopted that SLA."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1451809
+}

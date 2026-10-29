@@ -1,0 +1,38 @@
+{
+  "case": "lead-small-fix-stays-inline",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 7,
+  "elapsed_seconds": 17.2,
+  "subject_cost_usd": 0.0704147,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-implementation-loop\"}"
+  ],
+  "tool_calls": 5,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": {
+    "passed": true,
+    "output": "fixed=True scoped=True cargo_test_exit=0\n"
+  },
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The agent made the single scoped edit in cli/args.rs and ran `cargo test -p cli` via Bash, and the oracle confirms exit 0 with fixed=True and scoped=True. It spawned no subagents, kept the phases inline, and reported honestly that there was no git diff to inspect."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1258613
+}

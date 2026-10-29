@@ -1,0 +1,35 @@
+{
+  "case": "release-low-traffic-side-effects",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 11.8,
+  "subject_cost_usd": 0.059490299999999996,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:ship-release-rollout\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer rejects the ramp because two 200s and a time-based bake prove nothing, and it says so directly. It requires charge correctness checks (reconciliation, duplicates, amount mismatches), event-count gates, staged risk-sensitive exposure, an idempotency key as a blocker, and a kill switch plus a refund/compensation runbook distinct from code rollback, and it explicitly warns that charges are not shadow-safe."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1146647
+}

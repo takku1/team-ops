@@ -1,0 +1,35 @@
+{
+  "case": "holdout-date-from-one-sprint",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 18.1,
+  "subject_cost_usd": 0.06387989999999999,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer says outright that one sprint supports no percentiles. It labels the 4\u20138 sprint scenario table (Dec 24, 2026 to Feb 18, 2027) as uncalibrated assumptions, flags ticket-size variation and backlog growth, and explains that resampling 2\u20133 more sprints of throughput would justify a real 90% figure. It names three risks with trigger signals and sets a re-forecast point after the next sprint, presenting the mid-February date only as a buffered commitment rather than a calibrated 90% forecast."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12310249999999999
+}

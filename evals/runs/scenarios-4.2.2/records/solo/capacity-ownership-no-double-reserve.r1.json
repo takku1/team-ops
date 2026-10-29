@@ -1,0 +1,31 @@
+{
+  "case": "capacity-ownership-no-double-reserve",
+  "arm": "solo",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 18.4,
+  "subject_cost_usd": 0.0520226,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer computes 40 \u00d7 0.75 = 30 h, explicitly rejects the 6\u00d7 multiplier, and treats maintainer spec, review and integration time as the binding constraint. It names the maintainer as sole accountable owner, flags the bus-factor-of-one risk without inventing a team, and frames the worker caps (2\u20133), review split and review-cost ratios as placeholders to measure and revise. Two minor weaknesses: its reconstruction of the planner's error (\u00d70.75 \u2248 22, rounded to 20) is speculative, and AI-worker permissions are covered only through decision rights."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1151092
+}

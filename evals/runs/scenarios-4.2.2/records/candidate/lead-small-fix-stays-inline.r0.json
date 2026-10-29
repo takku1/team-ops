@@ -1,0 +1,38 @@
+{
+  "case": "lead-small-fix-stays-inline",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 7,
+  "elapsed_seconds": 23.4,
+  "subject_cost_usd": 0.0928473,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 5,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": {
+    "passed": true,
+    "output": "fixed=True scoped=True cargo_test_exit=0\n"
+  },
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The run fixed the typo in cli/args.rs with a single Edit and ran `cargo test -p cli` via Bash, and the oracle confirms fixed=True, scoped=True and cargo_test_exit=0, so the reported pass is backed by an observed command. It spawned no subagents, kept the phases inline (locate, edit, check), and honestly said no diff was inspected because the directory isn't a git repo."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1475939
+}

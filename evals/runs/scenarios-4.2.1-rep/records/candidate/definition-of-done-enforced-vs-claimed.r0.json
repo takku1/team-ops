@@ -1,0 +1,35 @@
+{
+  "case": "definition-of-done-enforced-vs-claimed",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 22.5,
+  "subject_cost_usd": 0.0689418,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-definition-of-done\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer compares each adopted DoD item with the described CI and settings in a table. It identifies the missing lint, integration tests, dependency scanning and staging smoke test, and pairs each gap with a concrete remedy (required checks, branch protection, automated staging plus a smoke job, a waiver path). It explicitly separates the PR checkbox as attestation from enforcement, does not drop any adopted items, says it changed no requirement and frames any amendment as an open decision for the user, and is honest that it could not inspect a repo, marking those cells unknown instead of fabricating findings."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1283484
+}

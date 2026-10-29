@@ -1,0 +1,35 @@
+{
+  "case": "test-strategy-pyramid-and-flaky",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 22.3,
+  "subject_cost_usd": 0.07024810000000001,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:build-test-strategy\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer ranks the escaped billing defects and the missing payment contract tests first, explicitly rejects a 70/20/10 ratio, and pairs consumer-driven contracts with billing integration semantics (declines, timeouts, idempotency, duplicate webhooks). It removes the global 100% gate in favor of changed-line coverage used as a diagnostic, and gives each flaky test an owner slot, a triage and fix-by deadline, visible retries, and quarantine only with compensating coverage, refusing to quarantine or delete a sole critical check."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1394227
+}

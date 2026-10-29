@@ -1,0 +1,9 @@
+{
+  "skills": [
+    "build-definition-of-done"
+  ],
+  "kind": "behavioral-scenario",
+  "status": "not-run",
+  "split": "dev",
+  "note": "Held out in scenarios-4.2.1-rep; reclassified to dev after tuning on its recorded gap."
+}

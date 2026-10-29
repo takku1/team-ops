@@ -1,0 +1,31 @@
+{
+  "case": "lead-repair-history-survives-worker",
+  "arm": "solo",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 2,
+  "elapsed_seconds": 18.2,
+  "subject_cost_usd": 0.0472967,
+  "skills_invoked": [],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer explicitly rejects renaming to NEW-1 and keeps the I-12 ID logged as attempt 3. It also requires that any implementer, fresh or not, be briefed with the verbatim check, the failure output, and both failed approaches marked do-not-repeat. It chooses a bounded diagnosis-first attempt capped at one fix and one check run, with an escalation stop on no new evidence. It invents no extra budget and honestly notes the empty workspace rather than fabricating records."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1031193
+}

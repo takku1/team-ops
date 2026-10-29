@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The review requests changes, explains that dropping legacy_email breaks old replicas during a rolling update, and requires code removal to finish deploying before a later schema drop rather than relying on passing tests. However, it omits the required severity label identifying the ordering issue as blocking, and its claim that the directory is not a git repo is unverified by the shown Glob and Grep calls."
+}

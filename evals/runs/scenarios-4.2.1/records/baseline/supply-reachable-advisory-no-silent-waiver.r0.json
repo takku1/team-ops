@@ -1,0 +1,33 @@
+{
+  "case": "supply-reachable-advisory-no-silent-waiver",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 15.0,
+  "subject_cost_usd": 0.059675599999999995,
+  "skills_invoked": [],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The agent inspected the workspace, reported honestly that it was empty with no fabricated edits, and refused to add an ignore. It cited the deny.toml reachability rule and presented the 0.14 migration path, including TLS backend impact, plus a time-boxed waiver with owner, expiry and tracking issue as the owner's decision. However, it never explicitly established that `cargo update` cannot fix the advisory, it did not describe the exposure (ephemeral ECDHE keys versus a network timing attacker), and its exception option omits a compensating control."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12218559999999999
+}

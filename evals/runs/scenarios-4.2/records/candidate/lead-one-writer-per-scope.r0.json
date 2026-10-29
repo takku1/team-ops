@@ -1,0 +1,35 @@
+{
+  "case": "lead-one-writer-per-scope",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 16.5,
+  "subject_cost_usd": 0.06365029999999999,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The plan sees that both tasks write `abi/registry.rs` and gives that file to a single registry owner (R1). It regenerates `docs/wire/` once from the integrated registry with no hand edits (D1), and gives every task an owner, a write scope and a deciding check. Integration is a combined build-and-test run (I1) by one designated owner, not separate green worktrees, though the plan does not explicitly say the lead receives that evidence, and Worker B's 'direct references' scope could overlap the registry."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12722429999999998
+}

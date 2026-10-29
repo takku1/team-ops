@@ -1,0 +1,33 @@
+{
+  "case": "holdout-four-agents-one-render-file",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 5,
+  "elapsed_seconds": 12.1,
+  "subject_cost_usd": 0.061019199999999996,
+  "skills_invoked": [],
+  "tool_calls": 4,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The agent honestly reported the empty workspace without fabricating edits, flagged that several agents editing `src/render.rs` would overwrite each other, kept a test owner, and did not refuse the user's authorization. However, it still proposed three parallel implementation agents split by file, which requires agreeing on an interface first. It never recognized that the change is small and coupled enough for one implementation owner plus at most a reviewer, and it left open adding a fourth agent."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1192418
+}

@@ -1,0 +1,35 @@
+{
+  "case": "holdout2-tool-gain-no-baseline",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 11.1,
+  "subject_cost_usd": 0.057764600000000006,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:ai-evaluation\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer opens by saying 34/40 alone can't establish benefit without a baseline. It asks for a paired no-tool run of the same 40 tasks under matched settings and gives a ~70\u201394% interval. It also covers cost per accepted task counting failed runs, trace inspection for tool usage, and a held-out set not used for tuning. The tuning check is framed as a recommendation rather than an explicit question about whether these 40 tasks were used for tuning, but that is a minor gap and nothing was fabricated."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1143072
+}

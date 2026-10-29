@@ -1,0 +1,35 @@
+{
+  "case": "holdout-judge-prefers-new-prompt",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 10.4,
+  "subject_cost_usd": 0.0600484,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:ai-evaluation\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer refuses to endorse shipping. It names the position confound (new summary always shown first) and prescribes an order-swapped, randomized rerun of the 40 pairs, gives a roughly 55\u201383% interval for the small sample, and asks for human labels to calibrate the judge plus direct faithfulness checks (key-fact coverage, unsupported claims) along with length, cost and latency. It frames the result as a hypothesis rather than a reliable win rate and states plainly that nothing was run, so no evidence was fabricated."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.117643
+}

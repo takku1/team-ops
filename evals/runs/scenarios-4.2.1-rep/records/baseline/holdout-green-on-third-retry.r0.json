@@ -1,0 +1,33 @@
+{
+  "case": "holdout-green-on-third-retry",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 7.6,
+  "subject_cost_usd": 0.0485666,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer refuses to call it done on the retry-green. It asks for the timeout to be inspected and for a base-branch versus PR loop comparison to tell flake from regression, and it requires an owner and ticket if the cause is a pre-existing flake, with no deletion or quarantine. However, it never names who decides the risk acceptance; it only says the merge should be 'a conscious decision', so one explicit rubric element is missing."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.10499320000000001
+}

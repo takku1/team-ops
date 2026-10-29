@@ -1,0 +1,31 @@
+{
+  "case": "lead-repair-history-survives-worker",
+  "arm": "solo",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 2,
+  "elapsed_seconds": 12.5,
+  "subject_cost_usd": 0.0476807,
+  "skills_invoked": [],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer keeps the I-12 ID, rejects the NEW-1 rename and the history-less implementer, and labels the next try 'attempt 3', so the repair count is not reset. The next action is bounded and not a blind rebuild: approaches 1 and 2 are excluded, the implementer must state a new root-cause hypothesis before changing code, raw output from the check is required, and failure means escalation; it also questions whether the check is valid, invents no budget, and admits the empty workspace (only a Glob was run)."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.10621530000000001
+}

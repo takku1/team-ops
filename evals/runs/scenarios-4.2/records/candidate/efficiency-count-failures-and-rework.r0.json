@@ -1,0 +1,35 @@
+{
+  "case": "efficiency-count-failures-and-rework",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 11.2,
+  "subject_cost_usd": 0.0617655,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:ai-evaluation\", \"args\": \"Compare A ($10, 5/10 accepted, 20 min repair per reject) vs B ($18, 9/10 accepted, 5 min repair per reject) on 10 matched tasks; no hourly rate or severe-risk data.\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer computes $2.00 per accepted task for both setups from total costs, reports 100 vs 5 repair minutes, and separates generation latency from end-to-end time including repair. It gives a break-even rate (~$5/hour) instead of assuming a labor rate, and it qualifies the B recommendation with sample-size, severe-failure, and acceptance-criteria caveats plus a staged rollout, though leading with 'deploy B' and calling any real rate plausible slightly overstates certainty."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1260235
+}

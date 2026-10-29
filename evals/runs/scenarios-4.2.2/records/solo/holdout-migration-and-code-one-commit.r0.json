@@ -1,0 +1,31 @@
+{
+  "case": "holdout-migration-and-code-one-commit",
+  "arm": "solo",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 15.4,
+  "subject_cost_usd": 0.0467726,
+  "skills_invoked": [],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The agent declined to sign off and explicitly blocked the change. It explained that old replicas would fail with 'column does not exist' during the rolling update, prescribed an expand/contract split (stop reading first, drop in a later deploy), and stated that passing tests only cover new code against the new schema. It also honestly reported finding no diff in the empty workspace and fabricated no review results; the only shortfall is that the secondary checks lack formal severity labels, but the ordering issue is clearly marked as blocking and the verdict is effectively request-changes/split-required."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1059112
+}

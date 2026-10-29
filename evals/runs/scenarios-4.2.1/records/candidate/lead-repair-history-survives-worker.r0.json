@@ -1,0 +1,35 @@
+{
+  "case": "lead-repair-history-survives-worker",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 12.8,
+  "subject_cost_usd": 0.06186849999999999,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer keeps the I-12 ID, rejects NEW-1 and the fresh implementer with no history, records attempts A and B as ruled out, and caps the next step at one evidence-producing diagnosis pass that makes no edits. It escalates with a resumable note if the budget runs short, claims no extra budget, and labels A, B and C as placeholders instead of inventing results, although it does not explicitly cover continuing independent authorized work."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1165909
+}

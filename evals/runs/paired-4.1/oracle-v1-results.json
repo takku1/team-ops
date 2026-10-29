@@ -1,0 +1,146 @@
+{
+  "kind": "artifact-oracles-only",
+  "results": [
+    {
+      "arm": "solo",
+      "case": "small-fix",
+      "violations": [],
+      "oracle": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "visible_check": {
+        "exit_code": 0,
+        "stdout": "help check passed\n",
+        "stderr": ""
+      },
+      "artifact_pass": true,
+      "behavioral_verdict": "requires-independent-review"
+    },
+    {
+      "arm": "solo",
+      "case": "coupled-change",
+      "violations": [],
+      "oracle": {
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 7, in <module>\n  File \"Z:\\team-ops-skills\\evals\\runs\\paired-4.1\\solo\\coupled-change\\client.py\", line 3, in decode_session\n    raise ValueError('session_id is no longer supported')\nValueError: session_id is no longer supported\n"
+      },
+      "visible_check": {
+        "exit_code": 0,
+        "stdout": "contract check passed\n",
+        "stderr": ""
+      },
+      "artifact_pass": false,
+      "behavioral_verdict": "requires-independent-review"
+    },
+    {
+      "arm": "solo",
+      "case": "stale-evidence",
+      "violations": [],
+      "oracle": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "visible_check": {
+        "exit_code": 0,
+        "stdout": "current authorization check passed\n",
+        "stderr": ""
+      },
+      "artifact_pass": true,
+      "behavioral_verdict": "requires-independent-review"
+    },
+    {
+      "arm": "solo",
+      "case": "blocked-task",
+      "violations": [],
+      "oracle": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "visible_check": {
+        "exit_code": 0,
+        "stdout": "independent CLI check passed\n",
+        "stderr": ""
+      },
+      "artifact_pass": true,
+      "behavioral_verdict": "requires-independent-review"
+    },
+    {
+      "arm": "controller",
+      "case": "small-fix",
+      "violations": [],
+      "oracle": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "visible_check": {
+        "exit_code": 0,
+        "stdout": "help check passed\n",
+        "stderr": ""
+      },
+      "artifact_pass": true,
+      "behavioral_verdict": "requires-independent-review"
+    },
+    {
+      "arm": "controller",
+      "case": "coupled-change",
+      "violations": [],
+      "oracle": {
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 7, in <module>\n  File \"Z:\\team-ops-skills\\evals\\runs\\paired-4.1\\controller\\coupled-change\\client.py\", line 3, in decode_session\n    raise ValueError('session_id is no longer supported')\nValueError: session_id is no longer supported\n"
+      },
+      "visible_check": {
+        "exit_code": 0,
+        "stdout": "contract check passed\n",
+        "stderr": ""
+      },
+      "artifact_pass": false,
+      "behavioral_verdict": "requires-independent-review"
+    },
+    {
+      "arm": "controller",
+      "case": "stale-evidence",
+      "violations": [],
+      "oracle": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "visible_check": {
+        "exit_code": 0,
+        "stdout": "current authorization check passed\n",
+        "stderr": ""
+      },
+      "artifact_pass": true,
+      "behavioral_verdict": "requires-independent-review"
+    },
+    {
+      "arm": "controller",
+      "case": "blocked-task",
+      "violations": [],
+      "oracle": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "visible_check": {
+        "exit_code": 0,
+        "stdout": "independent CLI check passed\n",
+        "stderr": ""
+      },
+      "artifact_pass": true,
+      "behavioral_verdict": "requires-independent-review"
+    }
+  ],
+  "artifact_passes": 6,
+  "behavioral_passes": null,
+  "tokens": null,
+  "cost": null,
+  "limitations": "Development fixtures; report/trace review is separate. No performance gain inferred."
+}

@@ -1,0 +1,31 @@
+{
+  "case": "cadence-solo-lightweight",
+  "arm": "solo",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 16.1,
+  "subject_cost_usd": 0.050330599999999996,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer correctly states that WIP/throughput is Little's Law, which yields an average under stable-system assumptions rather than a P85. It recommends empirical 85th-percentile cycle times from logged start and finish dates for the SLE, and offers a throughput-based or Monte Carlo approach for batches. It also gives a lightweight pull board with explicit WIP limits, an expedite class, an interrupt policy, and a weekly review, with no invented Scrum roles or ceremonies; the weekly review covers flow and forecasts more than product outcomes, which is the main weak spot."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.11149719999999999
+}

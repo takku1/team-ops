@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The plan assigns the lead one final full-suite run on frozen current inputs, rejects previous-revision green, and separates targeted builder checks and independent review from duplicate full runs. However, it asserts without evidence that the checkout is not a Git repository and does not explicitly provide the reviewer with the current run\u2019s trustworthy results."
+}

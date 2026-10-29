@@ -1,0 +1,17 @@
+{
+  "name": "team-ops-delivery",
+  "version": "4.2.2",
+  "description": "Optional companion to team-ops for repos that ship and operate services: test strategy, trunk and CI policy, release rollout, SLOs and error budgets, incidents, and forecasting.",
+  "author": {
+    "name": "Dillon Carney",
+    "email": "dillon.c.carney@gmail.com"
+  },
+  "keywords": [
+    "release",
+    "slo",
+    "incident",
+    "ci",
+    "testing",
+    "forecasting"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "case": "definition-of-done-enforced-vs-claimed",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 15.3,
+  "subject_cost_usd": 0.0655698,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-definition-of-done\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer compares each adopted DoD item against the described CI, scanning, PR template, and staging practice in a written/configured/enforced/observed table. It flags missing lint, integration, dependency-scanning, and staging/smoke checks with concrete paired remedies, explicitly separates checkbox attestation from CI enforcement and required branch protection, and keeps the requirements as written ('Don't keep claiming them') while allowing temporary narrowing only via an explicit team decision. It honestly marks unverifiable settings as unknown and claims no fabricated results."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1258164
+}

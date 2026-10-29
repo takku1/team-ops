@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The response blocks the ramp, rejects HTTP 200 and elapsed time as safety evidence, and requires charge correctness, reconciliation, idempotency, event-count gates, exposure caps, and compensation distinct from rollback. However, it proposes a kill switch and refund procedure without requiring tested containment or recovery, leaving a key external-effects safety gate incomplete."
+}

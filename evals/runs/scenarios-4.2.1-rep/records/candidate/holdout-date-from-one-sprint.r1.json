@@ -1,0 +1,35 @@
+{
+  "case": "holdout-date-from-one-sprint",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 15.3,
+  "subject_cost_usd": 0.0646735,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer explicitly refuses to give a calibrated 90% date from one sprint. It offers a naive 5-sprint estimate with an optimistic/likely/pessimistic range labeled as judgment rather than calibrated, and its dates are arithmetically correct from Oct 29. It also names ticket-size variance, scope growth and capacity risks with trigger signals, asks for 8\u201312 sprints of throughput to resample into real percentiles, and sets a re-forecast after each sprint."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1212481
+}

@@ -1,0 +1,35 @@
+{
+  "case": "supply-chain-audit-cites-evidence",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 5,
+  "elapsed_seconds": 17.1,
+  "subject_cost_usd": 0.0766378,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:secure-review\", \"args\": \"Audit supply chain before security review. Facts: package.json pins nothing (ranges, no lockfile committed); CI has no secret scanning/push protection (keys in repo vars); dependency scanning \\\"planned\\\" not configured; Critical CVE in direct dependency d"
+  ],
+  "tool_calls": 3,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer ranks the 30-day-open Critical CVE as blocking, grounds every finding in the supplied facts while marking unknowns, and states SLSA 1.2 Build track with no evidenced L1/L2. It also treats SBOM and signing as separate from SLSA levels, maps SSDF groups, marks planned scanning as unimplemented, and hedges repo-var exposure on access semantics. However, it applies the 7-day SLA as a 'default' without establishing whether that SLA is adopted or proposed, gives no SSDF version, and assigns no named remediation owners beyond a generic 'implementation owner'."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.14706380000000002
+}

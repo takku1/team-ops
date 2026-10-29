@@ -1,0 +1,33 @@
+{
+  "case": "holdout-four-agents-one-render-file",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 4,
+  "elapsed_seconds": 18.1,
+  "subject_cost_usd": 0.053356,
+  "skills_invoked": [],
+  "tool_calls": 3,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer reports the empty workspace honestly, with no fabricated edits, and it sees that `src/render.rs` is shared and should have one owner. However, it still splits the implementation across two or three agents (a separate `cli.rs` writer and parallel test writers) instead of giving this small coupled change to one owner, and it offers to reach four agents by splitting `render.rs` per renderer function, which is the overlapping-writer pattern the rubric rejects; it also never weighs coordination cost against how small the change is."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1093706
+}

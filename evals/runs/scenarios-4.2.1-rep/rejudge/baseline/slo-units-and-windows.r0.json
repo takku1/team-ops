@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "Computes 2,000 allowed bad requests and 800 remaining, rejects an unconditional minutes conversion, and correctly calculates 2% for 30 days, 8.57% for 7 days, and 3.36\u00d7 for a 2% hourly burn on a 7-day SLO. Explains paired 1-hour/5-minute alert windows and minimum event counts for low traffic, with no fabricated execution claims."
+}

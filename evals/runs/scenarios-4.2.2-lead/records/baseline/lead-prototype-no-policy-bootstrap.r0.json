@@ -1,0 +1,33 @@
+{
+  "case": "lead-prototype-no-policy-bootstrap",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 2,
+  "elapsed_seconds": 12.2,
+  "subject_cost_usd": 0.05732810000000001,
+  "skills_invoked": [],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The plan uses lightweight, inline slices, and each slice has an explicit acceptance check (e.g., 'Done when unit tests for the store pass', build passes). It explicitly rules out a swarm or multi-agent team, creates no files, and requires no SLOs or deployment policy. It does not invent deployment history and only plans STATUS.md as a later wrap-up step, which follows the user's documented convention rather than being an unrequested policy file."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.11301810000000001
+}

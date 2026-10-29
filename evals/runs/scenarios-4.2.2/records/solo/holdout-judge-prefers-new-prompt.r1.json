@@ -1,0 +1,31 @@
+{
+  "case": "holdout-judge-prefers-new-prompt",
+  "arm": "solo",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 10.4,
+  "subject_cost_usd": 0.0453666,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer declines to ship on this evidence. It names position bias and proposes rerunning with swapped or randomized order, and it quantifies the small-sample uncertainty correctly (28/40, p\u22480.02, CI about 55\u201383%) rather than treating 71% as a reliable win rate. It also calls for a blind human spot-check of 15\u201320 pairs, a faithfulness review for factual errors and omissions, and a length confound check, then gives a clear decision rule. The staged-rollout suggestion is explicitly conditional on low risk and comes with the caveat that the gain is not yet validated."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1034172
+}

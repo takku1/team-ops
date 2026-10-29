@@ -1,0 +1,35 @@
+{
+  "case": "supply-provenance-not-sbom",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 5,
+  "elapsed_seconds": 12.9,
+  "subject_cost_usd": 0.063891,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:secure-review\"}"
+  ],
+  "tool_calls": 3,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer declines to certify Build L2, names SLSA v1.x Build track, states that no level is evidenced, and marks the hosted-builder and key-separation questions as unknown. It also treats library compatibility ranges as acceptable when CI uses a frozen committed lockfile, maps gaps to SSDF groups without claiming NIST mandates any SLA, and says plainly that no files were inspected."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1226334
+}

@@ -1,0 +1,35 @@
+{
+  "case": "definition-of-done-enforced-vs-claimed",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 16.4,
+  "subject_cost_usd": 0.0674469,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-definition-of-done\", \"args\": \"Audit what the repo's Definition of Done actually enforces vs claims. DoD: approved review, CI green, no open critical/high dependency findings, docs updated, deployed to staging and smoke-tested. Reality: CI runs build + unit tests only (no li"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer compares each adopted DoD item with the actual CI and process, names the missing lint, integration tests, and dependency scanning, flags the skipped staging deploy, and pairs every gap with a concrete remedy. It states that a PR checkbox is only attestation, separates written, configured, enforced, and observed, keeps all adopted items, and asks for an explicit visible decision to enforce or revise; it does not fabricate evidence and marks unknowns honestly."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1275609
+}

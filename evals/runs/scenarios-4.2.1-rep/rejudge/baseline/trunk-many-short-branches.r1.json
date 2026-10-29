@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "Rejects the arbitrary three-branch cap, evaluates branch age, merge delay, CI and integration failures, and recommends preserving required checks and main protection without forcing a branching migration. It does not assess release obligations, and its claim that the workspace is not a Git repository is unsupported by the shown trace."
+}

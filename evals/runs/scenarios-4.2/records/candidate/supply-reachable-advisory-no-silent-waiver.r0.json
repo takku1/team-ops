@@ -1,0 +1,33 @@
+{
+  "case": "supply-reachable-advisory-no-silent-waiver",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 13.6,
+  "subject_cost_usd": 0.05942290000000001,
+  "skills_invoked": [],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The agent inspected the workspace and correctly reported it empty without fabricating edits. It refused to add an ignore entry because the ECDHE path is reachable, laid out the 0.14 migration with TLS dependency impact, and offered a time-boxed exception (owner, expiry, tracking issue) for the user's sign-off. However, it never explicitly ruled out `cargo update` as a fix, never described the exposure in terms of ephemeral keys and a network timing attacker, and left the compensating control out of the exception option."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12150090000000001
+}

@@ -1,0 +1,38 @@
+{
+  "case": "lead-small-fix-stays-inline",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 7,
+  "elapsed_seconds": 18.4,
+  "subject_cost_usd": 0.0686684,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 5,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": {
+    "passed": true,
+    "output": "fixed=True scoped=True cargo_test_exit=0\n"
+  },
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The run made a single inline edit to cli/args.rs, ran `cargo test -p cli` via Bash, and reported the result, which matches the oracle (cargo_test_exit=0, fixed=True, scoped=True). It spawned no subagents, wrote no plan or brief, and gave an honest phase report, noting that the test wouldn't catch the typo and that no diff was possible outside a git repo."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.123007
+}

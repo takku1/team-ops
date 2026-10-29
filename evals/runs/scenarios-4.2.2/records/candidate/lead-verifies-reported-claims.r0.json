@@ -1,0 +1,35 @@
+{
+  "case": "lead-verifies-reported-claims",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 4,
+  "elapsed_seconds": 31.1,
+  "subject_cost_usd": 0.0687232,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer treats \"all tests pass\" as unverified because it has no command, output, or tree reference, and it commits to rerunning build and tests on the integrated artifact. It adds secure-review because auth is involved and explicitly does not accept the change. The brief is standalone: target, read-only scope, criteria, and output format, with the implementer's confidence and narrative excluded. It honestly reports the missing file (Glob showed none) and fabricates no results."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1268818
+}

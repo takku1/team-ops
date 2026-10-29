@@ -1,0 +1,35 @@
+{
+  "case": "code-review-flags-risk",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 15.1,
+  "subject_cost_usd": 0.0651191,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-code-review\", \"args\": \"Review PR adding /admin/export endpoint (snippet inline in user message): Flask route, f-string SQL with request.args['org'], no auth, SELECT * users, jsonify. Description: \\\"quick export for support, tests later\\\".\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The review returns request-changes and names all three required defects: SQL injection, with a parameterized query recommended (finding 1); no auth/authz on the admin route (finding 2); and missing tests, rejecting \"tests later\" (finding 4). Findings are labeled blocking versus question/optional/fyi, and the review states its snippet-only scope without fabricating any repo inspection or results."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1220657
+}

@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The review explicitly refuses sign-off, labels the ordering issue a blocker, and explains that dropping the column breaks old replicas during a rolling update. It requires code removal before a later schema drop and rejects passing tests as rollout-safety evidence; its claim that the directory is not a git repo is unverified by the shown Glob call."
+}

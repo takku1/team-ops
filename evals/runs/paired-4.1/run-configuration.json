@@ -1,0 +1,45 @@
+{
+  "kind": "matched-development-comparison",
+  "distinct_tasks": 4,
+  "arms": [
+    "solo",
+    "inline-controller"
+  ],
+  "model": "same inherited parent default for both actors; exact identifier unavailable",
+  "tools": "same host tool surface; candidate may read snapshotted skill package",
+  "worker_tools": "prohibited for both arms in this development run; dispatch policy not tested",
+  "instruction_limits": {
+    "max_tool_calls": 24,
+    "max_minutes": 8
+  },
+  "externally_enforced_limits": null,
+  "token_limit": null,
+  "measured_tokens": null,
+  "measured_cost": null,
+  "scheduling": "two independent cold-context actors ran concurrently on one shared machine",
+  "task_order": [
+    "small-fix",
+    "coupled-change",
+    "stale-evidence",
+    "blocked-task"
+  ],
+  "actor_reported_batch_windows_seconds": {
+    "solo": 35.8638401,
+    "controller": 53.829653
+  },
+  "timing_scope": "Actor-reported execution windows; exclude some setup/reporting, not controlled end-to-end latency.",
+  "quality_result": "Both arms pass all four task outcomes in independent review.",
+  "decision": "Retain small-work inline defaults. No evidence here for extra workers or a quality/cost advantage.",
+  "grader_corrections": [
+    "Initial oracle incorrectly mandated KeyError where task only required rejection; ValueError is valid. Original results retained in oracle-v1-results.json.",
+    "Independent review found missing extra-file/TASK scope inventory and mixed-payload rejection; evaluator fixed and regression tests added."
+  ],
+  "limitations": [
+    "Development fixtures, not held-out real tasks.",
+    "All actor changes isolated from MochiOS.",
+    "Full 38-scenario corpus not run.",
+    "No quality superiority, speedup, or token/cost savings inferred.",
+    "Artifact/source/report review cannot authenticate complete actor-time command chronology or prohibited reads.",
+    "Candidate uses frozen package hashes recorded at preparation; subsequent documentation changes are outside the evaluated snapshot."
+  ]
+}

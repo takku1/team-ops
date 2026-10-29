@@ -1,0 +1,35 @@
+{
+  "case": "threat-model-four-questions",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 21.4,
+  "subject_cost_usd": 0.0665382,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:secure-review\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer is organized under Shostack's four questions (sections 1, 2\u20133, and 4) and models the system with a diagram and four explicit trust boundaries (TB1\u2013TB4). It covers every required threat with a mitigation and claims no unverified code inspection: background read and snooping plus lingering password clips with auto-clear and history/sync exclusion (T1), focus-steal (T6), and the shell paste command as an unauthenticated deputy (T4)."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1318968
+}

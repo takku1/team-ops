@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The answer uses all four Shostack questions, diagrams trust boundaries, and proposes mitigations for shell-triggered paste abuse and lingering secrets. However, it omits focus spoofing or focus stealing, addresses background snooping only indirectly, and provides no clear expiry or exclusion enforcement for password-manager clips."
+}

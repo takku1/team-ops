@@ -1,0 +1,33 @@
+{
+  "case": "failure-log-from-stuck-run",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 13.9,
+  "subject_cost_usd": 0.0549726,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The write-up is blameless and covers the system factors: it accepted an unverified discriminator, had no falsification or investigation step, and had no stop rule after rounds that produced no new evidence; its actions include an evidence-status field for briefs and a retry budget for leads. However, no action says how to tell whether it worked, it records no cost or impact beyond a passing mention of three rounds, and it never says where the entry is kept or that the next run reads it, all of which the rubric requires."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1133552
+}

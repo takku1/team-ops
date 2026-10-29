@@ -1,0 +1,167 @@
+﻿{
+    "valid":  true,
+    "source_path":  "Z:\\team-ops-skills\\plugins\\team-ops-delivery",
+    "plugin":  {
+                   "id":  "team-ops-delivery",
+                   "display_name":  null,
+                   "version":  "4.0.0",
+                   "description":  "Optional companion to team-ops for repos that ship and operate services: test strategy, trunk and CI policy, release rollout, SLOs and error budgets, incidents, and forecasting.",
+                   "manifest_family":  "claude-compatible",
+                   "capabilities":  {
+                                        "skills":  [
+                                                       {
+                                                           "id":  "build-test-strategy",
+                                                           "path":  "skills/build-test-strategy/SKILL.md",
+                                                           "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops-delivery\\skills\\build-test-strategy\\SKILL.md",
+                                                           "enabled_default":  null
+                                                       },
+                                                       {
+                                                           "id":  "build-trunk-integration",
+                                                           "path":  "skills/build-trunk-integration/SKILL.md",
+                                                           "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops-delivery\\skills\\build-trunk-integration\\SKILL.md",
+                                                           "enabled_default":  null
+                                                       },
+                                                       {
+                                                           "id":  "plan-forecast-recovery",
+                                                           "path":  "skills/plan-forecast-recovery/SKILL.md",
+                                                           "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops-delivery\\skills\\plan-forecast-recovery\\SKILL.md",
+                                                           "enabled_default":  null
+                                                       },
+                                                       {
+                                                           "id":  "run-incident-postmortem",
+                                                           "path":  "skills/run-incident-postmortem/SKILL.md",
+                                                           "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops-delivery\\skills\\run-incident-postmortem\\SKILL.md",
+                                                           "enabled_default":  null
+                                                       },
+                                                       {
+                                                           "id":  "run-slo-error-budget",
+                                                           "path":  "skills/run-slo-error-budget/SKILL.md",
+                                                           "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops-delivery\\skills\\run-slo-error-budget\\SKILL.md",
+                                                           "enabled_default":  null
+                                                       },
+                                                       {
+                                                           "id":  "ship-release-rollout",
+                                                           "path":  "skills/ship-release-rollout/SKILL.md",
+                                                           "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops-delivery\\skills\\ship-release-rollout\\SKILL.md",
+                                                           "enabled_default":  null
+                                                       }
+                                                   ],
+                                        "hooks":  [
+
+                                                  ],
+                                        "mcp_servers":  [
+
+                                                        ],
+                                        "commands":  [
+
+                                                     ],
+                                        "reminders":  [
+
+                                                      ],
+                                        "session_providers":  [
+
+                                                              ]
+                                    },
+                   "compatibility":  {
+                                         "summary":  "full",
+                                         "declarations":  [
+                                                              {
+                                                                  "id":  "skill:build-test-strategy",
+                                                                  "kind":  "skill",
+                                                                  "classification":  "supported"
+                                                              },
+                                                              {
+                                                                  "id":  "skill:build-trunk-integration",
+                                                                  "kind":  "skill",
+                                                                  "classification":  "supported"
+                                                              },
+                                                              {
+                                                                  "id":  "skill:plan-forecast-recovery",
+                                                                  "kind":  "skill",
+                                                                  "classification":  "supported"
+                                                              },
+                                                              {
+                                                                  "id":  "skill:run-incident-postmortem",
+                                                                  "kind":  "skill",
+                                                                  "classification":  "supported"
+                                                              },
+                                                              {
+                                                                  "id":  "skill:run-slo-error-budget",
+                                                                  "kind":  "skill",
+                                                                  "classification":  "supported"
+                                                              },
+                                                              {
+                                                                  "id":  "skill:ship-release-rollout",
+                                                                  "kind":  "skill",
+                                                                  "classification":  "supported"
+                                                              }
+                                                          ]
+                                     }
+               },
+    "capabilities":  {
+                         "skills":  [
+                                        {
+                                            "id":  "build-test-strategy",
+                                            "path":  "skills/build-test-strategy/SKILL.md",
+                                            "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops-delivery\\skills\\build-test-strategy\\SKILL.md",
+                                            "enabled_default":  null
+                                        },
+                                        {
+                                            "id":  "build-trunk-integration",
+                                            "path":  "skills/build-trunk-integration/SKILL.md",
+                                            "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops-delivery\\skills\\build-trunk-integration\\SKILL.md",
+                                            "enabled_default":  null
+                                        },
+                                        {
+                                            "id":  "plan-forecast-recovery",
+                                            "path":  "skills/plan-forecast-recovery/SKILL.md",
+                                            "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops-delivery\\skills\\plan-forecast-recovery\\SKILL.md",
+                                            "enabled_default":  null
+                                        },
+                                        {
+                                            "id":  "run-incident-postmortem",
+                                            "path":  "skills/run-incident-postmortem/SKILL.md",
+                                            "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops-delivery\\skills\\run-incident-postmortem\\SKILL.md",
+                                            "enabled_default":  null
+                                        },
+                                        {
+                                            "id":  "run-slo-error-budget",
+                                            "path":  "skills/run-slo-error-budget/SKILL.md",
+                                            "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops-delivery\\skills\\run-slo-error-budget\\SKILL.md",
+                                            "enabled_default":  null
+                                        },
+                                        {
+                                            "id":  "ship-release-rollout",
+                                            "path":  "skills/ship-release-rollout/SKILL.md",
+                                            "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops-delivery\\skills\\ship-release-rollout\\SKILL.md",
+                                            "enabled_default":  null
+                                        }
+                                    ],
+                         "hooks":  [
+
+                                   ],
+                         "mcp_servers":  [
+
+                                         ],
+                         "commands":  [
+
+                                      ],
+                         "reminders":  [
+
+                                       ]
+                     },
+    "diagnostics":  [
+                        {
+                            "code":  "unsupported-field",
+                            "severity":  "warning",
+                            "message":  "Claude manifest field `author` is presentation-only and is not imported",
+                            "path":  "Z:\\team-ops-skills\\plugins\\team-ops-delivery\\.claude-plugin\\plugin.json"
+                        },
+                        {
+                            "code":  "unsupported-field",
+                            "severity":  "warning",
+                            "message":  "Claude manifest field `keywords` is presentation-only and is not imported",
+                            "path":  "Z:\\team-ops-skills\\plugins\\team-ops-delivery\\.claude-plugin\\plugin.json"
+                        }
+                    ]
+}

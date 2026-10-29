@@ -1,0 +1,55 @@
+{
+  "case": "small-fix",
+  "started_at": "2026-10-28T02:34:50.6976743-04:00",
+  "ended_at": "2026-10-28T02:35:44.527327-04:00",
+  "ownership": {
+    "implementation": "controller (inline)",
+    "integration": "controller",
+    "final_verification": "controller"
+  },
+  "actual_skill_loads": [
+    "team-ops/team-lead",
+    "team-ops/build-implementation-loop",
+    "team-ops/build-definition-of-done",
+    "team-ops/plan-work-breakdown"
+  ],
+  "skill_loading": "Read snapshot SKILL.md directly; host has no native loader. Read host-compatibility.md fallback.",
+  "workers": {
+    "used": 0,
+    "reason": "Host has no worker tools; all roles inline. No independent review claimed."
+  },
+  "commands": [
+    {
+      "command": "C:\\Users\\dcarn\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\python.exe -B check.py",
+      "cwd": "Z:\\team-ops-skills\\evals\\runs\\paired-4.1\\controller\\small-fix",
+      "exit_status": 0,
+      "stdout": "help check passed\n",
+      "stderr": "",
+      "evidence": "check.log"
+    }
+  ],
+  "changes": [
+    "cli.py"
+  ],
+  "tasks": [
+    {
+      "id": "small-fix",
+      "state": "complete",
+      "owner": "controller",
+      "next_action": "None; requested work complete."
+    }
+  ],
+  "acceptance": "supported by current fixture check",
+  "limitations": [
+    "Fixture check only; no deployment performed.",
+    "No independent review.",
+    "git status --short -- . failed with exit 1: directory is not a Git repository; source changes tracked by before/after hashes."
+  ],
+  "unknowns": {
+    "tokens": null,
+    "cost": null
+  },
+  "protected_files_unchanged": true,
+  "elapsed_seconds": 53.829653,
+  "final_inspection": "Read final edited source; only authorized changes were made. Protected file hashes match initial snapshot."
+}

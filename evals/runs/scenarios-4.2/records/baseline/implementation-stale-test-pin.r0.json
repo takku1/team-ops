@@ -1,0 +1,36 @@
+{
+  "case": "implementation-stale-test-pin",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 9,
+  "elapsed_seconds": 17.0,
+  "subject_cost_usd": 0.0767394,
+  "skills_invoked": [],
+  "tool_calls": 8,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": {
+    "passed": true,
+    "output": "pinned=True others_kept=True production_unchanged=True status_updated=True suite_exit=0\n"
+  },
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The run tightened the pin to `assertEqual(lookup(0x4B), 0x49)` citing KM-12, left the production mapping unchanged, and removed the stale STATUS.md entry. The one suite run shown came after both edits, so it confirms the fix but the trace never shows the failure being reproduced first, which the rubric requires."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1398814
+}

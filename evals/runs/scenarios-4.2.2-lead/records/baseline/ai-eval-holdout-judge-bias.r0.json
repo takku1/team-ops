@@ -1,0 +1,33 @@
+{
+  "case": "ai-eval-holdout-judge-bias",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 12.4,
+  "subject_cost_usd": 0.0542686,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer clearly rejects the readiness claim and covers most rubric items. It calls for a fresh representative holdout, state and side-effect checks, a different-model or human-calibrated judge, counting timeouts as failures, a severity breakdown, and a correct Wilson interval (about 89.5\u201399.7%) that keeps accuracy distinct from confidence. It omits configuration records entirely, never asks for per-failure cause analysis, does not say the judge should be blinded, and does not address reruns versus independent tasks."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.11988259999999999
+}

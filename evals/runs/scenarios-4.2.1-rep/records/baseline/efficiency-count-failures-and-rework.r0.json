@@ -1,0 +1,33 @@
+{
+  "case": "efficiency-count-failures-and-rework",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 8.4,
+  "subject_cost_usd": 0.0507066,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer correctly computes $2.00 per accepted task for both setups, reports 100 vs 5 repair minutes, separates generation latency from repair-dominated end-to-end time, and notes sample-size, review-time, and severe-risk caveats. However, it leads with 'Deploy B' before those caveats and collapses dollars and minutes using an assumed $50/hour rate (A \u2248 $93, B \u2248 $22), though no rate was given; only the break-even framing stays within the rubric."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.10848459999999999
+}

@@ -1,0 +1,35 @@
+{
+  "case": "work-breakdown-slices-vertically",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 34.9,
+  "subject_cost_usd": 0.07379820000000001,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The plan uses vertical increments. T1 is a walking skeleton spanning migration, API, UI and audit, with authz (403) and the audit row in the same transaction from the first slice. Each task has checkable acceptance tests and explicit dependencies, and the provider unknown is a time-boxed spike (T0a, about 1 day) with explicit questions and a sandbox experiment, while the design is made robust to either answer. Scope is handled via BUILD/WRAP/DEFER calls and append-only audit enforcement; it claims no fabricated work and notes that no code was inspected."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.13809280000000002
+}

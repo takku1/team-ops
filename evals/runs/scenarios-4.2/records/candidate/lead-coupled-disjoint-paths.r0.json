@@ -1,0 +1,35 @@
+{
+  "case": "lead-coupled-disjoint-paths",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 13.3,
+  "subject_cost_usd": 0.0601773,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The plan explicitly recognizes contract coupling despite disjoint filenames. It assigns the schema and generated client to a single integration owner (T1) ahead of the dependent T2/T3 work, with contract tests and an end-to-end/no-drift oracle (T4), and it sequences the parallel window only after the contract is frozen. It gives no overlapping generator writes to workers, dispatches no agents, and notes that one owner may do everything if the parallel gain is small, so user permission is not treated as a mandate to spawn."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1183073
+}

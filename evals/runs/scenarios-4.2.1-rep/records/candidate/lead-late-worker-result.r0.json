@@ -1,0 +1,35 @@
+{
+  "case": "lead-late-worker-result",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 12.3,
+  "subject_cost_usd": 0.0602521,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer records the late done as attempt-1 history, does not advance or accept attempt 2 from it, notes that timeout isn't proof the process stopped, fences worker 1 with a stop-and-report request, and requires fresh checks on the current integrated artifact before acceptance. However, it never says the reassignment was unsafe, lets attempt 2 keep writing while attempt 1 may still be active instead of pausing both until one owner is confirmed, and doesn't address deduplicating repeated completion events."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12155070000000001
+}

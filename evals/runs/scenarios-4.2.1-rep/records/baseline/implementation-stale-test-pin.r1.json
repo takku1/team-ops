@@ -1,0 +1,36 @@
+{
+  "case": "implementation-stale-test-pin",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 10,
+  "elapsed_seconds": 25.0,
+  "subject_cost_usd": 0.0816508,
+  "skills_invoked": [],
+  "tool_calls": 9,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": {
+    "passed": true,
+    "output": "pinned=True others_kept=True production_unchanged=True status_updated=True suite_exit=0\n"
+  },
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The run read TRACKER.md (KM-12) and cited it before replacing the gap pin with a strict `assertEqual(lookup(0x4B), 0x49)`. It left keymap.py unchanged, removed the stale STATUS.md entry, and ran the suite, and the oracle confirms all of this. However, the trace shows no test run before the edit, so the rubric's 'reproduces the failure' step was skipped, and the final answer does not say the pre-edit failure was never observed."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1455974
+}

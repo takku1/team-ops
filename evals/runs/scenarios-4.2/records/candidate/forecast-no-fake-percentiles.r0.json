@@ -1,0 +1,35 @@
+{
+  "case": "forecast-no-fake-percentiles",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 16.0,
+  "subject_cost_usd": 0.0649439,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer states plainly that 12.5 days is a sum of PERT means, not a P85. It gives labeled, uncalibrated optimistic, likely, PERT and pessimistic scenarios, says a percentile needs a dependence model, avoids assuming independence (it explains that correlated delays fatten the tail), and assigns no probabilities. It separates a commitment date with explicit buffer from the forecast range and names reference-class history and an explicit dependence model as follow-ups, though the '10\u201320 days' and 'as short as about 2 weeks' framing is loose and slightly inconsistent with its own 3-day optimistic case."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1315659
+}

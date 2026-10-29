@@ -1,0 +1,33 @@
+{
+  "case": "capacity-ownership-no-double-reserve",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 14.2,
+  "subject_cost_usd": 0.0568366,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer computes 40 \u00d7 0.75 = 30 h, calls the 20 h figure a double-count of support, and rejects the \u00d76 multiplier because maintainer review and integration time caps throughput. It covers disjoint write scopes, per-task acceptance checks, sole maintainer accountability with a bus-factor-1 backup risk, and an intake path, without inventing a team or approval bureaucracy, and it labels the hour split, the 1.3\u20132\u00d7 gain and the 2-worker start as assumptions to tune from measured data."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1176632
+}

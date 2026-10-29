@@ -1,0 +1,35 @@
+{
+  "case": "design-ai-recovery-flow",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 35.7,
+  "subject_cost_usd": 0.0849973,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:design-product-workflow\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer separates the known requirements from labeled assumptions and specifies split-pane source comparison, per-claim edit/restore, and cancel, partial, retry, and failed-upload states, along with keyboard, aria-live, and non-color accessibility. It explicitly avoids confidence percentages, invented research, and invented thresholds while proposing task-based validation with seeded errors. It also reuses generic library components it honestly admits it has not inspected, offers a justified A/B alternative to test, and claims no files or results it did not produce."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1615797
+}

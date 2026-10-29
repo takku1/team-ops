@@ -1,0 +1,35 @@
+{
+  "case": "design-ai-recovery-flow",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 34.7,
+  "subject_cost_usd": 0.0845331,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:design-product-workflow\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer separates the brief's stated requirements from unvalidated assumptions, and it specifies claim-to-source comparison, inline correction with revert, always-visible cancel, per-file upload failure with retry, and a state map with keyboard and ARIA handling, mapped to generic library components without claiming it inspected the library. It offers a cheap A/C comparison tied to the main open question and a task-based plan with planted errors, and it avoids invented research, numeric confidence, mandatory RFCs, and any claim that a mockup proves usability."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1646751
+}

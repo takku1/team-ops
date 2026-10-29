@@ -1,0 +1,35 @@
+{
+  "case": "incident-effects-over-ticket-counts",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 22.7,
+  "subject_cost_usd": 0.0717426,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:run-incident-postmortem\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer prioritizes customer remediation, blast-radius discovery, a kill-switch mitigation, and evidence preservation (traces, model/prompt/tool versions, timeout settings, provider logs). It replaces 'human error' with systemic contributing factors (idempotency, timeout semantics, autonomous retry, detection gaps), limits P0s to two with justification, gives each action an owner placeholder and an effectiveness check, and explicitly rejects ticket closure as proof of prevention, all without fabricating facts or edits."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1367446
+}

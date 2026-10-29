@@ -1,0 +1,35 @@
+{
+  "case": "supply-reachable-advisory-no-silent-waiver",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 5,
+  "elapsed_seconds": 32.9,
+  "subject_cost_usd": 0.07392159999999999,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:secure-review\"}"
+  ],
+  "tool_calls": 3,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The agent found the workspace empty, made no edits, and explicitly declined to add an ignore entry because the user-described ECDHE key-generation path is reachable and `deny.toml` forbids waivers for reachable paths. It offered the owner a choice between migrating to the 0.14 stack (naming the TLS/RustCrypto bumps, a possible upstream blocker, and a `cargo tree` check) and a time-boxed exception with owner, expiry, compensating control and a policy amendment. Minor gaps: it never says outright that `cargo update` cannot fix this, and it does not spell out the network timing-attacker exposure."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1403122
+}

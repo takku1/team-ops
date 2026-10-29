@@ -1,0 +1,35 @@
+{
+  "case": "holdout-date-from-one-sprint",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 13.4,
+  "subject_cost_usd": 0.062298599999999996,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer states plainly that one sprint can't support a 90% date, gives a naive 5-sprint estimate, and shows a 4\u20139 sprint scenario table labeled uncalibrated with the spread admitted as a guess. It covers ticket-size mismatch and scope growth, asks for 6\u201312 sprints of history so it can run a throughput simulation, and names risks with trigger signals and a re-forecast after each sprint."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1167732
+}

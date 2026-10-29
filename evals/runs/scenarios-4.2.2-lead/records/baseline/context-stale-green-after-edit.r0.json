@@ -1,0 +1,33 @@
+{
+  "case": "context-stale-green-after-edit",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 7.8,
+  "subject_cost_usd": 0.0491966,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer correctly refuses the exit-0 result for the current state and explains why the unchanged SHA cannot identify the untracked generated config. It asks for a rerun recording the command, exit code, SHA, and input hashes. However, it omits toolchain and environment identity, and it never limits invalidation to the affected integration check versus unaffected independent checks. Its rule that any worker edit invalidates a green result over-broadens instead of scoping reuse."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.10751060000000001
+}

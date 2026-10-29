@@ -1,0 +1,38 @@
+{
+  "case": "lead-small-fix-stays-inline",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 8,
+  "elapsed_seconds": 15.0,
+  "subject_cost_usd": 0.075315,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 6,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": {
+    "passed": true,
+    "output": "fixed=True scoped=True cargo_test_exit=0\n"
+  },
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The agent fixed the typo inline with a single Edit to cli/args.rs and spawned no subagents (no Agent calls in the trace). It actually ran `cargo test -p cli`, which the oracle confirms (cargo_test_exit=0), and it accurately reported that only the implement and verify phases ran inline."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.131101
+}

@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The answer declines to ship on the current evidence, identifies position bias and small-sample uncertainty, and recommends randomized or swapped-order judging. It outlines a small rerun with human judge calibration, faithfulness checks, and additional cases rather than treating 71% as a reliable win rate."
+}

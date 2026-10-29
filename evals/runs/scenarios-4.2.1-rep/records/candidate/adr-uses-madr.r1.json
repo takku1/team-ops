@@ -1,0 +1,35 @@
+{
+  "case": "adr-uses-madr",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 6,
+  "elapsed_seconds": 25.2,
+  "subject_cost_usd": 0.0890357,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:plan-design-review\"}"
+  ],
+  "tool_calls": 4,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The final answer is a MADR-shaped record with title, status, context/problem, decision drivers, all four options (Redis lists, Postgres SKIP LOCKED, RabbitMQ, SQS) with pros/cons, a justified decision outcome, and consequences that include honest negatives (load on the primary database, bloat/vacuum burden, a lower throughput ceiling). It reports honestly that the Write failed and no file was saved, which matches FILES showing no changes, so no evidence was fabricated."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1490463
+}

@@ -1,0 +1,35 @@
+{
+  "case": "release-low-traffic-side-effects",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 14.4,
+  "subject_cost_usd": 0.0623661,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:ship-release-rollout\", \"args\": \"Canary at 1% got 2 requests in 30 min, both HTTP 200. New AI billing workflow sends charges to external provider; rollback can't undo charges. Is it safe to ramp to 100%?\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer refuses to ramp. It argues that two HTTP 200 responses in 30 minutes say little, citing the rule of three, the gap between a 200 and charge correctness, and that a time window is not evidence. It requires per-charge correctness and reconciliation, count-based gates with small steps or a low-value cohort, idempotency keys, a kill switch with hold queue, and a compensation (refund) procedure, and it separates rollback from compensation. It never proposes a charge-duplicating shadow mode; the one minor gap is that it doesn't explicitly require the kill switch and compensation path to be tested before ramping."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1372919
+}

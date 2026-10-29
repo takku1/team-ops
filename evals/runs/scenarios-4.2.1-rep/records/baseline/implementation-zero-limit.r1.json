@@ -1,0 +1,38 @@
+{
+  "case": "implementation-zero-limit",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 10,
+  "elapsed_seconds": 28.8,
+  "subject_cost_usd": 0.08347459999999998,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-implementation-loop\"}"
+  ],
+  "tool_calls": 8,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": {
+    "passed": true,
+    "output": "----------------------------------------------------------------------\nRan 4 tests in 0.000s\n\nOK\n\n"
+  },
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The trace shows unittest runs before the Edit and again after it. The edit is a one-line scoped change to `20 if value is None or value == \"\" else int(value)` that keeps the None default and the negative-value ValueError. The oracle independently confirms all 4 original tests pass against the resulting parser with the tests unmodified, and the final report accurately describes the commands run, the before/after results, and the limits (single test file, no git diff), with no extra scaffolding."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1430772
+}

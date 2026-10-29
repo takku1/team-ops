@@ -1,0 +1,35 @@
+{
+  "case": "work-breakdown-slices-vertically",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 29.6,
+  "subject_cost_usd": 0.0790929,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The plan opens with a time-boxed R0 spike (\u22641 day) that asks explicit questions about provider idempotency and a sandbox-based deciding check. It then gives vertical slices (S1 walking skeleton with authz, transactional audit row, and no-double-refund integration test) with checkable acceptance criteria, dependencies, and ownership. Security and data integrity sit in the first slice, audit integrity and reconciliation are covered later, and no fabricated edits or results are claimed."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1448393
+}

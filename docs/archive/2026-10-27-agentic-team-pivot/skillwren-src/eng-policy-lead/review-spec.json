@@ -1,0 +1,210 @@
+[
+ [
+  "frontmatter",
+  [
+   1,
+   4
+  ],
+  [
+   "name: eng-policy-lead",
+   "bootstrap a repo's policy set",
+   "Not for single-topic requests: use the specific skill"
+  ]
+ ],
+ [
+  "title-intro",
+  [
+   6,
+   8
+  ],
+  [
+   "# Engineering Policy Lead",
+   "if request is a single-topic need:",
+   "generate handoff naming the one specific skill from request as handoff"
+  ]
+ ],
+ [
+  "pick-mode",
+  [
+   10,
+   11
+  ],
+  [
+   "flows: [bootstrap-policy, audit-policy, run-workflow]",
+   "run a workflow for a single-topic request"
+  ]
+ ],
+ [
+  "pass-forward",
+  [
+   12,
+   12
+  ],
+  [
+   "pass each step's outputs forward to the next step"
+  ]
+ ],
+ [
+  "skip-steps",
+  [
+   13,
+   13
+  ],
+  [
+   "skipping inapplicable steps with a stated reason",
+   "pad a job with steps that do not apply"
+  ]
+ ],
+ [
+  "stop-gates",
+  [
+   14,
+   14
+  ],
+  [
+   "stop at the first blocking finding before later steps build on it",
+   "Blocking findings include unresolved authority for a consequential release",
+   "generate stop report naming the blocking gate"
+  ]
+ ],
+ [
+  "summary",
+  [
+   15,
+   15
+  ],
+  [
+   "end with decisions, artifacts written, open risks, and top 3 next actions with owners",
+   "**lead summary**"
+  ]
+ ],
+ [
+  "skill-map",
+  [
+   17,
+   38
+  ],
+  [
+   "org-team-topology (owner and boundary)",
+   "measure-delivery-health (DORA + SPACE)",
+   "secure-supply-chain (no open criticals or highs past SLA)"
+  ]
+ ],
+ [
+  "bootstrap-order",
+  [
+   40,
+   52
+  ],
+  [
+   "### Bootstrap order",
+   "`docs/policy/ownership.md` from org-team-topology + org-ownership-raci",
+   "`docs/adr/0001-record-architecture-decisions.md` and `docs/design/TEMPLATE.md`",
+   "generate policy drafts in bootstrap order from existing as drafts"
+  ]
+ ],
+ [
+  "no-overwrite",
+  [
+   54,
+   54
+  ],
+  [
+   "overwrite an existing policy file",
+   "**existing policy split**",
+   "never written",
+   "immutable: true"
+  ]
+ ],
+ [
+  "audit-columns",
+  [
+   56,
+   60
+  ],
+  [
+   "generate written, enforced, and followed scores per policy area from samples as scores",
+   "Written? (a policy doc exists with an owner)",
+   "Enforced? (CI checks, branch protection, alerts, bots)",
+   "read an explicitly scoped sample of pull requests, deploys, and incidents from history as samples"
+  ]
+ ],
+ [
+  "audit-ranking",
+  [
+   62,
+   62
+  ],
+  [
+   "verify gaps are ranked by risk with security and reliability before flow",
+   "verify report lists at most 3 fixes, each with owner, fixing skill, and effort",
+   "dump every gap at once"
+  ]
+ ],
+ [
+  "wf-new-service",
+  [
+   64,
+   67
+  ],
+  [
+   "**New service / major feature:**",
+   "*Gate:* before consequential implementation, resolve the applicable design decision, accountable owner, and blocking threats."
+  ]
+ ],
+ [
+  "wf-launch",
+  [
+   69,
+   71
+  ],
+  [
+   "**Launch readiness:**",
+   "*Output:* go / no-go with the blocking items"
+  ]
+ ],
+ [
+  "wf-slipping",
+  [
+   73,
+   74
+  ],
+  [
+   "**Project is slipping:**",
+   "plan-late-recovery (lever order, Brooks check)"
+  ]
+ ],
+ [
+  "wf-health",
+  [
+   76,
+   77
+  ],
+  [
+   "**Quarterly health check:**",
+   "top 3 improvement experiments, each with an owner and a review date"
+  ]
+ ],
+ [
+  "wf-post-incident",
+  [
+   79,
+   80
+  ],
+  [
+   "**Post-incident hardening:**",
+   "plan-decision-record if the architecture changes"
+  ]
+ ],
+ [
+  "principles",
+  [
+   82,
+   83
+  ],
+  [
+   "Short, owned, versioned files",
+   "one accountable owner"
+  ]
+ ]
+]

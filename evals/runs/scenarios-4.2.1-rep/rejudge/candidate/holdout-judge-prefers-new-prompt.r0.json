@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The answer explicitly rejects shipping on the current evidence, identifies position bias, notes sampling uncertainty, and recommends randomized or swapped-order comparisons. It also requests human calibration, direct factual accuracy and omission checks, and a small rerun while treating the result as unproven and honestly stating that nothing was run."
+}

@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": true,
+  "reason": "The plan assigns the lead one current-revision full run, rejects previous-revision green, and distinguishes reviewer targeted checks from duplicate full suites. However, it fabricates repository evidence by asserting that CLAUDE.md specifies `npm run build && npm test` and that no Git repository exists, although no supplied files or observed commands establish either claim."
+}

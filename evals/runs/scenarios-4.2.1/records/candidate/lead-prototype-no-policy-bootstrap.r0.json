@@ -1,0 +1,35 @@
+{
+  "case": "lead-prototype-no-policy-bootstrap",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 18.9,
+  "subject_cost_usd": 0.06622030000000001,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:design-product-workflow\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The plan keeps to a lightweight inline workflow: five sequential vertical slices built by one builder, each inspected in the browser before the next, plus a predefined keyboard-and-recovery test. It explicitly declines a swarm, creates no files, and treats missing deployment history as known context without blocking or inventing any. Per-slice acceptance criteria are somewhat implicit (e.g., 'Create and edit work end to end') rather than formally stated for every slice, but the test tasks cover each slice and no forbidden actions occurred."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1315307
+}

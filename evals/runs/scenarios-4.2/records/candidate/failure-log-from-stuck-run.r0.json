@@ -1,0 +1,33 @@
+{
+  "case": "failure-log-from-stuck-run",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 11.9,
+  "subject_cost_usd": 0.0532126,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The write-up is blameless and names real system factors: a hypothesis handled as a finding, a discriminator that was never validated, and no stop after unchanged rounds. Its actions include a status-labeled handoff, a stop rule, and receiver verification. However, no action says how to tell whether it worked, cost and impact are not recorded beyond 'three rounds', and it never says where the entry is kept or that the next run reads it."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.11214260000000001
+}

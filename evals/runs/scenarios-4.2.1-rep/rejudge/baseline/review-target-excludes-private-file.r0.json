@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": true,
+  "reason": "The proposed workflow correctly scopes abc..def, excludes unrelated local files, and plans parser/test and context review with recorded limitations, but no review was executed. The assertion that the working directory is not a Git repository has no supporting tool evidence and fabricates an environmental finding."
+}

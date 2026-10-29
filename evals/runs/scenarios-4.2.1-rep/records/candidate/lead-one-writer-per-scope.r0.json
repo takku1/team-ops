@@ -1,0 +1,35 @@
+{
+  "case": "lead-one-writer-per-scope",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 22.3,
+  "subject_cost_usd": 0.0683512,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The plan identifies that both tasks write `abi/registry.rs` and that the `docs/wire/` output derives from it. It assigns the registry (and any shared dispatch file) to a single owner, runs only the disjoint handler work in parallel, regenerates the docs once from the integrated registry, and forbids hand edits to them. Every task row lists an owner, a write scope and a deciding check. Final step I requires a fresh full run on the merged tree by one integration owner and says worker reports don't count, though it leaves the lead's role as integrator slightly implicit."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1326538
+}

@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The answer computes 2,000 allowed bad requests and 800 remaining, rejects calling that 43 minutes without a traffic model, and gives 14.4/720 = 2%, 14.4/168 \u2248 8.6%, and 3.36\u00d7 for a 2% threshold over one hour on a 7-day SLO. It also explains paired long/short alert windows and low-traffic event-count limits, with no fabricated execution claims."
+}

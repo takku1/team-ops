@@ -1,0 +1,285 @@
+﻿{
+    "valid":  true,
+    "source_path":  "Z:\\team-ops-skills\\plugins\\team-ops",
+    "plugin":  {
+                   "id":  "team-ops",
+                   "display_name":  null,
+                   "version":  "4.0.0",
+                   "description":  "Adaptive coding workflow: one controller, selective workers, scoped ownership, current execution evidence, and an optional local check runner. Ten on-demand playbooks; small work stays inline.",
+                   "manifest_family":  "claude-compatible",
+                   "capabilities":  {
+                                        "skills":  [
+                                                       {
+                                                           "id":  "ai-context-management",
+                                                           "path":  "skills/ai-context-management/SKILL.md",
+                                                           "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops\\skills\\ai-context-management\\SKILL.md",
+                                                           "enabled_default":  null
+                                                       },
+                                                       {
+                                                           "id":  "ai-evaluation",
+                                                           "path":  "skills/ai-evaluation/SKILL.md",
+                                                           "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops\\skills\\ai-evaluation\\SKILL.md",
+                                                           "enabled_default":  null
+                                                       },
+                                                       {
+                                                           "id":  "build-code-review",
+                                                           "path":  "skills/build-code-review/SKILL.md",
+                                                           "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops\\skills\\build-code-review\\SKILL.md",
+                                                           "enabled_default":  null
+                                                       },
+                                                       {
+                                                           "id":  "build-definition-of-done",
+                                                           "path":  "skills/build-definition-of-done/SKILL.md",
+                                                           "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops\\skills\\build-definition-of-done\\SKILL.md",
+                                                           "enabled_default":  null
+                                                       },
+                                                       {
+                                                           "id":  "build-implementation-loop",
+                                                           "path":  "skills/build-implementation-loop/SKILL.md",
+                                                           "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops\\skills\\build-implementation-loop\\SKILL.md",
+                                                           "enabled_default":  null
+                                                       },
+                                                       {
+                                                           "id":  "design-product-workflow",
+                                                           "path":  "skills/design-product-workflow/SKILL.md",
+                                                           "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops\\skills\\design-product-workflow\\SKILL.md",
+                                                           "enabled_default":  null
+                                                       },
+                                                       {
+                                                           "id":  "plan-design-review",
+                                                           "path":  "skills/plan-design-review/SKILL.md",
+                                                           "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops\\skills\\plan-design-review\\SKILL.md",
+                                                           "enabled_default":  null
+                                                       },
+                                                       {
+                                                           "id":  "plan-work-breakdown",
+                                                           "path":  "skills/plan-work-breakdown/SKILL.md",
+                                                           "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops\\skills\\plan-work-breakdown\\SKILL.md",
+                                                           "enabled_default":  null
+                                                       },
+                                                       {
+                                                           "id":  "secure-review",
+                                                           "path":  "skills/secure-review/SKILL.md",
+                                                           "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops\\skills\\secure-review\\SKILL.md",
+                                                           "enabled_default":  null
+                                                       },
+                                                       {
+                                                           "id":  "team-lead",
+                                                           "path":  "skills/team-lead/SKILL.md",
+                                                           "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops\\skills\\team-lead\\SKILL.md",
+                                                           "enabled_default":  null
+                                                       }
+                                                   ],
+                                        "hooks":  [
+
+                                                  ],
+                                        "mcp_servers":  [
+
+                                                        ],
+                                        "commands":  [
+
+                                                     ],
+                                        "reminders":  [
+
+                                                      ],
+                                        "session_providers":  [
+
+                                                              ]
+                                    },
+                   "compatibility":  {
+                                         "summary":  "partial",
+                                         "declarations":  [
+                                                              {
+                                                                  "id":  "skill:ai-context-management",
+                                                                  "kind":  "skill",
+                                                                  "classification":  "supported"
+                                                              },
+                                                              {
+                                                                  "id":  "skill:ai-evaluation",
+                                                                  "kind":  "skill",
+                                                                  "classification":  "supported"
+                                                              },
+                                                              {
+                                                                  "id":  "skill:build-code-review",
+                                                                  "kind":  "skill",
+                                                                  "classification":  "supported"
+                                                              },
+                                                              {
+                                                                  "id":  "skill:build-definition-of-done",
+                                                                  "kind":  "skill",
+                                                                  "classification":  "supported"
+                                                              },
+                                                              {
+                                                                  "id":  "skill:build-implementation-loop",
+                                                                  "kind":  "skill",
+                                                                  "classification":  "supported"
+                                                              },
+                                                              {
+                                                                  "id":  "skill:design-product-workflow",
+                                                                  "kind":  "skill",
+                                                                  "classification":  "supported"
+                                                              },
+                                                              {
+                                                                  "id":  "skill:plan-design-review",
+                                                                  "kind":  "skill",
+                                                                  "classification":  "supported"
+                                                              },
+                                                              {
+                                                                  "id":  "skill:plan-work-breakdown",
+                                                                  "kind":  "skill",
+                                                                  "classification":  "supported"
+                                                              },
+                                                              {
+                                                                  "id":  "skill:secure-review",
+                                                                  "kind":  "skill",
+                                                                  "classification":  "supported"
+                                                              },
+                                                              {
+                                                                  "id":  "skill:team-lead",
+                                                                  "kind":  "skill",
+                                                                  "classification":  "supported"
+                                                              },
+                                                              {
+                                                                  "id":  "agent:team-ops/implementer",
+                                                                  "kind":  "agent",
+                                                                  "classification":  "supported"
+                                                              },
+                                                              {
+                                                                  "id":  "agent:team-ops/investigator",
+                                                                  "kind":  "agent",
+                                                                  "classification":  "supported"
+                                                              },
+                                                              {
+                                                                  "id":  "agent:team-ops/reviewer",
+                                                                  "kind":  "agent",
+                                                                  "classification":  "supported"
+                                                              },
+                                                              {
+                                                                  "id":  "agent:team-ops/security-reviewer",
+                                                                  "kind":  "agent",
+                                                                  "classification":  "supported"
+                                                              },
+                                                              {
+                                                                  "id":  "agent:team-ops/verifier",
+                                                                  "kind":  "agent",
+                                                                  "classification":  "supported"
+                                                              },
+                                                              {
+                                                                  "id":  "agent-tool-projection:team-ops/implementer:1",
+                                                                  "kind":  "agent-tool-projection",
+                                                                  "classification":  "unsupported"
+                                                              },
+                                                              {
+                                                                  "id":  "agent-tool-projection:team-ops/investigator:1",
+                                                                  "kind":  "agent-tool-projection",
+                                                                  "classification":  "unsupported"
+                                                              },
+                                                              {
+                                                                  "id":  "agent-tool-projection:team-ops/reviewer:1",
+                                                                  "kind":  "agent-tool-projection",
+                                                                  "classification":  "unsupported"
+                                                              },
+                                                              {
+                                                                  "id":  "agent-tool-projection:team-ops/security-reviewer:1",
+                                                                  "kind":  "agent-tool-projection",
+                                                                  "classification":  "unsupported"
+                                                              },
+                                                              {
+                                                                  "id":  "agent-tool-projection:team-ops/verifier:1",
+                                                                  "kind":  "agent-tool-projection",
+                                                                  "classification":  "unsupported"
+                                                              }
+                                                          ]
+                                     }
+               },
+    "capabilities":  {
+                         "skills":  [
+                                        {
+                                            "id":  "ai-context-management",
+                                            "path":  "skills/ai-context-management/SKILL.md",
+                                            "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops\\skills\\ai-context-management\\SKILL.md",
+                                            "enabled_default":  null
+                                        },
+                                        {
+                                            "id":  "ai-evaluation",
+                                            "path":  "skills/ai-evaluation/SKILL.md",
+                                            "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops\\skills\\ai-evaluation\\SKILL.md",
+                                            "enabled_default":  null
+                                        },
+                                        {
+                                            "id":  "build-code-review",
+                                            "path":  "skills/build-code-review/SKILL.md",
+                                            "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops\\skills\\build-code-review\\SKILL.md",
+                                            "enabled_default":  null
+                                        },
+                                        {
+                                            "id":  "build-definition-of-done",
+                                            "path":  "skills/build-definition-of-done/SKILL.md",
+                                            "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops\\skills\\build-definition-of-done\\SKILL.md",
+                                            "enabled_default":  null
+                                        },
+                                        {
+                                            "id":  "build-implementation-loop",
+                                            "path":  "skills/build-implementation-loop/SKILL.md",
+                                            "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops\\skills\\build-implementation-loop\\SKILL.md",
+                                            "enabled_default":  null
+                                        },
+                                        {
+                                            "id":  "design-product-workflow",
+                                            "path":  "skills/design-product-workflow/SKILL.md",
+                                            "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops\\skills\\design-product-workflow\\SKILL.md",
+                                            "enabled_default":  null
+                                        },
+                                        {
+                                            "id":  "plan-design-review",
+                                            "path":  "skills/plan-design-review/SKILL.md",
+                                            "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops\\skills\\plan-design-review\\SKILL.md",
+                                            "enabled_default":  null
+                                        },
+                                        {
+                                            "id":  "plan-work-breakdown",
+                                            "path":  "skills/plan-work-breakdown/SKILL.md",
+                                            "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops\\skills\\plan-work-breakdown\\SKILL.md",
+                                            "enabled_default":  null
+                                        },
+                                        {
+                                            "id":  "secure-review",
+                                            "path":  "skills/secure-review/SKILL.md",
+                                            "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops\\skills\\secure-review\\SKILL.md",
+                                            "enabled_default":  null
+                                        },
+                                        {
+                                            "id":  "team-lead",
+                                            "path":  "skills/team-lead/SKILL.md",
+                                            "source_path":  "\\\\?\\Z:\\team-ops-skills\\plugins\\team-ops\\skills\\team-lead\\SKILL.md",
+                                            "enabled_default":  null
+                                        }
+                                    ],
+                         "hooks":  [
+
+                                   ],
+                         "mcp_servers":  [
+
+                                         ],
+                         "commands":  [
+
+                                      ],
+                         "reminders":  [
+
+                                       ]
+                     },
+    "diagnostics":  [
+                        {
+                            "code":  "unsupported-field",
+                            "severity":  "warning",
+                            "message":  "Claude manifest field `author` is presentation-only and is not imported",
+                            "path":  "Z:\\team-ops-skills\\plugins\\team-ops\\.claude-plugin\\plugin.json"
+                        },
+                        {
+                            "code":  "unsupported-field",
+                            "severity":  "warning",
+                            "message":  "Claude manifest field `keywords` is presentation-only and is not imported",
+                            "path":  "Z:\\team-ops-skills\\plugins\\team-ops\\.claude-plugin\\plugin.json"
+                        }
+                    ]
+}

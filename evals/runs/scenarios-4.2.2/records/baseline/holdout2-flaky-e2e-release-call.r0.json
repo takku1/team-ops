@@ -1,0 +1,33 @@
+{
+  "case": "holdout2-flaky-e2e-release-call",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 2,
+  "elapsed_seconds": 14.4,
+  "subject_cost_usd": 0.0543893,
+  "skills_invoked": [],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "fail",
+    "severe_failure": false,
+    "reason": "The answer correctly refuses to call the release ready, questions QA's 'flaky' label, proposes checks that separate flake from regression (comparing failure artifacts, re-running against the RC, correlating with recent changes), and asks for a ticket with an owner. However, it never states that accepting the risk belongs to a named release owner or the user. Instead it gives its own conditional ship recommendations ('ship', 'you can still ship with guardrails'), which hits the rubric's explicit fail condition of never saying who decides."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1128319
+}

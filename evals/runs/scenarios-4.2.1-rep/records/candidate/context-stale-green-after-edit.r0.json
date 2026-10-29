@@ -1,0 +1,35 @@
+{
+  "case": "context-stale-green-after-edit",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 14.8,
+  "subject_cost_usd": 0.0581444,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:ai-context-management\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer rejects the snapshot-A exit 0 for the current artifact and explains that the SHA does not cover the edited untracked generated config. It specifies a rerun of the integration check on current inputs, recording the command, exit status, log pointer and config hash, but it omits toolchain and environment identity and never says whether unaffected independent checks can keep their results."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.116059
+}

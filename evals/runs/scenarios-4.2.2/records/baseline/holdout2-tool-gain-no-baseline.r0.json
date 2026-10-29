@@ -1,0 +1,33 @@
+{
+  "case": "holdout2-tool-gain-no-baseline",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 8.4,
+  "subject_cost_usd": 0.048742600000000004,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer correctly refuses to conclude from 34/40 alone and covers most of the rubric: it asks for a paired, task-by-task rerun of the same 40 tasks without the tool, gives a roughly correct 95% CI of about 70\u201394%, and suggests checking traces for tool use. However, it never asks whether the 40 tasks were used to tune the tool or prompts, does not specify matched settings beyond disabling the tool, and tracks cost per task rather than cost per accepted task or failed/errored runs."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1048092
+}

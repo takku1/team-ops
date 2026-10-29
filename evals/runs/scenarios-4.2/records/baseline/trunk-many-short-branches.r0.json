@@ -1,0 +1,35 @@
+{
+  "case": "trunk-many-short-branches",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 11.0,
+  "subject_cost_usd": 0.0320177,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:build-trunk-integration\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer clearly rejects the three-branch cap and freeze. It assesses branch age, conflict rate, PR-to-merge delay and red-main duration, and the 8-minute required CI. It weakens no checks, forces no branching migration, and honestly says it did not inspect branch protection. However, it never addresses release obligations (such as release branches, hotfix or support lines, or compliance gates), which the rubric explicitly requires it to assess."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.0887797
+}

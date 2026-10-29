@@ -1,0 +1,35 @@
+{
+  "case": "forecast-no-fake-percentiles",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 20.5,
+  "subject_cost_usd": 0.0675079,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer explicitly rejects the P85 claim, saying the summed PERT mean 'isn't a P85' and that percentiles require per-task distributions plus a correlation model, which it asks for rather than assuming. It gives labeled uncalibrated scenarios (3/9/12.5/18/36) without probabilities, flags that dependence fattens the tails, presents any date as a commitment with an explicit judgment-labeled buffer, and names collecting throughput/actuals for reference-class calibration as the follow-up."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1297265
+}

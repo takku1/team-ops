@@ -1,0 +1,38 @@
+{
+  "case": "implementation-zero-limit",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 10,
+  "elapsed_seconds": 20.7,
+  "subject_cost_usd": 0.08401170000000001,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-implementation-loop\"}"
+  ],
+  "tool_calls": 8,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": {
+    "passed": true,
+    "output": "----------------------------------------------------------------------\nRan 4 tests in 0.000s\n\nOK\n\n"
+  },
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The trace shows the tests run before the one-line edit to parser.py (`20 if value is None or value == \"\" else int(value)`) and again after it, and the oracle independently confirms all 4 original tests pass, so the None default and the negative-value rejection both still hold. The report is truthful and scoped: it discloses the failed `python -I` run, the lack of a diff, and the untested `False`/`0.0` behavior change, and the agent added no policy scaffolding and did not weaken any tests."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.14263030000000002
+}

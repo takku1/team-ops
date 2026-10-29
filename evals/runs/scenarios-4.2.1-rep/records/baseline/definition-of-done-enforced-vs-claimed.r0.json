@@ -1,0 +1,35 @@
+{
+  "case": "definition-of-done-enforced-vs-claimed",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 15.9,
+  "subject_cost_usd": 0.0672983,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-definition-of-done\", \"args\": \"Audit what our Definition of Done enforces vs claims. DoD: approved review, CI green, no open critical/high dependency findings, docs updated, deployed to staging and smoke-tested. Reality: CI runs build + unit tests only (no lint, no integrati"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer maps each adopted DoD item against what is configured, enforced, and observed. It flags missing lint, integration tests, dependency scanning, and staging smoke tests, and pairs each gap with a concrete remedy such as required checks, a scanner gate with a waiver path, and an automated or gated staging step. It also says plainly that a PR checkbox is only self-attestation, not enforcement, refuses to quietly drop items, and leaves the relabel-vs-enforce choice to the team as an explicit decision. It is honest that it inspected no real config, and it makes no fabricated edits or results."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.13119229999999998
+}

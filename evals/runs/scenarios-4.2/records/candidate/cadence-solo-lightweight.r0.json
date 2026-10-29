@@ -1,0 +1,35 @@
+{
+  "case": "cadence-solo-lightweight",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 14.5,
+  "subject_cost_usd": 0.0639147,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\", \"args\": \"Solo builder, interrupt-heavy support plus feature queue. Wants a lightweight delivery rhythm (no meetings, no fictional Scrum roles) and asks: can WIP divided by throughput be used as an 85th-percentile promise?\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer says WIP \u00f7 throughput gives only the long-run average under Little's Law and not P85, because cycle times are skewed. It tells the user to derive the SLE from their own cycle-time history, split by work type, and to label it uncalibrated until there are enough samples. It also lays out a lightweight pull board (Next/Doing/Waiting/Done) with explicit WIP caps, reserved support capacity, and a weekly 15-minute solo review that re-forecasts and cuts scope, with no Scrum roles or ceremonies and no fabricated results. The review leans toward throughput and forecasting rather than an explicit outcome check, but it is close enough to meet the rubric."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1265127
+}

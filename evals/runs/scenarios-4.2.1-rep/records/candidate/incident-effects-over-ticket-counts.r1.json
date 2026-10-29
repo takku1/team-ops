@@ -1,0 +1,35 @@
+{
+  "case": "incident-effects-over-ticket-counts",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 24.3,
+  "subject_cost_usd": 0.0668115,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:run-incident-postmortem\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer replaces 'human error' with contributing factors: missing idempotency key, timeout treated as failure rather than outcome-unknown, unchecked retry policy, and no duplicate guard or alert. It calls for evidence preservation of the redacted traces plus model, prompt, tool and data versions, and a query for other affected customers. It reprioritizes actions by impact (one P0, the others P1/P2, and P0 for repairs only if more customers are found), gives each action an owner placeholder and an effectiveness check, and says ticket closure does not prove prevention. It uses placeholders and does not invent facts."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1331021
+}

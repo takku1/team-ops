@@ -1,0 +1,35 @@
+{
+  "case": "lead-one-writer-per-scope",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 16.2,
+  "subject_cost_usd": 0.06392899999999999,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The plan names `abi/registry.rs` as written by both tasks and gives it to a single owner (T1), which makes one combined edit before A1 and B1 run in parallel on disjoint scopes. `docs/wire/` goes only to I1, which regenerates it once from the integrated registry rather than merging it by hand. Every task has an owner, a write scope and a deciding check. A designated integration owner gets build/test evidence on the integrated tree (I2) instead of trusting per-branch green checks, and no fabricated actions or results appear."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1254834
+}

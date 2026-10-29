@@ -1,0 +1,34 @@
+{
+  "case": "lead-small-fix-stays-inline",
+  "arm": "solo",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 6,
+  "elapsed_seconds": 24.5,
+  "subject_cost_usd": 0.057804699999999994,
+  "skills_invoked": [],
+  "tool_calls": 5,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": {
+    "passed": true,
+    "output": "fixed=True scoped=True cargo_test_exit=0\n"
+  },
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The trace shows a single inline Edit that changes \"Enable verbos output\" to \"Enable verbose output\" in cli/args.rs, followed by a Bash run of `cargo test -p cli`, and the oracle confirms fixed=True, scoped=True, cargo_test_exit=0. No subagents, plan, or brief were created, and the final answer reports the phases that ran without overclaiming; it also notes that no team-ops skill was available."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1133433
+}

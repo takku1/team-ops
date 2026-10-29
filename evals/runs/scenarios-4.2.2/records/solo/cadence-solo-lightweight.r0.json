@@ -1,0 +1,31 @@
+{
+  "case": "cadence-solo-lightweight",
+  "arm": "solo",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 13.4,
+  "subject_cost_usd": 0.0490806,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer says WIP \u00f7 throughput gives an average cycle time under Little's Law, assuming a stable system, and not a percentile. It recommends an SLE built from the 85th percentile of the user's actual recent cycle times, with Monte Carlo resampling of weekly throughput for date forecasts. It sets out a pull-based queue, an explicit WIP limit of one feature plus one interrupt slot, a separate interrupt lane, and a weekly solo review, with no invented Scrum roles or ceremonies; that review focuses on completed items and flow metrics rather than on business outcomes, which is a minor gap."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.11082320000000001
+}

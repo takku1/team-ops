@@ -1,0 +1,33 @@
+{
+  "case": "holdout2-three-heavy-builds-near-limit",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 10.4,
+  "subject_cost_usd": 0.0506486,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer avoids three concurrent 6 GB builds by capping at two with a free-memory check and a fallback to serial. It also avoids spawning agent workers near the usage limit by using background shell builds with separate logs and output dirs. However, it never plans for a worker killed by the usage limit to be retried from resumable state as an environment failure (it only says to stop and report). It also runs two heavy builds in one lane on a 16 GB machine rather than one build lane per resource."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1058312
+}

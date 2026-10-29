@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The answer correctly computes 2,000 allowed bad requests and 800 remaining, rejects an unconditional conversion to minutes, and computes 14.4/720 = 2%, 14.4/168 \u2248 8.57%, and 3.36\u00d7 for 2% over one hour on a 7-day SLO. It recommends paired 1-hour/5-minute windows and minimum event counts for low traffic, and explicitly states that no alert rules or dashboards were created."
+}

@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": true,
+  "reason": "The plan assigns the lead one final full-suite run, rejects previous-revision green, and specifies revision-linked evidence without adding a supervisor. However, it explicitly permits accepting a review-driven repair using only focused checks and reviewer confirmation, bypassing required full-suite coverage on the final integrated revision."
+}

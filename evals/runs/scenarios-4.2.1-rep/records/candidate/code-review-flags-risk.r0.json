@@ -1,0 +1,35 @@
+{
+  "case": "code-review-flags-risk",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 18.5,
+  "subject_cost_usd": 0.067118,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-code-review\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The review issues request-changes and names all three required defects as blocking: SQL injection via the f-string with a parameterized-query fix, no authentication/authorization on the admin route, and no tests (\"tests later isn't acceptable\"). It separates blocking findings from optional nits and fyi items, and it states plainly that it ran nothing and verified no evidence."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1227126
+}

@@ -1,0 +1,35 @@
+{
+  "case": "trunk-many-short-branches",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 11.7,
+  "subject_cost_usd": 0.0565238,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:build-trunk-integration\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer rejects the three-branch cap and weighs branch age (under four hours), integration delay and failures (time to merge, red-main duration, conflict rate), and required checks (eight-minute CI, branch protection). It also keeps existing protection, rules out a migration without evidence, and admits it did no repo audit, but it never considers release obligations, which the rubric names explicitly."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.11307039999999999
+}

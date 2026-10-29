@@ -1,0 +1,35 @@
+{
+  "case": "code-review-keeps-out-of-diff-findings",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 4,
+  "elapsed_seconds": 13.3,
+  "subject_cost_usd": 0.060300900000000004,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-code-review\"}"
+  ],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The review labels the stale `docs/operations.md:42` instruction as a `blocking:` finding. It ties that finding to the renamed key that `client.py` reads and the one in `defaults.toml`, and it also reports diff-level findings (a compatibility-alias question, a repo-wide reference check, test coverage) without fabricating any file reads, since it says plainly that the workspace was empty. The `request-changes` verdict comes with reasons that fit the impact: a one-line doc fix is needed before approval."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1140395
+}

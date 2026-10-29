@@ -1,0 +1,35 @@
+{
+  "case": "lead-verifies-reported-claims",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 16.0,
+  "subject_cost_usd": 0.067939,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer refuses to accept the change and calls 'all tests pass' unverified because no command, count, or scope was given. It assigns the deciding test run to the lead and routes the auth change to a security review via the secure-review skill, with an acceptance gate that requires an observed green run including an expiry test. The review brief stands alone: it gives the target (the diff of auth/session.rs), the task, six concrete security and correctness criteria, and read-only and no-duplicate-suite constraints, and it leaves out the implementer's confidence and narrative. No results were fabricated; every planned check is stated as future work, not claimed as done."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1307574
+}

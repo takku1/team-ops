@@ -1,0 +1,35 @@
+{
+  "case": "holdout-green-on-third-retry",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 17.3,
+  "subject_cost_usd": 0.059240799999999996,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-definition-of-done\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer correctly refuses to treat the third-retry green as done. It gives concrete flake-vs-regression checks (rerun on the base commit, inspect failed-run logs for where it hung), requires an owned ticket for any flake, and never suggests deleting or quarantining the test. However, it never names who decides whether to accept the merge risk; the 'owner' it mentions is only for the flake ticket. It also offers 'diff doesn't touch the webhook path' as acceptable evidence, which is weaker than the baseline separation the rubric asks for."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1181274
+}

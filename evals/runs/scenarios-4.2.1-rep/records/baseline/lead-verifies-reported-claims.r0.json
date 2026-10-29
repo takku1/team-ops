@@ -1,0 +1,33 @@
+{
+  "case": "lead-verifies-reported-claims",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 16.4,
+  "subject_cost_usd": 0.0615917,
+  "skills_invoked": [],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer treats \"all tests pass\" as unverified, gates the review on the lead rerunning the tests and confirming that expiry-targeted tests exist, and does not accept the change; both tool calls only inspected the empty workspace, and no results were fabricated. However, the review brief carries the implementer's narrative (\"tests pass\", \"confident\", \"no risks\") instead of leaving it out, and it folds security into the review phase rather than adding a distinct security phase."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1252337
+}

@@ -1,0 +1,35 @@
+{
+  "case": "release-low-traffic-side-effects",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 20.4,
+  "subject_cost_usd": 0.0617287,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:ship-release-rollout\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer refuses to ramp, explains that two 200s show neither correctness nor exactly-once charging, and replaces the fixed bake time with event-count and zero-mismatch reconciliation gates. It requires stable idempotency keys, a kill switch, spend caps, sandbox or synthetic charges instead of real duplicates, and treats bad charges as compensation rather than rollback; its only gap is not explicitly requiring the kill switch and refund runbook to be tested beforehand."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1252433
+}

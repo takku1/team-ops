@@ -1,0 +1,35 @@
+{
+  "case": "lead-coupled-disjoint-paths",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 18.4,
+  "subject_cost_usd": 0.0632926,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The plan recognizes that A and B are coupled through the contract even though their paths are disjoint. It assigns the schema and generated client to a single owner C (T0/T1) before any dependent coding, and defines an integration oracle (T4) plus fixtures, rollout strategy, and one-writer-per-shared-file ownership. It also says one sequential agent is likely cheaper than parallel workers unless the changes are large, so it does not treat the user's permission as a mandate to spawn, and it dispatches nothing and fabricates no results."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1235832
+}

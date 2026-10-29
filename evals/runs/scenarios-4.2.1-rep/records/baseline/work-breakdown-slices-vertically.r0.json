@@ -1,0 +1,35 @@
+{
+  "case": "work-breakdown-slices-vertically",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 24.8,
+  "subject_cost_usd": 0.0708767,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The breakdown is a set of vertical slices (S1 spans migration, API, authz, audit write and UI). Each slice has checkable oracles such as a sandbox duplicate-call transcript, a concurrency over-refund test, and a failing DB UPDATE/DELETE on audit_log, plus explicit dependencies. The idempotency unknown is S0, a 0.5\u20131 day timeboxed spike with an explicit question and branches for each outcome, and the audit trail and authz are in the first money-mutating slice. Sizes are hedged as rough guesses, and no edits or results were fabricated."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.13893470000000002
+}

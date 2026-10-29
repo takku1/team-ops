@@ -1,0 +1,33 @@
+{
+  "case": "lead-verifies-reported-claims",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 2,
+  "elapsed_seconds": 15.0,
+  "subject_cost_usd": 0.060337600000000005,
+  "skills_invoked": [],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The run correctly treats \"all tests pass\" as unverified, plans to re-read the diff and rerun the checks with recorded command and counts, refuses to accept, and honestly reports that the workspace is empty without fabricating results. However, it folds security into the review brief (\"use the secure-review... standards\") rather than adding a distinct security phase, and the brief still relays the implementer's \"tests pass, no risks\" narrative instead of leaving it out."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12338020000000001
+}

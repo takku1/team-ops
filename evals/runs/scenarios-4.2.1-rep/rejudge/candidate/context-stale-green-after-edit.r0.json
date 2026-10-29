@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": true,
+  "reason": "The answer correctly rejects the old green for the changed untracked generated input and requests a rerun with config hashes, command, exit status, and logs, but omits stable-input verification and toolchain/environment identity. It also asserts that the directory is not a Git repository without any supporting tool evidence, fabricating a factual finding."
+}

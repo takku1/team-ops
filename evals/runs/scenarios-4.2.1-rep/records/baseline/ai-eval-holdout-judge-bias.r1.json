@@ -1,0 +1,35 @@
+{
+  "case": "ai-eval-holdout-judge-bias",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 14.5,
+  "subject_cost_usd": 0.0620193,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:ai-evaluation\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer plainly rejects the 98% readiness/confidence claim. It calls for a fresh held-out representative set, executable output and side-effect state checks, and a separate blinded, order-randomized judge calibrated against human labels for subjective quality. It also requires counting timeouts and aborted runs as failures, versioning the full configuration, per-slice results, and a ~89\u201399.9% interval, while distinguishing accuracy from statistical confidence and reruns from independent samples; it honestly says nothing was run (only a Skill load is shown), and its one gap is not explicitly requiring causes for each failure."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12374189999999999
+}

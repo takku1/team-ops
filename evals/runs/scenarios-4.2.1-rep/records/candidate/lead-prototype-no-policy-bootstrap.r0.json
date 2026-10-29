@@ -1,0 +1,35 @@
+{
+  "case": "lead-prototype-no-policy-bootstrap",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 21.7,
+  "subject_cost_usd": 0.0642556,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:design-product-workflow\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The plan has lightweight inline implementation slices built by a single builder, explicitly says 'There's no reason to spawn a team', and gives each slice an acceptance check (slice 6's check is a rendered-state inspection at two widths). No files were created and no SLOs, policy rollout or fabricated deployment history appear; the answer states 'no deployment history' as a known fact and proceeds with planning anyway, deferring STATUS.md until building begins."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12552619999999998
+}

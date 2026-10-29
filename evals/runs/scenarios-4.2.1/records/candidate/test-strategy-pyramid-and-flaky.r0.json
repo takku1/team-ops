@@ -1,0 +1,35 @@
+{
+  "case": "test-strategy-pyramid-and-flaky",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 18.6,
+  "subject_cost_usd": 0.0673828,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:build-test-strategy\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer ranks billing escapes first and chooses layers by risk rather than by ratio. It adds consumer-driven contracts plus isolated integration tests for failure semantics such as timeouts, duplicate webhooks and double-charging, drops the global 100% gate in favor of changed-line coverage, assertion review and mutation testing, and assigns each flaky test a named owner, a fix-by deadline, visible retries and compensating coverage before any quarantine. It invents no results and states plainly that nothing was run."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.13136920000000002
+}

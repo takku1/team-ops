@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "Correctly rejects the P85 claim, labels scenarios uncalibrated, requests justified distributions and correlation assumptions, and distinguishes a commitment from a forecast. However, it asserts that dependencies worsen tails without evidence and recommends a 9\u201318-day planning range without a justified basis; it mentions reference-class data but omits explicit forecast calibration."
+}

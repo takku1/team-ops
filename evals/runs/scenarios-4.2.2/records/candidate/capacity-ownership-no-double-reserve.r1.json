@@ -1,0 +1,33 @@
+{
+  "case": "capacity-ownership-no-double-reserve",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 15.4,
+  "subject_cost_usd": 0.0579026,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer computes 30 hours, explains that the 0.75 factor already absorbs the 10 support hours, and rejects the 6\u00d7 multiplier because review, integration and decisions are bounded by the maintainer's 30 hours. It names the maintainer as accountable owner, flags bus-factor-of-one backup risk without inventing a team or approval bureaucracy, sets write-scope and read-only interface permissions for workers, and labels the hour split and 2-worker pilot as tunable assumptions to be replaced by measured data."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.11836920000000001
+}

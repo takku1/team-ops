@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The review blocks sign-off, identifies that dropping legacy_email while old replicas still read it causes rolling-update failures, and prescribes separate code-removal and later column-drop deployments. Although it lacks a formal severity label, it explicitly calls the issue blocking, rejects passing tests as rollout-safety evidence, and makes no fabricated edit claims."
+}

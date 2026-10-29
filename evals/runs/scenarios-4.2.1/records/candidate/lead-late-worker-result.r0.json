@@ -1,0 +1,35 @@
+{
+  "case": "lead-late-worker-result",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 11.6,
+  "subject_cost_usd": 0.0604748,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer refuses to let the stale attempt-1 event advance or overwrite attempt 2, logs it as an unverified historical report, treats the silent worker as possibly still running, diffs attempt 1's artifacts, and requires the current integrated artifact to pass checks before acceptance. However, it says the 'reassignment stands' without recognizing that reassigning was unsafe while old writes could continue, and it explicitly leaves attempt 2 running instead of pausing conflicting writes before resuming a single owner; it also never addresses deduplicating repeated completion events."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12136920000000001
+}

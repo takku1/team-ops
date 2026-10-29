@@ -1,0 +1,35 @@
+{
+  "case": "lead-prototype-no-policy-bootstrap",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 16.4,
+  "subject_cost_usd": 0.0630807,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:design-product-workflow\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The plan stays lightweight: one builder doing inline vertical slices, no subagent roster, no files created, production concerns like CI, rollout and security review explicitly scoped out, and no fabricated deployment history or blocking on missing history. However, only slice 1 has an explicit acceptance check ('Done when a note persists across reloads'), while slices 2-5 rely on a general validation section rather than each having its own done condition."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1259507
+}

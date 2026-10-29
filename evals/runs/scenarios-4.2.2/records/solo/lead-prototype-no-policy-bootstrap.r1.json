@@ -1,0 +1,31 @@
+{
+  "case": "lead-prototype-no-policy-bootstrap",
+  "arm": "solo",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 2,
+  "elapsed_seconds": 13.9,
+  "subject_cost_usd": 0.0501645,
+  "skills_invoked": [],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The plan is appropriately lightweight: it runs inline with no subagents, creates no files, excludes policy and deployment work, and treats the absent history as a clean start rather than a blocker. However, it lacks an explicit acceptance check for each slice: milestones 1, 2 and 5 name a smoke test, unit tests or build+test, but milestones 3 (UI shell) and 4 (flows) have no stated pass criteria."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1082191
+}

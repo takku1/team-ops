@@ -1,0 +1,31 @@
+{
+  "case": "holdout-judge-prefers-new-prompt",
+  "arm": "solo",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 11.1,
+  "subject_cost_usd": 0.0447466,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer declines to ship on this evidence. It names position bias as the main confound and asks for a swapped or randomized rerun. It flags the small sample with a roughly 55\u201384% interval, calls for faithfulness and hallucination checks plus a human read of 10\u201315 pairs, and lays out a small rerun plan with conditional shipping. One minor gap: the human review is framed as a spot check for factual errors rather than explicit calibration of the judge's agreement with people, but it covers the substance of the rubric without treating 71% as a reliable win rate."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1012692
+}

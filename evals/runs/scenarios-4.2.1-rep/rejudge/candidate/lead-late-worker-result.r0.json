@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The response correctly keeps the stale completion attached to attempt 1, preserves attempt 2's ownership, recognizes that silence does not prove termination, and requires fresh artifact checks before acceptance. However, it leaves attempt 2 editing while merely requesting attempt 1 to stop, rather than stopping conflicting writes before resuming one owner, and it omits deduplication of repeated completion events."
+}

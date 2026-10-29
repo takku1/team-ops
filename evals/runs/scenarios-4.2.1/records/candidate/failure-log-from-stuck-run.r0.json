@@ -1,0 +1,35 @@
+{
+  "case": "failure-log-from-stuck-run",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 4,
+  "elapsed_seconds": 16.3,
+  "subject_cost_usd": 0.06832560000000001,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\", \"args\": \"Write up a failed run: inherited diagnosis (\\\"stale app image embedded in the kernel; compare image IDs to confirm\\\") accepted by implementer, three rebuild rounds, failure unchanged; image IDs are slot numbers that repeat across builds so they could never di"
+  ],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The write-up is blameless and names system factors: the diagnosis was accepted without testing whether its discriminator could fail, there was no stop rule on unchanged outcomes, and handoffs carried no evidence status. Its actions are concrete (verify-before-editing, a two-repair rule, labeling handoff claims as observed or inferred, a new eval case), and it records cost honestly without inventing figures. However, only the eval action says how to tell whether it worked. The entry is not kept anywhere: the agent said no tracker exists and only offered to append it to one, and it never states that the next run reads it."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.13190400000000002
+}

@@ -1,0 +1,31 @@
+{
+  "case": "capacity-ownership-no-double-reserve",
+  "arm": "solo",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 16.3,
+  "subject_cost_usd": 0.0507526,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer computes 40 \u00d7 0.75 = 30 hours, flags the planner's double subtraction of support, and refuses to multiply capacity by the six workers. It caps worker WIP by maintainer review hours, labels the hour split and the 2\u20133 concurrent workers as tunable starting assumptions, and names the maintainer as sole accountable owner with a backup person and runbook for single-point-of-failure risk, without inventing a team or approval bureaucracy."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1107512
+}

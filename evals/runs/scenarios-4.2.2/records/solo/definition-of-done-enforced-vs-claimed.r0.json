@@ -1,0 +1,31 @@
+{
+  "case": "definition-of-done-enforced-vs-claimed",
+  "arm": "solo",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 16.9,
+  "subject_cost_usd": 0.0501286,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer compares each adopted DoD item against actual enforcement, identifies the lint, integration, dependency-scanning and staging gaps with concrete remedies, and separates PR checkboxes (\"a prompt rather than enforcement\") from required status checks; it also honestly notes the findings are unverified. However, its fallback of changing the DoD to match reality (e.g., making staging/docs \"when applicable\") or accepting it as \"aspirational\" never requires an authorized, recorded decision for the policy change, which the rubric explicitly calls for."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.11377119999999999
+}

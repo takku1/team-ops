@@ -1,0 +1,31 @@
+{
+  "case": "lead-duplicate-check-owner",
+  "arm": "solo",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 14.0,
+  "subject_cost_usd": 0.0499686,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer makes the main session the single final-run owner and runs the full suite once on a fingerprinted, frozen current revision. It rejects the previous-revision record as evidence ('can't stand in for the final run'), shares the result and fingerprint with the other roles, and spawns no new supervisor or fabricates results. It also limits the reviewer to targeted evidence-only checks, which separates those from three identical full runs."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.10643520000000001
+}

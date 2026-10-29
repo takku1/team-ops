@@ -1,0 +1,33 @@
+{
+  "case": "context-stale-green-after-edit",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 9.7,
+  "subject_cost_usd": 0.050102600000000004,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer rejects the exit-0 result as stale for the current state. It explains that the SHA covers only tracked content and not the edited untracked generated config, and it requires a fresh run of the same command and environment with the commit SHA plus content hashes of untracked inputs and proof the run read the edited file. It does not reuse the result because the SHA matches or infer failures elsewhere. It names toolchain identity only implicitly, through 'same environment', and it doesn't say whether unaffected independent checks keep their results, but neither gap breaks a rubric requirement."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1093852
+}

@@ -1,0 +1,35 @@
+{
+  "case": "code-review-keeps-out-of-diff-findings",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 4,
+  "elapsed_seconds": 11.2,
+  "subject_cost_usd": 0.061770900000000004,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-code-review\"}"
+  ],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The review labels `docs/operations.md:42` as a blocking finding and ties it to the renamed reader in `client.py`, then also covers the diff itself: it raises a backward-compat question about deployed `retry_limit` configs and says what looks fine in the rename and the test. The request-changes verdict comes with reasons, and the answer states that the files were absent (shown by the Grep) instead of inventing evidence."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1156769
+}

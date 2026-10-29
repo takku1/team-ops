@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "execution_id": "dff328b8776d4b0faacf160bc0aeaa24",
+  "input_id": "b5cbf0304cb7a7739afe7737a0d35db14995161846db6966d03b2ba07c1b79c7",
+  "command": [
+    "C:\\Users\\dcarn\\.cargo\\bin\\cargo.exe",
+    "test",
+    "--locked",
+    "--offline",
+    "--lib",
+    "--target",
+    "x86_64-pc-windows-msvc",
+    "-p",
+    "mochios-admission-check"
+  ],
+  "cwd": "Z:\\MochiOS",
+  "exit_code": 0,
+  "stable": true,
+  "reused": false,
+  "started_unix": 1793167021.3551178,
+  "elapsed_seconds": 0.318,
+  "stdout_log": "Z:\\team-ops-skills\\evals\\runs\\mochios-4.0\\checks\\dff328b8776d4b0faacf160bc0aeaa24.stdout.log",
+  "stderr_log": "Z:\\team-ops-skills\\evals\\runs\\mochios-4.0\\checks\\dff328b8776d4b0faacf160bc0aeaa24.stderr.log"
+}

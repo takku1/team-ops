@@ -1,0 +1,18 @@
+{
+  "name": "team-ops",
+  "version": "4.2.2",
+  "description": "Adaptive coding workflow: one controller, selective workers, scoped ownership, current execution evidence, and an optional local check runner. Ten on-demand playbooks; small work stays inline.",
+  "author": {
+    "name": "Dillon Carney",
+    "email": "dillon.c.carney@gmail.com"
+  },
+  "keywords": [
+    "agent-team",
+    "workflow",
+    "code-review",
+    "implementation",
+    "verification",
+    "security",
+    "ai-evaluation"
+  ]
+}

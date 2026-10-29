@@ -1,0 +1,35 @@
+{
+  "case": "capacity-ownership-no-double-reserve",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 15.3,
+  "subject_cost_usd": 0.0655291,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer correctly states 30 hours rather than 20, rejects the 6x multiplier, accounts for maintainer review and integration overhead, and labels its splits as adjustable defaults. However, its own table puts the 10 support hours inside the 30 and leaves a 20-hour discretionary pool, which repeats the double-subtraction it criticizes. It also never names backup or bus-factor risk for the solo maintainer, and it covers permission constraints only loosely through write scopes."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.13280750000000002
+}

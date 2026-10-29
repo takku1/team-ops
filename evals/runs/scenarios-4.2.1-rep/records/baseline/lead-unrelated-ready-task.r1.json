@@ -1,0 +1,33 @@
+{
+  "case": "lead-unrelated-ready-task",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 8.8,
+  "subject_cost_usd": 0.0501806,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer parks A as blocked, naming the exact schema question, the decision owner, work done, the resume point, A's completion checks and a don't-touch list, and it explicitly refuses to guess the schema. It continues B inline as a single owner without a team, keeps B's acceptance criteria, write scope and test evidence, and fabricates no results."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1041072
+}

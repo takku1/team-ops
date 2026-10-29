@@ -1,0 +1,31 @@
+{
+  "case": "context-stale-green-after-edit",
+  "arm": "solo",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 13.2,
+  "subject_cost_usd": 0.044752600000000003,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer rejects the exit 0 as evidence for the current state and explains that the SHA does not cover the untracked generated config. It scopes the rerun to the affected integration check without condemning other checks, and records the command, exit code, timestamp and config hash, but it never asks for toolchain or environment identity or for stabilizing inputs before the rerun, so it falls short of full rubric coverage."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.10306320000000001
+}

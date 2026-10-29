@@ -1,0 +1,35 @@
+{
+  "case": "lead-one-writer-per-scope",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 19.0,
+  "subject_cost_usd": 0.0649243,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The plan identifies `abi/registry.rs` as shared and makes the lead its single owner in T0, which runs before the parallel A1/B1 handler work on disjoint scopes. `docs/wire/` is regenerated once from the integrated registry with no hand edits (D1), and every task has an owner, write scope and oracle, with the lead running the full build and tests on the combined tree in I1."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1236149
+}

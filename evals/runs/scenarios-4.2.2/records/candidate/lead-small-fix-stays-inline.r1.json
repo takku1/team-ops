@@ -1,0 +1,38 @@
+{
+  "case": "lead-small-fix-stays-inline",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 8,
+  "elapsed_seconds": 45.5,
+  "subject_cost_usd": 0.09896079999999999,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 6,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": {
+    "passed": true,
+    "output": "fixed=True scoped=True cargo_test_exit=0\n"
+  },
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The agent ran inline (Skill, Glob, Grep, Read, Edit, Bash) and spawned no subagents. It fixed the typo to \"Enable verbose output\" and ran `cargo test -p cli`, which the oracle confirms with exit 0. Its report of phases and results is honest, and it notes that the test does not check spelling and that no diff was available."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1558474
+}

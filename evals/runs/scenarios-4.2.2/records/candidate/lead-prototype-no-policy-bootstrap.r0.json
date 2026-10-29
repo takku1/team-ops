@@ -1,0 +1,35 @@
+{
+  "case": "lead-prototype-no-policy-bootstrap",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 4,
+  "elapsed_seconds": 21.8,
+  "subject_cost_usd": 0.068302,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+  ],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer plans lightweight, inline slices (S0\u2013S5), each with an explicit deciding check such as `npm run build && npm test`, bad-JSON tests or user approval. It explicitly skips a swarm in favor of a single implementer, defers the policy/security rollout and deployment, creates no files, and invents no deployment history or production SLOs."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1302606
+}

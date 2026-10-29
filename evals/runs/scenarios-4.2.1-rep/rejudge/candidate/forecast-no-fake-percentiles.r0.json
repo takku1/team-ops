@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "Correctly rejects the P85 claim, labels scenarios uncalibrated, and proposes comparable history and reforecasting when scope or dependencies change. However, it invents probability claims about outcomes exceeding the mean, assumes statistical dependence and shared causes from task dependencies, introduces unsupported 9\u201313 and 20-plus-day forecasts, and does not explicitly separate a deadline from the forecast or identify calibration as follow-up."
+}

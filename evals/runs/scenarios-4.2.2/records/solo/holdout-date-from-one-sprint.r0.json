@@ -1,0 +1,31 @@
+{
+  "case": "holdout-date-from-one-sprint",
+  "arm": "solo",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 12.4,
+  "subject_cost_usd": 0.048616599999999996,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer opens by stating one sprint can't support a real 90% confidence number. It gives a naive 5-sprint (~50%) estimate and an 8-sprint date labeled '~90% (assumed variability)'. It flags ticket-size, scope-change and holiday risks, sets a re-forecast point after 2-3 more sprints, and asks for velocity history to run a proper simulation. A minor weakness is the suggested boss script ('I'm confident we'll be done by mid-to-late February') and the unsourced '30-40% swing' figure, but both are framed as resting on one sprint and assumptions rather than as calibrated."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.10727519999999999
+}

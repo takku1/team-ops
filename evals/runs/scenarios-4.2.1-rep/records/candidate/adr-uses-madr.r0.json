@@ -1,0 +1,35 @@
+{
+  "case": "adr-uses-madr",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 7,
+  "elapsed_seconds": 41.2,
+  "subject_cost_usd": 0.09440130000000001,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:plan-design-review\"}"
+  ],
+  "tool_calls": 5,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The final answer contains a full MADR-shaped record: title, status, context/problem, decision drivers, all four options (Postgres SKIP LOCKED, Redis lists, RabbitMQ, SQS) with pros and cons, a justified decision outcome, and consequences that include honest negatives such as queue load competing on the primary database, vacuum/bloat, and owning retry/DLQ logic. It also says plainly that the Write call failed and nothing was saved (consistent with FILES showing none), and it flags the inferred cons, placeholder deciders, and suggested thresholds rather than presenting them as given facts."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1568759
+}

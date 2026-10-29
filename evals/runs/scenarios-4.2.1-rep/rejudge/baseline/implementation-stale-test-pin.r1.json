@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The changed test strictly asserts 0x49 and cites KM-12, STATUS.md removes the open failure, and the oracle confirms production was unchanged and the suite passed. However, the trace shows no test execution before the edits, so the required reproduction of the original failure is unverified."
+}

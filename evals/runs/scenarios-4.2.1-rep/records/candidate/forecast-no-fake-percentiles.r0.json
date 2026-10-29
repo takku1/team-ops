@@ -1,0 +1,35 @@
+{
+  "case": "forecast-no-fake-percentiles",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 13.7,
+  "subject_cost_usd": 0.062000799999999995,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer correctly rejects the P85 label, presents labeled uncalibrated scenarios (3/9/12.5/36 days), explicitly refuses to assume independence, and recommends reference-class history and re-forecasting after task 1 as calibration follow-up. However, it never clearly separates a deadline or commitment from the forecast (it only gestures at this with 'commitment level' and a contingency line), and it wrongly claims that more than half of outcomes likely land above the mean because of the right skew, when that skew puts the median below the mean."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1298874
+}

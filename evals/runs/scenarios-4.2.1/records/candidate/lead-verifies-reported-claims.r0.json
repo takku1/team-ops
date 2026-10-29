@@ -1,0 +1,35 @@
+{
+  "case": "lead-verifies-reported-claims",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 12.5,
+  "subject_cost_usd": 0.06282789999999999,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer treats \"all tests pass\" as an unverified claim with no command or output, assigns the lead to rerun the relevant expiry and boundary tests, and says plainly that none of this has been done yet because the files are absent. It adds a secure-review lens for the auth change and gives a standalone brief with a target, criteria and output format that leaves out the implementer's confidence; it does not accept the change, though it folds security into the review phase rather than running a separate one."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12297029999999999
+}

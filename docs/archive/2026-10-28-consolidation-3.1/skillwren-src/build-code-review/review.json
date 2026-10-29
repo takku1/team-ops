@@ -1,0 +1,173 @@
+{
+ "original_sha256": "0558a917b4e453b89ab7bb752560e21eefabd55ec234eef926b1c836c82bd940",
+ "logic_sha256": "69db4353bd52489020b29fdcd4836264b7fdf9489c3497278cdbc8a5cb6eff2f",
+ "review": "Manual conversion review (prose v2 -> SkillWren 0.5). Anchors check bookkeeping, not semantic parity.",
+ "requirements": [
+  {
+   "id": "frontmatter",
+   "original_lines": [
+    1,
+    4
+   ],
+   "logic_contains": [
+    "name: build-code-review",
+    "Use when defining review rules for a repo",
+    "Not for automated security scanning (use secure-supply-chain)"
+   ]
+  },
+  {
+   "id": "title",
+   "original_lines": [
+    6,
+    6
+   ],
+   "logic_contains": [
+    "# Code Review Policy"
+   ]
+  },
+  {
+   "id": "approval-standard",
+   "original_lines": [
+    8,
+    9
+   ],
+   "logic_contains": [
+    "approve once the change improves overall code health and has no unresolved blocking correctness or security issue, even if it is not perfect",
+    "There is no perfect code, only better code"
+   ]
+  },
+  {
+   "id": "small-changes",
+   "original_lines": [
+    10,
+    10
+   ],
+   "logic_contains": [
+    "About 100 lines changed is a healthy norm, and around 1000 is usually too large",
+    "Separate refactors from behavior changes",
+    "Stack PRs for big features",
+    "approve a change too large to review well"
+   ]
+  },
+  {
+   "id": "speed",
+   "original_lines": [
+    11,
+    11
+   ],
+   "logic_contains": [
+    "first response within **one business day at most**",
+    "Review speed is a team throughput lever"
+   ]
+  },
+  {
+   "id": "approvals",
+   "original_lines": [
+    12,
+    12
+   ],
+   "logic_contains": [
+    "at least 1 owner (from CODEOWNERS) per touched area",
+    "second approver for security-sensitive paths, schema migrations, and infra"
+   ]
+  },
+  {
+   "id": "authors",
+   "original_lines": [
+    13,
+    13
+   ],
+   "logic_contains": [
+    "what changed, why, how it was tested, and the risk and rollback",
+    "self-review before requesting review and keep CI green"
+   ]
+  },
+  {
+   "id": "automate-nits",
+   "original_lines": [
+    14,
+    14
+   ],
+   "logic_contains": [
+    "leave style nits to formatters and linters",
+    "Humans review design"
+   ]
+  },
+  {
+   "id": "checklist",
+   "original_lines": [
+    16,
+    23
+   ],
+   "logic_contains": [
+    "check in priority order: design, functionality, complexity, tests, security and privacy, naming and comments and docs, operability",
+    "does it fit the architecture and the ADRs",
+    "concurrency, user impact",
+    "over-engineered for needs that do not exist yet",
+    "correct, meaningful, and able to fail",
+    "authz, secrets, PII, injection",
+    "logging, metrics, failure modes, flags"
+   ]
+  },
+  {
+   "id": "etiquette",
+   "original_lines": [
+    25,
+    28
+   ],
+   "logic_contains": [
+    "comment on the code, not the person, and explain why",
+    "`blocking:`, `nit:`, `optional:`, `question:`, `fyi:`",
+    "Escalate to the lead (team-lead) after one round"
+   ]
+  },
+  {
+   "id": "set-policy-flow",
+   "original_lines": [
+    30,
+    31
+   ],
+   "logic_contains": [
+    "set-review-policy:",
+    "apply policy baseline with current as policy",
+    "branch protection, and PR template"
+   ]
+  },
+  {
+   "id": "review-flow",
+   "original_lines": [
+    32,
+    32
+   ],
+   "logic_contains": [
+    "if reviewed is too large to review well:",
+    "asking the author to split the oversized change",
+    "generate findings in checklist priority order",
+    "verify every comment carries a severity label",
+    "approve, approve with nits, or request changes, with reasons"
+   ]
+  },
+  {
+   "id": "pitfalls",
+   "original_lines": [
+    34,
+    37
+   ],
+   "logic_contains": [
+    "approve a change too large to review well",
+    "block a change on personal preference that no style guide supports",
+    "Make PR age a visible metric"
+   ]
+  },
+  {
+   "id": "sources",
+   "original_lines": [
+    39,
+    40
+   ],
+   "logic_contains": [
+    "See the [research register](../../docs/current/research-evidence.md)"
+   ]
+  }
+ ]
+}

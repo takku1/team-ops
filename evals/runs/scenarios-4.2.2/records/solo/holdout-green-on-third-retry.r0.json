@@ -1,0 +1,31 @@
+{
+  "case": "holdout-green-on-third-retry",
+  "arm": "solo",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 7.4,
+  "subject_cost_usd": 0.0426986,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer refuses to call it done on a retry-green and proposes a sound flake-versus-regression check: inspect the failed-run logs, check whether the diff touches the webhook path, and loop the test on main versus the branch. It suggests a flake ticket and noting it in the PR, but it never names an owner for the flaky-test record or says who decides any risk acceptance, both of which the rubric requires."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.0975772
+}

@@ -1,0 +1,35 @@
+{
+  "case": "slo-units-and-windows",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 13.7,
+  "subject_cost_usd": 0.0608167,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:run-slo-error-budget\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer computes 2,000 allowed and 800 remaining bad requests, rejects the 43-minute framing because it needs a traffic model, and computes 14.4/720 = 2%, 14.4/168 \u2248 8.6%, and 3.36x for 2% on a 7-day window. It also covers paired long/short windows and minimum event counts for low traffic, with no unit mixing and no fabricated actions."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1165113
+}

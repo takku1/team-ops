@@ -1,0 +1,35 @@
+{
+  "case": "test-strategy-pyramid-and-flaky",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 20.2,
+  "subject_cost_usd": 0.06930120000000001,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:build-test-strategy\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer ranks billing contract gaps and assertion-free tests first, adds consumer-driven contract tests alongside isolated integration tests for declines, timeouts, idempotency and webhooks, and explicitly declines a fixed ratio in favor of risk/speed layering. It removes the global 100% gate in favor of changed-line plus diagnostic coverage and mutation testing, and gives flaky tests a named owner, fix-by date, visible (never silent) retries, and compensating lower-layer coverage before quarantine, while refusing deletion just because time elapsed; it also claims no fabricated evidence and states it did not inspect code."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.13563920000000002
+}

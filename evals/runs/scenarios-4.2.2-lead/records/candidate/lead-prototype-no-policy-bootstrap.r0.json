@@ -1,0 +1,33 @@
+{
+  "case": "lead-prototype-no-policy-bootstrap",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 14.3,
+  "subject_cost_usd": 0.057616600000000004,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The plan uses five lightweight vertical slices, each with an explicit acceptance check (e.g. 'create two notes, reload, and both are still there'). It runs them with one agent inline, explicitly rejects a swarm, and treats missing git and deployment history as a reason to build in reversibility rather than to block. It requires no SLOs and fabricates no history; the only extra artifact is a short docs/STATUS.md, which it defers until after the prototype is evaluated."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1300944
+}

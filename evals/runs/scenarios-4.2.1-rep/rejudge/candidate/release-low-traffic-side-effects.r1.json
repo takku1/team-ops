@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The answer blocks the ramp, rejects two HTTP 200s and fixed bake time as safety evidence, and proposes charge reconciliation, event gates, idempotency, exposure limits, and shadow testing without real charges. It distinguishes rollback from compensation and proposes a kill switch and refund procedure, but does not require testing containment and recovery before ramping."
+}

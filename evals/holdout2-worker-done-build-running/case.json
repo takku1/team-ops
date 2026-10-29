@@ -1,0 +1,9 @@
+{
+  "skills": [
+    "team-lead",
+    "build-definition-of-done"
+  ],
+  "kind": "behavioral-scenario",
+  "status": "not-run",
+  "split": "holdout"
+}

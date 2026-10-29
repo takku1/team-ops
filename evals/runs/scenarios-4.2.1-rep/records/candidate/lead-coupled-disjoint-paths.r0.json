@@ -1,0 +1,35 @@
+{
+  "case": "lead-coupled-disjoint-paths",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 22.3,
+  "subject_cost_usd": 0.060148200000000006,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer explicitly identifies contract coupling despite disjoint paths. It puts the schema (S0), generated client (S1), and fixtures under a single integration owner before A and B start, and adds an integration oracle (I) with a round-trip check. Write scopes are disjoint with no overlapping generator writes, and it does not equate permission with a mandate: no workers were dispatched, the worker cost is weighed, and the user is asked whether to spawn."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.11772280000000002
+}

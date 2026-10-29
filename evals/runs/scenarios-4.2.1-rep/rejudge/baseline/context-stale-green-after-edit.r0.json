@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "Correctly rejects the stale green result and recognizes that unchanged commit identity excludes the edited untracked generated configuration, requesting a rerun with command, exit code, and input hashes. However, it omits toolchain/environment identity and stable-input verification, allows a weaker diff-based substitute for required reruns, and broadly invalidates results after any worker edit without preserving unaffected independent checks."
+}

@@ -1,0 +1,35 @@
+{
+  "case": "lead-one-writer-per-scope",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 22.8,
+  "subject_cost_usd": 0.0704839,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The plan notices that both tasks write `abi/registry.rs` and feed `docs/wire/`, so it gives both to a single registry owner (R1 and D1). It runs A1 and B1 in parallel only on disjoint write scopes after R1 lands, and requires `docs/wire/` to be regenerated from the integrated registry rather than edited by hand. Every task has an owner, a write scope and a deciding check, and I1 verifies the integrated tree (build, tests and an old-name grep) through one designated owner. Separate green checks are never treated as proof that the combined result works, though the plan names the registry owner rather than the lead as integrator."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1357583
+}

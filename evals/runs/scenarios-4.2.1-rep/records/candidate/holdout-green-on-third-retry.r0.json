@@ -1,0 +1,35 @@
+{
+  "case": "holdout-green-on-third-retry",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 19.5,
+  "subject_cost_usd": 0.0583348,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-definition-of-done\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer refuses to treat the third-retry green as clean evidence. It separates a possible regression from baseline flakiness, proposes base-branch and loop reproduction plus inspection of the timeout logs, keeps the retries visible, and recommends an owned ticket rather than deleting or quarantining the test. It falls short by never naming who decides the risk acceptance: it says only that 'someone explicitly accepts it' and gives no role such as payments owner or tech lead, so one rubric element is missing."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1313606
+}

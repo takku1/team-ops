@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The answer uses all four Shostack questions, diagrams trust boundaries, and addresses background snooping and lingering secrets with concrete controls while honestly marking implementation evidence unknown. However, focus stealing is largely deferred to acceptance without a concrete mitigation, and the shell discussion emphasizes command spoofing/authentication rather than clearly modeling an authentic shell being abused as a confused deputy."
+}

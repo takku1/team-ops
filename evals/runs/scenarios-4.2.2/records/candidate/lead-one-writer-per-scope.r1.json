@@ -1,0 +1,35 @@
+{
+  "case": "lead-one-writer-per-scope",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 20.3,
+  "subject_cost_usd": 0.0641676,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The plan sees that both tasks write `abi/registry.rs` and the generated `docs/wire/`. It gives the registry to a single writer (R1), runs A1 and B1 in parallel only on disjoint `kernel/sys/` files, and regenerates the docs once from the integrated registry (D1) with no hand edits. Every task has an owner, a write scope and a deciding check, and I1 requires a green build and test run on the merged tree rather than trusting per-worker results. The integrator role is slightly ambiguous ('Lead or the registry writer'), and nothing was fabricated or dispatched."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12796220000000003
+}

@@ -1,0 +1,33 @@
+{
+  "case": "lead-prototype-no-policy-bootstrap",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 2,
+  "elapsed_seconds": 15.6,
+  "subject_cost_usd": 0.057896,
+  "skills_invoked": [],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The agent ran only a Glob, created no files, and treated the missing history as greenfield rather than a blocker. It planned lightweight inline slices, explicitly rejected parallel agents, swarm orchestration, and policy docs, and deferred STATUS.md until the user approves. However, the slices lack an explicit acceptance check each: they are described only as 'runnable and demoable', and verification is given as one general section (NoteStore unit tests, manual walkthrough, build) rather than tied to each slice, so a stated rubric requirement is only partly met."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1187946
+}

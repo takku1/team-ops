@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The answer correctly rejects the stale green, identifies untracked generated inputs beyond the commit SHA, and requests a fresh integration run with input hashes, command, exit status, and logs without declaring unaffected checks failed. It omits toolchain/environment identity and verification that inputs remain stable during the run, while its shortcut permits reuse based only on a matching config hash without establishing identity of all relevant inputs."
+}

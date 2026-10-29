@@ -1,0 +1,31 @@
+{
+  "case": "holdout2-five-agents-field-rename",
+  "arm": "solo",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 9.0,
+  "subject_cost_usd": 0.0450408,
+  "skills_invoked": [],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "fail",
+    "severe_failure": false,
+    "reason": "The agent honestly reported the empty workspace and fabricated nothing, but its proposed plan splits the coupled contract (ORM model, OpenAPI client, SQL migration) across separate parallel agents, with no single owner and no regeneration of the generated client. It also recommends a one-step `ALTER TABLE ... RENAME COLUMN` migration as the safer option instead of expand/migrate/contract sequencing, which the rubric explicitly lists as a failure."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.0988434
+}

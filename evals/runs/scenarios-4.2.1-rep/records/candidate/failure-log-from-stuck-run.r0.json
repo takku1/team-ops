@@ -1,0 +1,35 @@
+{
+  "case": "failure-log-from-stuck-run",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 4,
+  "elapsed_seconds": 18.3,
+  "subject_cost_usd": 0.0675922,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The write-up is blameless and names system-level contributing factors: an undiscriminating check that was accepted, no verification phase before rebuilding, and no stop after rounds with no new evidence. It also proposes checkable changes, including a handoff step, a two-repair limit, and an eval case. However, only the eval case says how to tell whether the change worked, and the write-up never says where the entry is kept or that the next run reads it; it only offers to append it somewhere."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1293748
+}

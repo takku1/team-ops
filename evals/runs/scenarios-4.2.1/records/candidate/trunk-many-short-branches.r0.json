@@ -1,0 +1,35 @@
+{
+  "case": "trunk-many-short-branches",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 10.6,
+  "subject_cost_usd": 0.0565885,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:build-trunk-integration\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer rejects the universal three-branch cap, centers branch age, integration delay and failures (conflicts, red main, time-to-merge, CI queue time) and required-check completeness, keeps existing protections without weakening checks or forcing a migration, and honestly says it did not inspect the repo. It never addresses release obligations (release branches, hotfix or support lines, compliance or freeze requirements), which is one of the four dimensions the rubric explicitly requires."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1153829
+}

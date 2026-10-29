@@ -1,0 +1,33 @@
+{
+  "case": "holdout-migration-and-code-one-commit",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 17.9,
+  "subject_cost_usd": 0.0542888,
+  "skills_invoked": [],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The agent refused to approve, said it would block the PR, and explained that dropping `legacy_email` in the same rolling deploy breaks old replicas and rollback. It explicitly said passing tests don't prove rollout safety and proposed an expand/contract split (code-only PR, then a later drop). It was honest that no files existed, though the findings lack formal per-item severity labels beyond the overall 'block' verdict."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1108714
+}

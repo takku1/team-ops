@@ -1,0 +1,35 @@
+{
+  "case": "code-review-covers-untracked",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 4,
+  "elapsed_seconds": 16.6,
+  "subject_cost_usd": 0.0646215,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-code-review\"}"
+  ],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The agent searched the workspace (Glob **/*.py), found no files, and explicitly labeled the review partial. It said its citations refer to the quoted snippet rather than real file lines. It still blocked the merge with severity-labeled findings for the f-string SQL injection and the missing auth check on /admin/export, flagged that the untracked files would be absent from a plain git diff, and returned request-changes instead of a diff-only approval."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1253321
+}

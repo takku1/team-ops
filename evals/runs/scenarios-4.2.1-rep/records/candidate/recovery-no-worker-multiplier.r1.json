@@ -1,0 +1,35 @@
+{
+  "case": "recovery-no-worker-multiplier",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 18.5,
+  "subject_cost_usd": 0.0665688,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The memo centers on the review and integration bottleneck, scope cuts, WIP caps, and the critical path. It declines to fabricate a P85 and rejects the eight extra agents with a Brooks/bottleneck rationale, reconsidering them only if measured conditions change. It also rejects halving regression checks in favor of making them faster or more targeted, and it does not invoke a one-third-timeline cutoff, which meets the rubric."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1252154
+}

@@ -1,0 +1,35 @@
+{
+  "case": "cadence-solo-lightweight",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 13.2,
+  "subject_cost_usd": 0.06054999999999999,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer correctly says WIP \u00f7 throughput is Little's Law, which gives a long-run average under stable conditions and not a P85. It directs the user to their own logged cycle-time history, split by work type, before stating any percentile. It also gives a lightweight rhythm with no meetings or Scrum roles: a WIP limit of one feature, finish-before-pull, a support time-box with an explicit interrupt rule, and a weekly 15-minute review of finished work, support load, queue ranking and re-forecasts."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12074059999999999
+}

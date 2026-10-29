@@ -1,0 +1,31 @@
+{
+  "case": "holdout2-worker-done-build-running",
+  "arm": "solo",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 11.7,
+  "subject_cost_usd": 0.0415086,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer refuses to accept the change, calls 'tests should pass' a prediction rather than evidence, and keeps the task open as 'implemented, unverified' until the build's exit status and output and real test results are observed. It covers waiting for the worker's job to finish or rerunning in a fresh shell to avoid stale artifacts, and invents no results, though it addresses input identity for the current artifact only implicitly."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.09390319999999999
+}

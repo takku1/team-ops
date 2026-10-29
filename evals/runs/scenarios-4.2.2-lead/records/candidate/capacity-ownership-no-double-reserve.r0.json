@@ -1,0 +1,33 @@
+{
+  "case": "capacity-ownership-no-double-reserve",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 13.2,
+  "subject_cost_usd": 0.0549086,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer correctly computes 40 \u00d7 0.75 = 30 hours, rejects the 6\u00d7 multiplier because review and integration are the bottleneck, defines write-scope permissions and maintainer-only shared files, and labels the hour allocation and worker count as tunable starting assumptions. It names the maintainer as the single accountable owner but never mentions backup or bus-factor risk for a solo maintainer, which is a required rubric element, so it falls short of a full pass."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.112291
+}

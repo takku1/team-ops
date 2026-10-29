@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The answer preserves attempt 2, records the stale output as history, proposes artifact inspection and fencing, and requires checks on the current integrated artifact before acceptance. However, it does not explicitly recognize the unsafe reassignment or pause conflicting writes until fencing is confirmed, omits completion deduplication, and prematurely labels the proposed ledger entry 'fenced, writes reconciled' without evidence."
+}

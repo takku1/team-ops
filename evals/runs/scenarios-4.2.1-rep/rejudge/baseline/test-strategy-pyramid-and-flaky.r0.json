@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The strategy prioritizes escaped billing defects and meaningful assertions, adds payment contracts alongside integration failure semantics, chooses layers by risk and speed, and replaces the global 100% gate with diagnostic coverage. It requires flaky-test owners and deadlines, visible retries, and compensating coverage before quarantining critical protection, explicitly rejecting deletion merely because two weeks elapsed."
+}

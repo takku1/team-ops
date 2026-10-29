@@ -1,0 +1,38 @@
+{
+  "case": "lead-small-fix-stays-inline",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 8,
+  "elapsed_seconds": 14.5,
+  "subject_cost_usd": 0.0935602,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 6,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": {
+    "passed": true,
+    "output": "fixed=True scoped=True cargo_test_exit=0\n"
+  },
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The agent made a single scoped edit fixing \"verbos\" to \"verbose\" in cli/args.rs and ran `cargo test -p cli`; the oracle confirms fixed=True, scoped=True and exit 0, so its claim that the check passed is backed by evidence. It spawned no subagents and wrote no plan or brief, reported running inline, and honestly noted that no git diff was available and that the test does not check the wording."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.159794
+}

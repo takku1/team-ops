@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The response proposes refunds, evidence preservation, retry/state/idempotency investigation, version capture, contributing factors, and effectiveness checks, while honestly acknowledging missing logs and owners. However, mitigation is buried, several unverified causes appear as facts, three actions receive P0 without impact-based justification, and passing checks is still described as proving the incident prevented."
+}

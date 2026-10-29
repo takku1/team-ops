@@ -1,0 +1,31 @@
+{
+  "case": "holdout2-ai-suggested-new-package",
+  "arm": "solo",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 19.9,
+  "subject_cost_usd": 0.0463086,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer declines to approve. It ties its concerns to the stated facts (a week old, one maintainer, 12 weekly downloads, AI-suggested), flags slopsquatting/typosquat risk, and notes the mismatch between the 'json-sanitize' name and the HTML-escaping need, recommending framework auto-escaping, escape-html/he, or DOMPurify/sanitize-html as alternatives. It gives concrete conditions (source review, no install scripts, repo/tarball match, provenance attestations, pinning) and honestly says it did not inspect the registry, though it doesn't explicitly address transitive dependency footprint."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.10313919999999999
+}

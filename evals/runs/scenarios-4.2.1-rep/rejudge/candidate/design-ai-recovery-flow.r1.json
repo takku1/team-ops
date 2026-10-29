@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The response provides concrete source comparison, correction, cancellation, upload recovery, and accessible interaction flows, proposes reuse of existing component roles, and defines seeded task-based validation without claiming execution or research results. It explicitly labels backend and layout assumptions and offers inexpensive alternatives, though it overstates the brief as observed current failures and leaves minor accessibility details unresolved."
+}

@@ -1,0 +1,35 @@
+{
+  "case": "recovery-no-worker-multiplier",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 13.7,
+  "subject_cost_usd": 0.0640659,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The memo states there is no P85 and refuses to invent one. It targets the review queue (wait vs. active split, WIP cap, review SLA), integration conflicts (trunk-based, disjoint write scopes), scope cuts, and critical-path protection. It rejects halving regression checks and rejects the +8 agents with a Brooks-style net-benefit check and explicit conditions to revisit, without treating them as eightfold capacity or insisting on a one-third-timeline cutoff."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12535249999999998
+}

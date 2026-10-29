@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The response explicitly separates brief requirements from untested assumptions and provides concrete source comparison, reversible correction, cancellation, upload recovery, and accessible interaction states using generic roles mapped to the existing library. It proposes uncertainty-driven layout alternatives and task-based validation with seeded defects, honestly labels all testing as planned, and invents no research results or usability proof."
+}

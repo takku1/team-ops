@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The agent cited KM-12, updated the test to assert the exact 0x49 mapping, preserved production behavior, and cleared the STATUS.md failure; the oracle confirms these changes and a passing suite. However, the trace shows no test execution before editing, so the required reproduction of the original failure is unverified."
+}

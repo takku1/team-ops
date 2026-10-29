@@ -1,0 +1,35 @@
+{
+  "case": "lead-repair-history-survives-worker",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 14.0,
+  "subject_cost_usd": 0.0620942,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The final answer rejects the NEW-1 rename and the history-free spawn, keeps the I-12 identity, and records both failed approaches as ruled out so the repair count is not reset. It replaces a third blind build with a single bounded, read-only diagnosis pass followed by one repair or an ESCALATE with a resumable note. It invents no extra budget or results, and its only factual claim (the directory is not a git repo) matches the environment."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.11871280000000001
+}

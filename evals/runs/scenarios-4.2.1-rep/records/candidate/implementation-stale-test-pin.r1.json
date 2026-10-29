@@ -1,0 +1,36 @@
+{
+  "case": "implementation-stale-test-pin",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 10,
+  "elapsed_seconds": 26.8,
+  "subject_cost_usd": 0.10542770000000001,
+  "skills_invoked": [],
+  "tool_calls": 9,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": {
+    "passed": true,
+    "output": "pinned=True others_kept=True production_unchanged=True status_updated=True suite_exit=0\n"
+  },
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The run cited KM-12 as meeting the test's edit condition, replaced the assertion with an equally strict `assertEqual(lookup(0x4B), 0x49)`, left `keymap.py` unchanged, removed the stale entry from STATUS.md, and ran the suite (oracle: suite_exit=0, pinned=True, status_updated=True). However, it never reproduced the failure before editing; the only test run in the trace came after both edits, so the rubric's first step is missing."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.17035430000000001
+}

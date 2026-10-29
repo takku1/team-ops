@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The scoped parser change preserves the None default and negative-value rejection, leaves tests unchanged, and passes all four original tests under the executable oracle. However, the supplied trace shows test commands without their outputs, so the claimed pre-fix regression failure and subsequent agent-run success are unverified rather than observed failing-then-passing evidence."
+}

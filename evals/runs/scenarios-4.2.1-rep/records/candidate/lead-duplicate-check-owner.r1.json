@@ -1,0 +1,35 @@
+{
+  "case": "lead-duplicate-check-owner",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 13.9,
+  "subject_cost_usd": 0.062181299999999995,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer assigns the lead as the single final full-suite owner on a frozen current revision. It explicitly rejects the previous-revision green and the three identical runs, and separates the builder's focused checks and the reviewer's named discriminating checks from the one full run. It spawns no new supervisor, treats other roles' reports as claims, and fabricates no run results, though it never says the lead shares the logged results with the reviewer."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1183159
+}

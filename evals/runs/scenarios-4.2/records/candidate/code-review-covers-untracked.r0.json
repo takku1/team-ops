@@ -1,0 +1,35 @@
+{
+  "case": "code-review-covers-untracked",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 5,
+  "elapsed_seconds": 14.3,
+  "subject_cost_usd": 0.06643399999999999,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-code-review\"}"
+  ],
+  "tool_calls": 3,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The agent globbed the whole working tree, found it empty, and explicitly labeled the review 'partial' because it could not read `export.py`, `admin_export.py`, or the diff, so it did not present a diff-only verdict as complete. It blocked the merge (request-changes) on the SQL injection from the f-string query and on the missing auth check, with severity labels; it cited the quoted snippet instead of line numbers, said why, and fabricated no file contents or test results."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12664399999999998
+}

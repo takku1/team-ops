@@ -1,0 +1,33 @@
+{
+  "case": "lead-unrelated-ready-task",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 8.7,
+  "subject_cost_usd": 0.0487246,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer parks A with its specific blocker (the schema question, its options, and who can decide), resume point, and untouched partial work without guessing at the schema, and runs B inline without spawning a team. It keeps B's limits (reproduce first, don't touch A's schema or contract files, stop if B turns out to be coupled), claims no fabricated results, and reasonably asks for B's details because the workspace is empty, though it doesn't explicitly restate A's acceptance criteria."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.10495099999999999
+}

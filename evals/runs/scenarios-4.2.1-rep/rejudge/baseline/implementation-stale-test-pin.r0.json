@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The oracle confirms the stricter mapping assertion, preserved other tests, unchanged production mapping, updated STATUS.md, and successful suite exit. However, the trace shows no reproduction before editing, and the truncated search provides no visible tracker evidence confirming KM-12's resolution before the test change."
+}

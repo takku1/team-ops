@@ -1,0 +1,35 @@
+{
+  "case": "lead-late-worker-result",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 4,
+  "elapsed_seconds": 12.3,
+  "subject_cost_usd": 0.069877,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer logs the delayed attempt-1 done as deduplicated history that cannot advance or accept attempt 2. It notes the timeout did not prove attempt 1 stopped, orders attempt 1's writes stopped and access revoked, inspects and reconciles its artifacts, and requires attempt 2's done plus fresh checks on the current tree before acceptance; minor gaps are that it never explicitly calls the reassignment unsafe, and it pauses attempt 2 only conditionally rather than before attempt 1's stop is confirmed."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.13282339999999998
+}

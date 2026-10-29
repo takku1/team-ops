@@ -1,0 +1,35 @@
+{
+  "case": "test-strategy-pyramid-and-flaky",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 19.2,
+  "subject_cost_usd": 0.06866810000000001,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:build-test-strategy\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer ranks billing escapes first and rejects the 70/20/10 ratio. It adds consumer-driven contract tests plus billing integration semantics (declines, duplicate webhooks, out-of-order events) and says the two complement each other, removes the 100% gate in favor of changed-line floors and mutation testing, and requires visible retries and named owners with fix-by dates. It also allows quarantine only with compensating coverage and says not to delete the only safety check because a timer ran out. No fabricated results are claimed: the flaky table is explicitly a template, and unmeasured items are marked *to measure*."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1342587
+}

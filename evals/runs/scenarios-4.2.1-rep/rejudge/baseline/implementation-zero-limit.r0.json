@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The trace shows a scoped parser edit and test commands before and after it, and the executable oracle confirms all four original tests pass. However, no baseline test output is supplied, so the claimed failing-then-passing regression evidence is only partially verified."
+}

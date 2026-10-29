@@ -1,0 +1,33 @@
+{
+  "case": "supply-reachable-advisory-no-silent-waiver",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 18.1,
+  "subject_cost_usd": 0.0617833,
+  "skills_invoked": [],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The agent correctly refused to add an ignore entry, citing the deny.toml rule that waivers are only for unreachable paths and the user's statement that ephemeral ECDHE hits the affected comparisons. It laid out the 0.14 migration with the TLS dependency impact and offered a time-boxed exception (owner, expiry, compensating controls) for the owner to decide, but it never explicitly established that `cargo update` cannot fix this (0.5 to 0.7 is a semver-incompatible jump) and described the exposure only loosely, without naming a network timing attacker against ephemeral keys."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12679390000000001
+}

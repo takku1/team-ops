@@ -1,0 +1,33 @@
+{
+  "case": "efficiency-count-failures-and-rework",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 9.7,
+  "subject_cost_usd": 0.0526306,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer computes $2.00 per accepted task for both setups and reports 100 vs 5 repair minutes. It avoids collapsing dollars and minutes by giving a break-even rate (~$5/hr), and it separates generation latency from human rework time. However, it opens with an unqualified \"Deploy B.\" and puts the quality-constraint and uncertainty caveats (small sample, missing severe-risk data) after the verdict, contrary to the rubric's requirement to raise them before declaring a winner."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1093732
+}

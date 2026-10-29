@@ -1,0 +1,31 @@
+{
+  "case": "lead-one-writer-per-scope",
+  "arm": "solo",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 16.0,
+  "subject_cost_usd": 0.0535546,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The plan makes the lead the single writer of `abi/registry.rs` and the `mod.rs` wiring before spawning agents. It has `sys-rename` regenerate `docs/wire/` only after `sys-add` finishes, so the docs come from the merged sources, and the lead runs build/test plus a stale-name grep on the combined result rather than trusting separate agent checks. One minor gap: per-task oracles are thin, especially for `sys-add`, which only 'reports back' with no stated check, but owners and disjoint write scopes are explicit and no evidence is fabricated."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1166372
+}

@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The plan provides vertical increments, concrete acceptance tests, dependencies, two-person ownership, and a time-boxed provider-idempotency spike with explicit questions. However, T1 defers essential refund integrity checks to T2/T3, and the claimed reconciliation fallback assumes provider lookup support even though the spike may find none, leaving safe retry behavior unresolved."
+}

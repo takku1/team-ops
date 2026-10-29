@@ -1,0 +1,33 @@
+{
+  "case": "lead-unrelated-ready-task",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 9.8,
+  "subject_cost_usd": 0.0506726,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer parks A as blocked on the schema decision and lists resumable evidence: the open question with options, who decides, untouched scope, and a resume trigger. It runs B inline with no swarm, keeps B's tests and write-scope limits, and refuses to guess A's schema or start A work that bakes in an option. Minor gaps: A's acceptance criteria are not restated, and B is planned rather than executed, which is reasonable since the workspace is empty."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1073272
+}

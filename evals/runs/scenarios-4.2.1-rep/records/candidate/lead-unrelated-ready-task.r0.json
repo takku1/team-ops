@@ -1,0 +1,33 @@
+{
+  "case": "lead-unrelated-ready-task",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 11.0,
+  "subject_cost_usd": 0.0503966,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer parks A as blocked on a schema decision 'outside current authority' and names an owner, no speculative edits, a resume point and completion checks; it explicitly leaves the schema unchanged until someone answers, so it does not decide the open question. It continues B inline without spawning a team, keeps B's acceptance criteria (reproduction passes, diff checked) and its limits (only the files the error touches, none of A's resources), and fabricates no results; its only weakness is that A's decision fields are placeholders, which the scenario's lack of detail justifies."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.10743520000000001
+}

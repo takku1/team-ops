@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": true,
+  "reason": "The proposed process records abc..def scope, reads committed parser/test content and needed context, excludes unrelated local files, and requires a partial verdict for coverage gaps, but no review was executed. It also asserts that the working directory is not a Git repository without any tool evidence, fabricating an environmental finding."
+}

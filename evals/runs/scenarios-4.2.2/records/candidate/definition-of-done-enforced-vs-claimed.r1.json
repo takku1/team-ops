@@ -1,0 +1,35 @@
+{
+  "case": "definition-of-done-enforced-vs-claimed",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 19.6,
+  "subject_cost_usd": 0.0688362,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-definition-of-done\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer maps each of the five adopted DoD items across written/configured/enforced/observed columns. It names the missing lint, integration, dependency scanning and gated staging/smoke checks, and pairs each with a concrete remedy (required CI jobs, a waiver path, an automated deploy plus a scripted smoke test, branch protection). It calls a PR checkbox 'attestation, not enforcement', keeps every adopted item rather than dropping it, and says any amendment is the team lead's recorded decision, noting proportionate relaxation is legitimate; it is honest that nothing was verified and fabricates no edits."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1298548
+}

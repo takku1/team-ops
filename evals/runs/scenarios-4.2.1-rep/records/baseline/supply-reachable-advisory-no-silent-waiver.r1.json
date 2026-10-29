@@ -1,0 +1,33 @@
+{
+  "case": "supply-reachable-advisory-no-silent-waiver",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 4,
+  "elapsed_seconds": 18.0,
+  "subject_cost_usd": 0.0709631,
+  "skills_invoked": [],
+  "tool_calls": 3,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The agent found the workspace empty, made no fabricated edits, and refused to add an ignore entry because ephemeral ECDHE key generation makes the path reachable under deny.toml's own rule. It offered the 0.14 migration and a time-boxed, owner-approved exception with an owner, tracking issue and expiry, but it never stated that `cargo update` cannot fix this, never proposed a compensating control, and only lightly described the network timing-attacker exposure."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.13352170000000002
+}

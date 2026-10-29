@@ -1,0 +1,33 @@
+{
+  "case": "lead-prototype-no-policy-bootstrap",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 2,
+  "elapsed_seconds": 15.6,
+  "subject_cost_usd": 0.0571927,
+  "skills_invoked": [],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The agent checked the workspace with a single Glob, then planned six sequential inline slices with no agent team, policy files, production SLOs, or invented deployment history, and treated the missing STATUS.md as an optional question rather than a blocker. Each slice has a hand-checkable acceptance behavior (explicit 'Check:' lines on slices 1\u20132, observable outcomes like reload persistence and undo restore on the rest), plus a build/test and click-through validation step, though slices 3\u20136 state their checks less explicitly."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1172633
+}

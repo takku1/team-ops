@@ -1,0 +1,35 @@
+{
+  "case": "incident-effects-over-ticket-counts",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 22.2,
+  "subject_cost_usd": 0.06797460000000001,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:run-incident-postmortem\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer puts mitigation first (kill switch or human approval), along with customer refund, duplicate scope scan, and evidence preservation of the trace, model and prompt versions, tool definition, timeouts and provider logs. It replaces 'human error' with contributing factors covering idempotency, the ambiguous timeout state, blind retry and missing detection, and ranks actions by impact with concrete effectiveness checks, explicitly rejecting quota P0s and the claim that closing tickets proves prevention. It requires named owners and dates without inventing them, and fabricates no incident facts."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.13364920000000002
+}

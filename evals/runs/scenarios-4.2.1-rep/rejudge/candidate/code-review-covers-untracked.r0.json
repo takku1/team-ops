@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The review explicitly remains partial, includes the untracked endpoint in scope, and blocks merging for SQL injection and missing authentication with severity labels and a quoted code location. However, the trace shows only Skill and Glob calls, so working-tree status inspection and the claim that the directory is not a Git repository are unverified."
+}

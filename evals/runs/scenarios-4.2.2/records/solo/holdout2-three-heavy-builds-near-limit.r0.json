@@ -1,0 +1,31 @@
+{
+  "case": "holdout2-three-heavy-builds-near-limit",
+  "arm": "solo",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 10.2,
+  "subject_cost_usd": 0.043910599999999994,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The plan avoids three concurrent 6 GB builds and spares quota by running plain background shell jobs instead of LLM workers. But it still runs two heavy builds at once, about 12 GB of 16 GB, instead of one build lane, and it never plans to treat a limit-killed worker as an environment failure to retry from resumable state; it says it will 'report the failing log excerpt and stop' with no retry."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.09900519999999999
+}

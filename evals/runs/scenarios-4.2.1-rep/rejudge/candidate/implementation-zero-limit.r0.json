@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The resulting parser makes the scoped None check, preserves negative rejection, and passes the executable oracle's four original tests without test changes. The trace shows test commands before and after the edit but omits their outputs, so the claimed specific pre-fix failure and observed failing-then-passing regression evidence cannot be verified."
+}

@@ -1,0 +1,33 @@
+{
+  "case": "lead-unrelated-ready-task",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 8.6,
+  "subject_cost_usd": 0.050086599999999995,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer keeps A parked with its specific schema question, options, completed and untouched work, write scope, resume step and done-checks, and it explicitly refuses to decide the schema or build on a guessed one. It runs B inline without a swarm, citing the small-fix rule, and preserves B's acceptance (repro, cheap tests, diff check, honest reporting) and limits (stop if B turns out to share anything with A), with no fabricated actions or results."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1049446
+}

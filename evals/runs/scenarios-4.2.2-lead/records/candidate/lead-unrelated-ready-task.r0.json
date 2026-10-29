@@ -1,0 +1,33 @@
+{
+  "case": "lead-unrelated-ready-task",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 7.3,
+  "subject_cost_usd": 0.049028600000000006,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer parks A with its specific schema blocker, authority limit, current state, resume point and completion checks, and it explicitly refuses to pick a default. It continues B inline without spawning workers, keeps B's scope, tests and independence boundary, and uses only future tense, so it claims no unverified results."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.102771
+}

@@ -1,0 +1,35 @@
+{
+  "case": "supply-chain-audit-cites-evidence",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 4,
+  "elapsed_seconds": 20.0,
+  "subject_cost_usd": 0.0707576,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:secure-review\", \"args\": \"Supply-chain audit verdict based on user-stated facts: unpinned deps/no lockfile; no secret scanning/push protection, keys in repo vars; dependency scanning not configured; Critical CVE in direct dep open 30 days; no SBOM/signatures/provenance; CI actions"
+  ],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer ranks the open Critical CVE first and grounds every finding in the user's stated facts. It also marks planned scanning as unimplemented, says no provenance means no evidenced Build L1/L2, separates SBOM and signing from SLSA levels, maps findings to SSDF groups, and treats repo-var access as unknown rather than assumed exposed. However, it presents the 7-day SLA as the governing standard without establishing that it was adopted or noting it is a suite default rather than a NIST mandate, declines to state an SLSA version/track, and assigns no concrete remediation owners (only generic 'implementation owners')."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.14140760000000002
+}

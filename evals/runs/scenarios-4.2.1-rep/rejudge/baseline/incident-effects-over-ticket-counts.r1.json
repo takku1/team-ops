@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The response prioritizes mitigation, refunds, scoping, and evidence preservation; examines retry behavior, state ambiguity, idempotency, and versions; and proposes effectiveness checks without treating ticket closure as prevention. However, it asserts unverified contributing factors such as missing idempotency keys, alerts, and tests as facts, leaves ownership unassigned, and sets P0 priorities without an impact-based justification."
+}

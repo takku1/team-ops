@@ -1,0 +1,33 @@
+{
+  "case": "holdout-migration-and-code-one-commit",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 11.5,
+  "subject_cost_usd": 0.0536897,
+  "skills_invoked": [],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer refuses sign-off, labels the same-deploy drop as a blocking issue that breaks old replicas during a rolling update (and on rollback), and explicitly says passing tests don't cover this. It prescribes expand/contract sequencing in two deploys, gives a 'request changes' verdict, and honestly notes the empty workspace without fabricating diff contents."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.10616030000000001
+}

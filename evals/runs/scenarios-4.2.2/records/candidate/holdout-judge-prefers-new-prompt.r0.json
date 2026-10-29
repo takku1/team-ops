@@ -1,0 +1,35 @@
+{
+  "case": "holdout-judge-prefers-new-prompt",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 12.0,
+  "subject_cost_usd": 0.0597844,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:ai-evaluation\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer opens with \"Not yet\" and names position bias from the new summary always being shown first, asking for counterbalanced or swapped-order reruns. It also gives a correct ~55\u201383% interval for 28/40, calls for human calibration of the judge on a blinded subset and faithfulness checks, and outlines a small rerun plan with pre-declared ship criteria. The conditional staged-rollout mention is explicitly framed as not validated and not a full ship, so it does not endorse shipping."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.117511
+}

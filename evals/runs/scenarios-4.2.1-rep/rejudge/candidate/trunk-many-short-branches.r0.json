@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "Rejects the universal cap, considers branch age, merge delay and failures, and preserves required checks and branch protection without forcing a migration. It omits release obligations, overstates branch count as evidence of small changes, and claims the directory is not a Git repository without supporting trace evidence."
+}

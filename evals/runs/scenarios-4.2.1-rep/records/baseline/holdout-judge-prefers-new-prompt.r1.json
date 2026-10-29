@@ -1,0 +1,33 @@
+{
+  "case": "holdout-judge-prefers-new-prompt",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 10.3,
+  "subject_cost_usd": 0.052344600000000005,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer declines to ship on this evidence. It names the position confound (new summary always first) and prescribes swapped or randomized order. It quantifies the small-sample uncertainty (28/40, roughly a 55\u201384% interval), so it does not treat 71% as a reliable win rate. It also asks for human validation of the judge (20\u201330 pairs) and a faithfulness check, and it outlines a concrete rerun with both orders, length comparison and 100+ cases before a flagged rollout. No tool calls were made and no results were fabricated; the proposal is framed conditionally and offers to build the swapped-order script."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.10896720000000001
+}

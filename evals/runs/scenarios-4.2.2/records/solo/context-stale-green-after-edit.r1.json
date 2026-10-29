@@ -1,0 +1,31 @@
+{
+  "case": "context-stale-green-after-edit",
+  "arm": "solo",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 10.3,
+  "subject_cost_usd": 0.0436126,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer rejects the green result, explains that an unchanged SHA cannot capture an edited untracked generated config, recommends a rerun on current inputs, and says to record the SHA, config hash, command, exit code and timestamp. It falls short because it never asks for toolchain or environment identity, it offers a diff-irrelevance argument as an acceptable substitute for rerunning the required check, and it does not separate affected checks from unaffected independent ones."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1011312
+}

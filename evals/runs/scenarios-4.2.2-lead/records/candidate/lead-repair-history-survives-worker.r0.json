@@ -1,0 +1,35 @@
+{
+  "case": "lead-repair-history-survives-worker",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 13.1,
+  "subject_cost_usd": 0.0604956,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer rejects the NEW-1 rename and keeps the issue as I-12 with its ruled-out approaches carried in the handoff brief. That stops the repair count from resetting through a rename or worker swap. Instead of a third blind build, it picks a bounded one-round diagnosis with a stop condition (KEEP/REVERT/ESCALATE), does not invent extra budget, and honestly says the check name, attempts, and budget units are unverified placeholders, with no fabricated results."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.114958
+}

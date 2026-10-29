@@ -1,0 +1,35 @@
+{
+  "case": "supply-chain-audit-cites-evidence",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 5,
+  "elapsed_seconds": 16.6,
+  "subject_cost_usd": 0.0719504,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:secure-review\", \"args\": \"Supply chain audit verdict before security review. Facts: package.json uses ranges, no lockfile committed; CI has no secret scanning/push protection, keys in repo vars; dependency scanning \\\"planned\\\" not configured; Critical CVE in direct dependency disc"
+  ],
+  "tool_calls": 3,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer covers most of the rubric. It ranks the 30-day-open Critical first and labels the 7-day figure a suite default, grounds every finding in the user's stated facts (noting the empty workspace), and says no provenance means no evidenced Build L1/L2 on the SLSA v1.0 Build track, with SBOM and signing treated as separate controls. It also marks the planned scanning as unimplemented, maps SSDF groups, and lists repo-var access as an unknown rather than assuming exposure. It falls short in two places: every remediation owner is left 'Unassigned' instead of being assigned, even to a role, and it never establishes whether the org has actually adopted the 7-day SLA before measuring the overdue time against it."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1437968
+}

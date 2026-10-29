@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The review explicitly blocks merging, identifies the f-string SQL injection and requests parameterized queries, and requires authentication plus organization-level authorization. It rejects \u201ctests later\u201d and specifies tests required before merge, while separating critical blocking findings from secondary recommendations, although the naming nit is unnecessarily framed as a pre-merge fix."
+}

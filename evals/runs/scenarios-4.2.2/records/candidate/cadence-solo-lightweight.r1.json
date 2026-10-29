@@ -1,0 +1,35 @@
+{
+  "case": "cadence-solo-lightweight",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 21.5,
+  "subject_cost_usd": 0.06783199999999999,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer correctly says WIP\u00f7throughput (Little's Law) gives only a stable long-run average, not a P85, and it bases the SLE on actual cycle-time percentiles from recorded start/finish history. It also gives a meeting-free pull rhythm (Next/Doing/Done, WIP limit of 1 feature + 1 support, interrupt budget) with no Scrum ceremonies. However, it never states an explicit prioritization policy, and its weekly/monthly reviews cover flow metrics and forecasts rather than outcomes, so the rubric's outcome-review requirement is not met."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.13072659999999997
+}

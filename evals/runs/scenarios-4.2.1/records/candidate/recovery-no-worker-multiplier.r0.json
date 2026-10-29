@@ -1,0 +1,35 @@
+{
+  "case": "recovery-no-worker-multiplier",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 13.1,
+  "subject_cost_usd": 0.0616735,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The memo goes after the review and integration bottleneck, cutting scope, WIP caps and the critical path. It declines to give a P85 (\"I can't give a P85 and I'm not giving one\") and rejects eight agents as eightfold capacity, citing growing review and conflict costs. It keeps regression checks and proposes fixing slow ones instead of halving them, allows only 1-2 added agents on conditions that amount to a net-benefit hypothesis, and never invokes a one-third-timeline cutoff."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1195599
+}

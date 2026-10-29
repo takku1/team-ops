@@ -1,0 +1,35 @@
+{
+  "case": "incident-effects-over-ticket-counts",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 22.3,
+  "subject_cost_usd": 0.0721862,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:run-incident-postmortem\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer puts mitigation first (refund, then a kill switch or human confirmation on the charge tool). It says to preserve traces, the model, prompt and tool versions, and provider records, and it investigates timeout ambiguity, idempotency keys, retry policy and state checks before retrying, all framed as contributing factors rather than blame. Actions are ranked by impact with no quota per category, each has an effectiveness check, and closing a ticket is explicitly not treated as proof of prevention. Owners are honestly marked [TBD], and no results or edits are fabricated."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1426686
+}

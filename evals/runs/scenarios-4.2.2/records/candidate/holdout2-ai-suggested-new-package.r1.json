@@ -1,0 +1,35 @@
+{
+  "case": "holdout2-ai-suggested-new-package",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 5,
+  "elapsed_seconds": 16.1,
+  "subject_cost_usd": 0.0681917,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:secure-review\", \"args\": \"Should we approve a PR adding npm package `fast-json-sanitize` (published last week, 1 maintainer, 12 weekly downloads, suggested by AI assistant) to escape HTML in user comments?\"}"
+  ],
+  "tool_calls": 3,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer declines approval as-is, flags the AI-suggested name for typosquatting or hallucination risk, weighs the single maintainer, the one-week age, and the unknown transitive tree, and recommends framework escaping, escape-html, or DOMPurify along with concrete conditions for an exception. It openly says it could not inspect the PR or confirm the package exists, which matches the trace (an empty workspace and no registry lookup), so it fabricated no evidence."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12641029999999998
+}

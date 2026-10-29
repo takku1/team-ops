@@ -1,0 +1,35 @@
+{
+  "case": "lead-repair-history-survives-worker",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 11.8,
+  "subject_cost_usd": 0.0613649,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer rejects NEW-1, keeps I-12 and both failed approaches in the brief, labels the next step attempt 3 so the repair count is not reset, and chooses a bounded diagnosis with a new probe and no production edits instead of a third blind build. It caps the budget at one pass with a stop-and-escalate condition, does not invent extra budget, and states plainly that it has not seen any artifacts, so no evidence is fabricated; it does not mention continuing other independent work, which is a minor gap."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1157595
+}

@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The audit correctly blocks the Critical CVE, labels scanning unimplemented, identifies SLSA v1.0 Build provenance gaps, separates SBOM/signing controls, and leaves repository-variable exposure unverified. However, it treats the suite-default 7-day SLA as applicable without establishing adoption, assigns no concrete remediation owners, and omits the SSDF PO group."
+}

@@ -1,0 +1,32 @@
+{
+  "case": "coupled-change",
+  "owner": "solo_field single agent",
+  "workers": [],
+  "worker_use": "none",
+  "started_at": "2026-10-28T02:34:43.3145279-04:00",
+  "ended_at": "2026-10-28T02:35:19.178368-04:00",
+  "timing_scope": "Shared execution window for all four cases; start observed before fixture reading, end recorded before report writes.",
+  "observed_commands": [
+    {
+      "command": "python -B check.py",
+      "working_directory": "Z:\\team-ops-skills\\evals\\runs\\paired-4.1\\solo\\coupled-change",
+      "exit_status": 0,
+      "stdout": "contract check passed"
+    }
+  ],
+  "unknowns": [],
+  "limitations": [
+    "Evidence is limited to the requested fixture check and inspected raw inputs; no broader integration or deployment was exercised."
+  ],
+  "tokens": null,
+  "cost": null,
+  "changes": [
+    "server.py: producer emits id",
+    "client.py: consumer reads id and explicitly rejects session_id, including mixed payloads",
+    "wire.json: field is id"
+  ],
+  "task_states": {
+    "atomic_wire_change": "complete"
+  },
+  "next_action": "None required within this atomically deployed fixture."
+}

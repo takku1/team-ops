@@ -1,0 +1,35 @@
+{
+  "case": "lead-one-writer-per-scope",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 20.9,
+  "subject_cost_usd": 0.06498519999999999,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The plan sees that both tasks write `abi/registry.rs`. It gives that file to a single serial owner (T0) and runs A and B in parallel only on disjoint handler scopes. `docs/wire/` is regenerated once by the lead from the merged registry, and every task has an owner, a write scope and a deciding check. The lead integrates and runs the build and tests on the merged tree, not on separate worktrees. One minor flaw is the assumed `npm run build && npm test` command for what looks like a Rust repo, but the plan flags its layout assumptions and dispatches nothing."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1263278
+}

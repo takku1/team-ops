@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The answer explicitly rejects a calibrated 90% date from one sprint and labels its 4\u20138 sprint range as uncalibrated judgment around a naive 5-sprint estimate. It identifies ticket-size variation, scope growth, and capacity risks, sets a re-forecast after the next sprint, and requests comparable throughput history for simulation."
+}

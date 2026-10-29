@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The plan recognizes incompatible contract coupling despite disjoint files and sequences contract agreement and single-owner schema/client generation before parallel server and consumer work, with explicit contract and end-to-end integration oracles. It reserves generated outputs and lockfiles for the integration owner, makes worker spawning optional despite permission, and claims no unobserved edits or test results."
+}

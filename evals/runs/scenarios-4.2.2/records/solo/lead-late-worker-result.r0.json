@@ -1,0 +1,31 @@
+{
+  "case": "lead-late-worker-result",
+  "arm": "solo",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 12.7,
+  "subject_cost_usd": 0.0449306,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer correctly logs the attempt-1 done event as stale history without advancing or overwriting attempt 2. It also recognizes worker 1 may still be alive and requires verifying the current scope before acceptance. However, it never says the reassignment was unsafe, and it tells attempt 2 to 'keep going' instead of pausing it until worker 1's writes are stopped. It also does not address deduplicating repeated completion events."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1036332
+}

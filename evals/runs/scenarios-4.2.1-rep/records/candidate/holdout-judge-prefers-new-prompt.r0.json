@@ -1,0 +1,35 @@
+{
+  "case": "holdout-judge-prefers-new-prompt",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 15.8,
+  "subject_cost_usd": 0.059446,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:ai-evaluation\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer refuses to endorse shipping. It names position bias (new always first) and asks for a swapped or randomized rerun, and it gives a sampling interval for 28/40 (~55\u201383%). It also flags the uncalibrated judge, asks for human spot-checks of the judge's verdicts, recommends checking factual faithfulness and omissions directly, calls the result promising but unproven, outlines a small rerun with predeclared criteria, and honestly states nothing was run."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1140366
+}

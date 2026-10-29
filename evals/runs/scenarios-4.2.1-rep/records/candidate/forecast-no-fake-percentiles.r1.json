@@ -1,0 +1,35 @@
+{
+  "case": "forecast-no-fake-percentiles",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 16.8,
+  "subject_cost_usd": 0.0626308,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer rejects the claim outright ('PERT mean is a weighted average... not any percentile') and gives labeled uncalibrated scenarios (3/9/12.5/36 days). It says no simulation was run, flags shared-cause dependence instead of assuming independence, keeps the buffer visible and separate from the work forecast, and names re-forecasting on task 1 and building a reference class from actuals as calibration follow-up, though deadline-vs-forecast separation and external comparable history are only lightly covered."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1262414
+}

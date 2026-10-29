@@ -1,0 +1,35 @@
+{
+  "case": "lead-unrelated-ready-task",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 15.0,
+  "subject_cost_usd": 0.0591908,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer records A as blocked on the schema decision, with a resumable hold record covering status, the question with options, evidence, write scope and next actions. It explicitly refuses to guess the schema, chooses to fix B inline without dispatching agents, and preserves B's criteria with focused tests and diff inspection. One minor weakness: it ends by asking where A's tracker lives instead of starting B right away, which slightly delays B. It does not fabricate any edits or results."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1185134
+}

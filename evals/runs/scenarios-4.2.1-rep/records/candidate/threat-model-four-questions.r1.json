@@ -1,0 +1,35 @@
+{
+  "case": "threat-model-four-questions",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 54.4,
+  "subject_cost_usd": 0.0723582,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:secure-review\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer follows Shostack's four questions with a mermaid diagram and trust boundaries B1\u2013B4. It covers shell-as-confused-deputy (T3), lingering password clips with exclusion hints and auto-clear (T1), and background snooping via clipboard managers and accessibility bypass, each with a mitigation. It never raises focus spoofing or focus-steal, where a malicious app grabs keyboard focus to receive a paste, which is one of the threats the rubric requires."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1450848
+}

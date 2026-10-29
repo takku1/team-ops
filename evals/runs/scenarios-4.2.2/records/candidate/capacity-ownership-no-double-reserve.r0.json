@@ -1,0 +1,33 @@
+{
+  "case": "capacity-ownership-no-double-reserve",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 16.1,
+  "subject_cost_usd": 0.0564426,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer correctly computes 30 h, rejects the 6\u00d7 multiplier, centers the plan on maintainer review and integration, and labels the hour split and scenario multipliers as placeholders to adjust after measuring. It names the maintainer as the single accountable owner but never addresses backup or bus-factor risk for a solo maintainer, and it covers actual permission and capacity constraints only partly, through disjoint write scopes, without discussing worker access, tooling permissions or rate limits."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1160892
+}

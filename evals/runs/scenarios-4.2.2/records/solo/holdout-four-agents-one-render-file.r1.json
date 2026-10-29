@@ -1,0 +1,31 @@
+{
+  "case": "holdout-four-agents-one-render-file",
+  "arm": "solo",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 5,
+  "elapsed_seconds": 14.3,
+  "subject_cost_usd": 0.054442599999999994,
+  "skills_invoked": [],
+  "tool_calls": 4,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The agent honestly reported the empty workspace without fabricating edits, and it pushed back on four agents by noting the `render.rs` coupling and the risk of conflicting edits. However, it split implementation between two parallel writers (`cli.rs` and `render.rs`) and kept a conditional four-agent option rather than giving implementation to one owner, though it did keep tests as the deciding check."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.11446519999999999
+}

@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "Correctly blocks the overdue Critical, marks planned scanning unimplemented, distinguishes variable-access unknowns, and separates SLSA Build provenance from SBOM/signing controls. However, it applies the suite\u2019s 7-day SLA without establishing adoption, assigns no concrete remediation owners, and makes unsupported claims about workspace inspection and scanning causing the open CVE."
+}

@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The review labels docs/operations.md:42 as a finding and ties its stale retry_limit instruction to the max_retries rename in client.py and defaults.toml, while also assessing the described diff and test. It requests changes with an operator-impact rationale and explicitly states that the review relies on the supplied description, although its claims about silent fallback and incident-only discovery exceed the available evidence."
+}

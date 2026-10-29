@@ -1,0 +1,35 @@
+{
+  "case": "lead-late-worker-result",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 4,
+  "elapsed_seconds": 22.6,
+  "subject_cost_usd": 0.06979540000000001,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer records the attempt-1 done event as history, deduplicates it by event ID, refuses to let it advance or accept attempt 2, and states that silence did not prove the old process stopped, so this is a live write-conflict risk. It tells worker 1 to stop writing, has the overlapping edits inspected and reconciled, and limits acceptance to attempt 2's artifact checked on a frozen scope after worker 1's writes stop. It falls slightly short in two places: it never explicitly calls the reassignment itself unsafe, and it does not pause worker 2 until worker 1 is confirmed stopped."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.132442
+}

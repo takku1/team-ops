@@ -1,0 +1,20 @@
+{
+  "labels": {
+    "baseline": "B",
+    "candidate": "A"
+  },
+  "seed": 7,
+  "subject_model": "sonnet",
+  "judge_model": "opus",
+  "claude_version": "2.1.312 (Claude Code)",
+  "hashes": {
+    "baseline": "111e34fb38c76c54f8e5db471f03be8396ed1849833d31c0aaa8732d115fc300",
+    "candidate": "c2f42c2b89fd821bdf357b0527be511f001e8d5bf50f5c4ffa5dbac7ee539b94"
+  },
+  "started": "2026-10-28T19:52:15",
+  "limitations": [
+    "User ~/.claude/CLAUDE.md loads in both arms (not removable without copying credentials).",
+    "Built-in skills compete for routing in both arms.",
+    "Development scenarios used to tune the suite; not a held-out set."
+  ]
+}

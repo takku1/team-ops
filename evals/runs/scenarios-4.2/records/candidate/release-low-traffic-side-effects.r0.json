@@ -1,0 +1,33 @@
+{
+  "case": "release-low-traffic-side-effects",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 11.4,
+  "subject_cost_usd": 0.0523286,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer refuses to ramp on two HTTP 200s and says outright that a 200 is not a correct charge. It requires end-to-end verification of amount, customer and currency, deliberately tested idempotency under retries and timeouts, and count-based staged gates with per-customer and per-hour spend caps. It also asks for a kill switch kept separate from code rollback, plus reconciliation, and notes that rollback can't undo charges, which leaves refunds. Shadow-mode duplication is avoided by sending volume and failure-injection testing to the provider sandbox. The main gap is that compensation (a tested refund playbook) is only implied, not spelled out as its own tested recovery step."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1159626
+}

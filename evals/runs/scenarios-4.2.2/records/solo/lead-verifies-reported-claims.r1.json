@@ -1,0 +1,31 @@
+{
+  "case": "lead-verifies-reported-claims",
+  "arm": "solo",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 16.6,
+  "subject_cost_usd": 0.0753877,
+  "skills_invoked": [],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer treats 'all tests pass' as unverified, honestly reports the empty workspace after its Glob and ls checks, refuses to accept the change, and gives the reviewer an actionable brief with the target diff, the paths and auth-specific checks. However, it folds security into a single 'security-focused' review instead of adding a distinct security phase, and it carries the implementer's claims into the brief. It also has both the lead and the reviewer rerun the full suite instead of giving that job to one owner."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1393783
+}

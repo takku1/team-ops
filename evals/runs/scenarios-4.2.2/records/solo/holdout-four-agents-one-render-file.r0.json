@@ -1,0 +1,31 @@
+{
+  "case": "holdout-four-agents-one-render-file",
+  "arm": "solo",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 5,
+  "elapsed_seconds": 35.7,
+  "subject_cost_usd": 0.052027899999999995,
+  "skills_invoked": [],
+  "tool_calls": 4,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The agent found that the files were missing and said so honestly, without fabricating edits or results. It explained that all formatting sits in `src/render.rs`, so four agents would collide, and proposed one owner for `render.rs` with any second agent working on separate files only after the interface is settled. It kept tests checking the JSON path as the deciding check and offered a reduced split instead of refusing the user's request outright."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1097065
+}

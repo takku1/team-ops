@@ -1,0 +1,35 @@
+{
+  "case": "threat-model-four-questions",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 25.0,
+  "subject_cost_usd": 0.0747507,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:secure-review\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer is organized around Shostack's four questions, with a data-flow diagram and five trust boundaries (B1\u2013B5), and gives every threat T1\u2013T11 a mitigation or acceptance decision. It covers focus-steal (T8), the shell as a programmatic paste trigger that must get no extra privilege (T7, effectively the confused deputy), and lingering password clips with exclusion hints and auto-clear (T4); background snooping is covered more weakly, through other apps reading the clip and the monitor/history exclusion flags, and the answer honestly marks file:line and verification as unknown rather than inventing results."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1497967
+}

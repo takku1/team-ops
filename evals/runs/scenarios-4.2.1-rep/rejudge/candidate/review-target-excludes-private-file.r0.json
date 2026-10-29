@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The proposed review correctly scopes abc..def, excludes private notes and unrelated edits, reads parser/test context at def, and requires a partial verdict for unread in-scope files. However, the only observed tool call invokes a skill, so the claim that the working directory reported it was not a Git repository is unverified."
+}

@@ -1,0 +1,35 @@
+{
+  "case": "lead-late-worker-result",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 12.2,
+  "subject_cost_usd": 0.060144500000000004,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer handles most of the rubric correctly. It logs the late done as unverified history without advancing attempt 2, says the timeout does not prove attempt 1 stopped, inspects the shared scope for post-reassignment edits, and accepts only once on the final artifact after fresh checks. However, it explicitly says 'I wouldn't pause attempt 2' while attempt 1 may still be writing, and it never states that the reassignment was unsafe. So it does not stop the conflicting writes before resuming one owner, and it leaves duplicate-completion handling implicit."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.11834710000000001
+}

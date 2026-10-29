@@ -1,0 +1,35 @@
+{
+  "case": "threat-model-four-questions",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 24.2,
+  "subject_cost_usd": 0.0738833,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:secure-review\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer follows all four Shostack questions with a data-flow diagram and five trust boundaries (TB1\u2013TB5). It covers every required threat with a response: background snooping and lingering password clips (T3: concealed/exclude-from-history hints, auto-clear), focus-steal and TOCTOU reads (T6, T11), the shell paste channel as a confused deputy (T5: authenticate the sender, require user input), and sync leakage (T10). It also honestly states that no code was inspected, marking every control and file:line as unknown."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1468893
+}

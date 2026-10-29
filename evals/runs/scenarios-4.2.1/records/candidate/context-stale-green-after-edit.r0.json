@@ -1,0 +1,35 @@
+{
+  "case": "context-stale-green-after-edit",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 9.5,
+  "subject_cost_usd": 0.055421099999999994,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:ai-context-management\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer correctly rejects the snapshot-A green for the changed artifact. It notes that the unchanged SHA does not cover the untracked generated config, and it requires a rerun of the integration check with command, exit status, log, and input content hashes, without inferring failure of other checks. However, it never asks for toolchain or environment identity (runner image, tool versions, env vars) to be recorded, and it never requires the inputs to be stable or frozen during the rerun, so one rubric element is only partly met."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.11315149999999999
+}

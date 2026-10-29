@@ -1,0 +1,23 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "team-ops-local",
+  "description": "Local marketplace for the team-ops agent-team workflow.",
+  "owner": {
+    "name": "Dillon Carney",
+    "email": "dillon.c.carney@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "team-ops",
+      "source": "./plugins/team-ops",
+      "description": "Adaptive coding workflow: one controller, selective workers, scoped ownership, current execution evidence, and an optional local check runner. Ten on-demand playbooks; small work stays inline.",
+      "version": "4.2.2"
+    },
+    {
+      "name": "team-ops-delivery",
+      "source": "./plugins/team-ops-delivery",
+      "description": "Optional companion for repos that ship and operate services: test strategy, trunk and CI policy, release rollout, SLOs, incidents, and forecasting.",
+      "version": "4.2.2"
+    }
+  ]
+}

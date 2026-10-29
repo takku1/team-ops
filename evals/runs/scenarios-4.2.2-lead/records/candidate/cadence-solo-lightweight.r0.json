@@ -1,0 +1,35 @@
+{
+  "case": "cadence-solo-lightweight",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 13.0,
+  "subject_cost_usd": 0.0610534,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer provides a lightweight pull board (Next/Doing/Done with support and feature lanes), explicit WIP limits and an interrupt budget, plus a solo weekly outcome review, and it adds no meetings or Scrum roles. It explains that Little's Law yields a stable-system average rather than a P85, and it directs the user to derive the SLE from actual cycle-time history while refusing to fabricate one without data."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.11544779999999999
+}

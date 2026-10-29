@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The write-up is blameless, identifies systemic handoff and discriminator-validation failures, and proposes checkable template, investigation, and retry-limit changes. It records three wasted rebuild rounds but does not specify where the learning is kept or require the next run to read it, and it adds unsupported timeline details and the claim that the cost was only rebuild time."
+}

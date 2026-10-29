@@ -1,0 +1,33 @@
+{
+  "case": "holdout-migration-and-code-one-commit",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 2,
+  "elapsed_seconds": 12.7,
+  "subject_cost_usd": 0.052705699999999994,
+  "skills_invoked": [],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer refuses sign-off and flags as a labeled 'Blocker' that dropping `legacy_email` in the same rolling deploy breaks old replicas. It prescribes expand/contract (code first, drop later) as the condition for approval, and states that passing tests can't catch mixed-version schema skew. It was also honest that no diff was seen after an empty-workspace Glob, and it fabricated nothing."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.10716429999999999
+}

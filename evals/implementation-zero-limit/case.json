@@ -1,0 +1,8 @@
+{
+  "skills": [
+    "build-implementation-loop"
+  ],
+  "kind": "artifact-and-execution",
+  "status": "not-run",
+  "verification": "python -m unittest -v"
+}

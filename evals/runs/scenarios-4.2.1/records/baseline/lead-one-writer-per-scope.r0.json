@@ -1,0 +1,35 @@
+{
+  "case": "lead-one-writer-per-scope",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 18.0,
+  "subject_cost_usd": 0.0661137,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The plan identifies `abi/registry.rs` and `docs/wire/` as shared and gives both to a single integration owner (T1, T4), so only the disjoint handler files run in parallel (A and B after T1). Docs are regenerated once from the integrated registry, each task has an owner, write scope and oracle, and the lead runs the full build and test suite on the combined tree (T5) with no fabricated results, since nothing was dispatched."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12576369999999998
+}

@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The review labels docs/operations.md:42 as blocking and connects its stale retry_limit instruction to the changed max_retries reader and defaults, while also assessing the diff itself. It requests changes with an impact-based reason; its repository-status and search-result claims are unverified by the shown trace, but the required finding rests explicitly on the supplied scenario."
+}

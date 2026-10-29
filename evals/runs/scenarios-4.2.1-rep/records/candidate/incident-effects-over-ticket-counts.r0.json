@@ -1,0 +1,35 @@
+{
+  "case": "incident-effects-over-ticket-counts",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 19.8,
+  "subject_cost_usd": 0.06664350000000001,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:run-incident-postmortem\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer replaces 'human error' with system contributing factors: no idempotency key, a timeout treated as failure, and retry on money-moving tools. It calls for capturing the model, prompt and tool version and redacted traces before changing anything, and it cuts five quota-driven P0s to two impact-ranked P0s, each with a fault-injection effectiveness check. It rejects 'prevented once tickets close' in favor of 'mitigated' until the checks pass, marks unknown facts and owners as [fill] rather than inventing them, and makes no file edits; the one weakness is that immediate mitigation is underweighted, with the kill switch at P2 and refunds at P1 rather than leading the response."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1360341
+}

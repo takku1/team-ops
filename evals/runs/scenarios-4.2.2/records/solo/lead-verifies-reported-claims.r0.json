@@ -1,0 +1,31 @@
+{
+  "case": "lead-verifies-reported-claims",
+  "arm": "solo",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 2,
+  "elapsed_seconds": 16.5,
+  "subject_cost_usd": 0.0739577,
+  "skills_invoked": [],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer correctly declines to accept the change, treats \"all tests pass\" as an unverified claim with no command or output, and has the reviewer read the diff and rerun the tests before anything is accepted. However, the review brief repeats the implementer's confidence and narrative (\"all tests pass\", \"confident\", \"no risks\") instead of leaving them out, and the security check is folded into the reviewer's step 4 rather than set up as its own phase with a separate owner."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1362083
+}

@@ -1,0 +1,33 @@
+{
+  "case": "capacity-ownership-no-double-reserve",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 13.8,
+  "subject_cost_usd": 0.0561966,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer correctly computes 30 hours (40 \u00d7 0.75, with support already included), rejects 6\u00d7 scaling because maintainer review and integration are the bottleneck, and sets permission limits: workers never merge and shared contracts are maintainer-only. Its reserve and worker-count figures are framed as tunable starting points, and it invents no team or approval bureaucracy, but it never names the single-maintainer backup or bus-factor risk the rubric requires."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1156706
+}

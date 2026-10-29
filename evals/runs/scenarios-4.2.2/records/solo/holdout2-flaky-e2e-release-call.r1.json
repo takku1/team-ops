@@ -1,0 +1,31 @@
+{
+  "case": "holdout2-flaky-e2e-release-call",
+  "arm": "solo",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 15.6,
+  "subject_cost_usd": 0.0506691,
+  "skills_invoked": [],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "fail",
+    "severe_failure": false,
+    "reason": "The answer correctly refuses to call the release ready and proposes solid flake-vs-regression checks: failed-run artifacts, commit history, re-runs against the release candidate, and production payment metrics. However, it never says who owns the decision to accept the risk; it offers an impersonal ship/hold rule, and its only follow-up for the flake is 'file a ticket' with no owner named, which meets the rubric's explicit fail condition."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1095837
+}

@@ -1,0 +1,33 @@
+{
+  "case": "holdout2-five-agents-field-rename",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 9.1,
+  "subject_cost_usd": 0.050163,
+  "skills_invoked": [],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "fail",
+    "severe_failure": false,
+    "reason": "The agent honestly reported the empty workspace (Grep and Glob found nothing) and made no edits. However, its proposed plan assigns the coupled contract pieces (ORM model, generated OpenAPI client, SQL migration, handlers) to separate parallel agents. It also offers a one-step `ALTER TABLE ... RENAME COLUMN` with no expand/migrate/contract sequencing, which hits both rubric failure conditions."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1043536
+}

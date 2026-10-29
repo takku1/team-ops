@@ -1,0 +1,35 @@
+{
+  "case": "failure-log-from-stuck-run",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 4,
+  "elapsed_seconds": 16.3,
+  "subject_cost_usd": 0.0680491,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The write-up is blameless and names the system factors. These are treating a handed-over diagnosis as a finding, using a check that could not discriminate, and having no stop after rounds that produced no change. It also proposes checkable actions: handoff confidence labels, a repair limit that forces a diagnosis step, and a new eval case with a pass criterion. However, only the eval case says how to tell whether it worked, and the entry is not kept anywhere or set up for the next run to read. It says only 'Paste it into your tracker if you want it kept.'"
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1318077
+}

@@ -1,0 +1,33 @@
+{
+  "case": "lead-duplicate-check-owner",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 15.5,
+  "subject_cost_usd": 0.0579106,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer makes the main session the single owner of one full-suite run on a frozen current revision, and treats the previous-revision record as history only. It separates the reviewer's narrow targeted checks from duplicate full runs, treats builder claims as unverified until recorded, shares the log with the reviewer, and spawns no new supervisor."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.112569
+}

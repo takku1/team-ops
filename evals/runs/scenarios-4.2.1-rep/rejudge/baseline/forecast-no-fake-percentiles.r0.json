@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "Correctly rejects the P85 claim, labels scenarios uncalibrated, and explicitly says simulation was not run or assigned numerical confidence. However, the recommended 9\u201313-day range is unsupported, the claim that dependence widens the spread assumes correlated durations, and the answer does not clearly separate a deadline from the forecast or identify comparable history and calibration as follow-up."
+}

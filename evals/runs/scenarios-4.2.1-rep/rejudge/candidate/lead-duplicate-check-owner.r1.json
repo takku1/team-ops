@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The plan assigns the lead one final full-suite run on frozen current inputs, rejects previous-revision green, and separates focused checks from redundant full runs without spawning another supervisor. However, it does not explicitly provide the reviewer with the final execution record and treats other roles\u2019 reports as inherently untrustworthy rather than specifying how shared evidence can be verified."
+}

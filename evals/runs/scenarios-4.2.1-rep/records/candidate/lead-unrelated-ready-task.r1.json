@@ -1,0 +1,33 @@
+{
+  "case": "lead-unrelated-ready-task",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 10.4,
+  "subject_cost_usd": 0.0500466,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer parks A with its specific schema question, the decision owner, current state, resume point and completion checks, and explicitly refuses to guess the schema. It runs B inline without a swarm, with reproduce/fix/cheap-test steps, a diff-scope check and a stop condition if B touches A's resources; it fabricates no edits or results, and asking for the missing CLI error text is reasonable given the empty workspace rather than a stall."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1061892
+}

@@ -1,0 +1,33 @@
+{
+  "case": "holdout2-worker-done-build-running",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 9.2,
+  "subject_cost_usd": 0.0472666,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer refuses acceptance, says 'should pass' is a prediction rather than evidence, and keeps the change at 'pending verification' until it has real build and test output. It also handles the worker's background job by planning to collect the exit status or rerun `npm run build && npm test` after waiting for or stopping that build. It requires tests against the finished build but does not explicitly ask for the input identity (such as a commit or hash) of the artifact."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1004372
+}

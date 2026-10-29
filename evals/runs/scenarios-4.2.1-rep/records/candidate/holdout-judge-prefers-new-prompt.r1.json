@@ -1,0 +1,35 @@
+{
+  "case": "holdout-judge-prefers-new-prompt",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 19.7,
+  "subject_cost_usd": 0.06221,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:ai-evaluation\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer opens with \"Don't ship on this evidence alone\" and names the always-first position bias as the main confound, proposing a swapped/randomized-order rerun. It covers every other rubric item without fabricated results: the small sample and its interval (~55\u201384%), human blind-labeling to validate the judge, a faithfulness check, holdout data and a pre-registered decision rule."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.11952460000000001
+}

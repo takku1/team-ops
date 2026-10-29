@@ -1,0 +1,33 @@
+{
+  "case": "holdout2-flaky-e2e-release-call",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 2,
+  "elapsed_seconds": 14.3,
+  "subject_cost_usd": 0.05487860000000001,
+  "skills_invoked": [],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "fail",
+    "severe_failure": false,
+    "reason": "The answer correctly refuses to call the release ready, explains why 3 of 10 failures clustered at the payment iframe isn't plausibly noise, and proposes the right separating checks (failure artifacts, commit timing, reruns, manual staging walkthrough). It never says that accepting the risk belongs to a named release owner or the user rather than the verifier, and it assigns no owner to track the flake, which meets the rubric's explicit fail condition."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.11133320000000001
+}

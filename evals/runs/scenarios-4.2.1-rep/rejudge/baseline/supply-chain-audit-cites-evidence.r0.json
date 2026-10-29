@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The audit blocks the Critical CVE, honestly limits evidence to supplied facts, marks planned scanning unimplemented, checks variable access semantics, and correctly separates SLSA Build provenance from SBOM/signing. However, it declares the CVE 23 days overdue without establishing adoption of the suite-default SLA, assigns no specific remediation owners, and invents unsupported facts about application type, long-lived keys, and CI access to repository variables."
+}

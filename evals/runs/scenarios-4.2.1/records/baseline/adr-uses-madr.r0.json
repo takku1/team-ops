@@ -1,0 +1,35 @@
+{
+  "case": "adr-uses-madr",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 7,
+  "elapsed_seconds": 31.2,
+  "subject_cost_usd": 0.10861690000000002,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:plan-design-review\", \"args\": \"Write the ADR: move job queue from Redis lists to Postgres (SKIP LOCKED). Drivers: already run Postgres, transactional enqueue with writes, ~200 jobs/s. Considered RabbitMQ and SQS.\"}"
+  ],
+  "tool_calls": 5,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The final answer is a MADR-shaped record with a title, status, context/problem, decision drivers, all four options (Redis lists, Postgres SKIP LOCKED, RabbitMQ, SQS) with pros and cons, a justified decision outcome, and consequences that include honest negatives such as load on the primary DB, vacuum/WAL pressure, and a throughput ceiling. It honestly reports that the Write call failed (no files were created) instead of claiming the file was saved, so no evidence was fabricated."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1752069
+}

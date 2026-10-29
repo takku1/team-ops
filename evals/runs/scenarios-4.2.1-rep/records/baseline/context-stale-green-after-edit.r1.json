@@ -1,0 +1,33 @@
+{
+  "case": "context-stale-green-after-edit",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 12.4,
+  "subject_cost_usd": 0.0503806,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer correctly rejects the exit 0 as evidence for the current state and explains that the unchanged SHA cannot cover an untracked generated config. It calls the result stale rather than failed and scopes the rerun to the affected integration check, recording command, SHA, input hashes and timestamp; however, it omits toolchain and environment identity, and it offers a no-rerun acceptance path based on reasoning about which keys the check reads."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.10872319999999999
+}

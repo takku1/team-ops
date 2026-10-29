@@ -1,0 +1,35 @@
+{
+  "case": "holdout-date-from-one-sprint",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 18.3,
+  "subject_cost_usd": 0.0666286,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer explicitly refuses to produce a P90 from one sprint, gives a naive 5-sprint estimate plus a 4\u20138 sprint range labeled as uncalibrated judgment, and flags ticket-size variation, scope growth and holiday capacity as risks. It names a re-forecast point (end of next sprint) and the data needed for a real percentile (6\u201312 sprints of throughput history for simulation), and it fabricates no tool results."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1216512
+}

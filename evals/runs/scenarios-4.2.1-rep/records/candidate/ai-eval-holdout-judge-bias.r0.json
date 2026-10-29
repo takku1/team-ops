@@ -1,0 +1,35 @@
+{
+  "case": "ai-eval-holdout-judge-bias",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 14.0,
+  "subject_cost_usd": 0.0623362,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:ai-evaluation\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer rejects both the readiness claim and the reading of the 98% score as 98% confidence. It gives a 49/50 confidence interval and notes that zero observed severe failures is not zero risk. It requires a fresh representative held-out set with slices, executable state and side-effect oracles, and a blinded, calibrated judge from a fresh context. It also requires counting timeouts with labeled causes, versioning the full configuration, and reporting uncertainty. No actions or results were fabricated."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1238868
+}

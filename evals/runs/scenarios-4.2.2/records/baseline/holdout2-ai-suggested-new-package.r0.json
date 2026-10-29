@@ -1,0 +1,35 @@
+{
+  "case": "holdout2-ai-suggested-new-package",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 5,
+  "elapsed_seconds": 13.8,
+  "subject_cost_usd": 0.06621200000000001,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:secure-review\", \"args\": \"Dependency audit: new npm package `fast-json-sanitize` proposed in a PR to escape HTML in user comments. Suggested by AI assistant; published last week, one maintainer, 12 weekly downloads.\"}"
+  ],
+  "tool_calls": 3,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer refuses to approve as-is, flags hallucination/typosquat risk for an AI-suggested package, weighs the single maintainer, one-week age, install scripts and transitive footprint, and notes the name mismatch ('JSON sanitize' vs HTML escaping). It proposes concrete conditions (npm view, audit signatures, Scorecard, XSS payload tests) and alternatives (framework encoding, escape-html/he/DOMPurify), while honestly stating it had no registry or diff access and fabricating no results."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1226146
+}

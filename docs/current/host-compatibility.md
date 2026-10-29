@@ -1,0 +1,30 @@
+# Host compatibility and fallback
+
+Observed locally on 2026-10-28. Support below describes inspected tools and validation results, not a promise about every host version. Preserve the user's selected host/model and its permission boundaries.
+
+| Capability | Muse | Claude Code | Fallback |
+|---|---|---|---|
+| Skill discovery/import | Validator recognizes 10 core and 6 delivery skills | Local plugin validation passes | Read the relevant installed SKILL.md directly when the host permits |
+| Named role agents | Not exposed by the inspected Muse plugin capability report; runtime loading unverified | Agent files supplied, but a model-driven session could not reach its API; dispatch unverified | Perform the role inline; use a bounded generic worker only if available, authorized, and beneficial |
+| Independent review | Requires a genuinely separate context; not established by validation | Same requirement | A cold inline reread is self-review; disclose the limit |
+| Local check helper | Standard Python script; not a registered Muse tool | Standard Python script; not a registered Claude tool | Invoke its installed path with an available shell, or run the required check directly |
+| Supporting references | Must survive host cache copying | Must survive host cache copying | Follow package-local links; never assume the source repository is present |
+| Shared state and worker limits | Host tools/permissions determine enforceability | Host tools/permissions determine enforceability | Controller-owned record and sequential ownership; do not claim atomic leases or live monitoring |
+
+## Selecting a route
+
+Use a skill through the host's native invocation when available. If it is missing, read its installed instructions or perform the requested work inline with the same acceptance criteria. A role name is not evidence that a tool or named agent exists. Never repeatedly try an unavailable worker type or invent a successful dispatch.
+
+If another plugin's playbook is unavailable, do the applicable check inline or report the precise missing capability. Do not install another plugin merely because a skill references it. Ordinary implementation does not require the delivery plugin.
+
+Keep one builder for coupled work and one final verification owner regardless of host. If the host cannot isolate writers or supply a stable artifact, sequence the work. Delegation authorization does not create missing filesystem or network permissions. A blocked model API call is an environment error, not a behavioral failure or pass.
+
+## Installation and sessions
+
+Validate installed version, enabled/active state, skill counts, and the cached references/helper. A successful process exit alone is insufficient: a local Muse install attempt returned a structured error with an outer shell status of zero. Restart the host session after updating; do not presume already loaded instructions refresh.
+
+The observed live Muse store remained on team-ops 2.2.0 because its installation lock was outside this session's writable access. Source validation of 4.x does not mean that live installation changed. Session-only plugin loading is development mode, not installation.
+
+## Verification limits
+
+Do not translate manifest validation into claims about model behavior, named-agent support, or workload speed. Record host/version, actual skill loads, tool calls, worker use, checks, output artifacts, and environment errors when running a behavioral test. Model cost and token usage are unknown unless measured by the host; omitted values are not zero.

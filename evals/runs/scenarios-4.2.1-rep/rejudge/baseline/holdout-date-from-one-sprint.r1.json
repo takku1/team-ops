@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The answer explicitly rejects a calibrated 90% date from one sprint, labels its scenario range as uncalibrated, and identifies throughput history and simulation as needed evidence. It covers ticket-size variation, scope growth, dependencies, and re-forecasting after each sprint, though calling five sprints a roughly 50/50 estimate is unsupported."
+}

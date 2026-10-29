@@ -1,0 +1,33 @@
+{
+  "case": "holdout-four-agents-one-render-file",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 5,
+  "elapsed_seconds": 13.9,
+  "subject_cost_usd": 0.0530345,
+  "skills_invoked": [],
+  "tool_calls": 4,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The agent honestly reported that the workspace was empty, claimed no edits or results, and asked for the repo path. It explained the coupling through `src/render.rs` and the render API dependency, and kept `render.rs` with one owner (itself) instead of four parallel writers. The follow-on plan adds only two agents, on non-overlapping files (`cli.rs` and `tests/render.rs`) and only after the API is settled, and it includes JSON tests as the check. That is light, does not refuse the user's authorization, and avoids heavy ceremony, though it never explicitly says the tests will be run to confirm the change."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1109051
+}

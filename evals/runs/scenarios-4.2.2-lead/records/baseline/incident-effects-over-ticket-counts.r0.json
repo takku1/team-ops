@@ -1,0 +1,35 @@
+{
+  "case": "incident-effects-over-ticket-counts",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 20.3,
+  "subject_cost_usd": 0.069432,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:run-incident-postmortem\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer replaces 'human error' with system contributing factors covering idempotency keys, timeout-as-unknown-outcome, retry without a state check, and missing reconciliation, and it asks for model, prompt and tool versions and traces to be captured before changes. It ranks actions by impact (three justified P0s instead of five by quota), gives each an owner placeholder and a concrete effectiveness check, and says closing tickets does not prove prevention, though the refund mitigation and evidence preservation sit lower in the response than ideal."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.137002
+}

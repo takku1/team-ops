@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+_runner_test_*/
+_permission_probe_*/
+_package_test_*/
+_field_test_*/
+evals/runs/**/cargo-target/
+# Local tool state and raw agent logs (records and reports carry the evidence)
+.claude-flow/
+evals/runs/**/transcripts/
+# Keeps human calibration grading blind
+evals/calibration/**/.key.json

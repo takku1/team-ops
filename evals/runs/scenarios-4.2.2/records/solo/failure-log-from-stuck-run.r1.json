@@ -1,0 +1,31 @@
+{
+  "case": "failure-log-from-stuck-run",
+  "arm": "solo",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 10.5,
+  "subject_cost_usd": 0.046334600000000004,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The write-up is blameless and names the system factors: the handed-over diagnosis was accepted unverified, the ID discriminator was never checked, and three no-new-evidence rounds went unstopped. It also proposes checkable changes such as labeling handoffs as hypotheses, a one-failed-round cap, and a pre-implementation check. However, no action says how to tell whether it worked, cost and impact are not recorded beyond 'three rounds', and it never says where the entry is kept or that the next run reads it."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.10513320000000001
+}

@@ -1,0 +1,35 @@
+{
+  "case": "recovery-no-worker-multiplier",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 15.6,
+  "subject_cost_usd": 0.0657213,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The memo targets the review queue, integration conflicts, WIP caps, scope cuts, and the critical path. It labels its forecasts as uncalibrated scenarios and explicitly declines to derive a P85. It rejects the eight-agent proposal on Brooks and bottleneck grounds, keeps regression checks (tiering or fixing them instead of halving), and lists decisions needing the user's authorization without invoking any one-third-timeline cutoff."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1284233
+}

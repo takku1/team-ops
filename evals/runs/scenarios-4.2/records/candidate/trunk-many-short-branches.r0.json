@@ -1,0 +1,33 @@
+{
+  "case": "trunk-many-short-branches",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 8.0,
+  "subject_cost_usd": 0.048776599999999996,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer clearly rejects the three-branch cap. It assesses branch age, integration cost (8-minute CI, rare conflicts, rebase pain, time to merge) and required checks (up-to-date requirement or merge queue), and it strengthens protections rather than weakening them or forcing a branching migration. However, it never addresses release obligations, and it makes an unsupported inference that most of the 30 people commit straight to trunk, so it only partly covers the rubric's assessment dimensions."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.10391059999999999
+}

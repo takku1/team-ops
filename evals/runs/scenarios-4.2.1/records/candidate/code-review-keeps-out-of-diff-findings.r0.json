@@ -1,0 +1,35 @@
+{
+  "case": "code-review-keeps-out-of-diff-findings",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 4,
+  "elapsed_seconds": 11.2,
+  "subject_cost_usd": 0.06121549999999999,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-code-review\"}"
+  ],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The review raises the stale `docs/operations.md:42` as a labeled `blocking:` finding, ties it to the changed `client.py` reader that now reads only `max_retries`, and also gives findings on the diff itself (backward-compat question, test-coverage fyi). It issues `request-changes` with reasons, and it says plainly that it could not read the files and ran no tests (the grep shown in the trace found nothing), so no evidence was fabricated."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1152299
+}

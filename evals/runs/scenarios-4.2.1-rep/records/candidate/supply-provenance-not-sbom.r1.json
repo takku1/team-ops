@@ -1,0 +1,35 @@
+{
+  "case": "supply-provenance-not-sbom",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 5,
+  "elapsed_seconds": 12.8,
+  "subject_cost_usd": 0.06665190000000001,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:secure-review\"}"
+  ],
+  "tool_calls": 3,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer refuses to certify L2 and names SLSA v1.x Build track with highest evidenced level 'none'. It explains why a signature and SBOM don't establish a level, and marks builder, provenance and key-custody controls as unknown rather than failed. It separates library compatibility ranges from reproducible lockfile-based CI resolution and rejects a blanket range violation, while still listing evidence-grounded checks such as strict lock install and digest-pinned images. It maps gaps to SSDF groups without claiming NIST mandates any SLA, and it says plainly that the empty directory means no files were inspected."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12845450000000003
+}

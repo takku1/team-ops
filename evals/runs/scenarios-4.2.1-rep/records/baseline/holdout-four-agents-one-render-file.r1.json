@@ -1,0 +1,33 @@
+{
+  "case": "holdout-four-agents-one-render-file",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 4,
+  "elapsed_seconds": 10.3,
+  "subject_cost_usd": 0.056826800000000004,
+  "skills_invoked": [],
+  "tool_calls": 3,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The agent honestly reported that the files were missing and fabricated no edits. It explained the coupling through `src/render.rs` and the interface dependency, recommended against four agents, and kept a deciding `cargo build && cargo test` check. However, its fallback plan splits implementation across three parallel writers (render.rs, cli.rs, tests) and offers that as an equal choice. The rubric instead wants a single implementation owner, with at most a reviewer or a read-only parallel task."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.11800540000000001
+}

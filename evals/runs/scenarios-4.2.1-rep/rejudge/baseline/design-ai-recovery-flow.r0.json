@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The response separates requirements from unvalidated assumptions, specifies source comparison, correction, cancellation and recovery states with accessible interactions, and proposes mapping generic components to the existing library while acknowledging it was not inspected. It provides task-based validation with planted errors and observable outcomes, limits layout alternatives to an unresolved comparison question, and invents no research results or executed validation."
+}

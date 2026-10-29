@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "Correctly computes 30 hours, rejects sixfold capacity, budgets human review/integration, names the maintainer accountable, and presents reserve and worker-count targets as adjustable. However, it omits explicit backup risk and actual permission constraints, and its ownership table confusingly says support is inside the 30 hours after identifying those as project hours."
+}

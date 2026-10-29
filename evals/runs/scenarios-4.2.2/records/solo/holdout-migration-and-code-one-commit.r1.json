@@ -1,0 +1,31 @@
+{
+  "case": "holdout-migration-and-code-one-commit",
+  "arm": "solo",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 10.9,
+  "subject_cost_usd": 0.0476746,
+  "skills_invoked": [],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer declines to approve. It explains that old replicas break mid-rollout when the column is dropped, notes that passing tests only cover new code against the new schema, and gives expand/contract sequencing ending in a 'changes requested' verdict, while honestly disclosing that the empty workspace meant no code was reviewed. However, the findings carry no explicit severity labels (the ordering issue is never marked as blocking), which the rubric requires."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1035012
+}

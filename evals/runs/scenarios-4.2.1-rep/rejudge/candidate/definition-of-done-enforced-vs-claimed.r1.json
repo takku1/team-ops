@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The review identifies missing lint, integration tests, dependency scanning, docs evidence, and staging smoke tests, pairing them with concrete execution and enforcement remedies while distinguishing checkboxes from evidence. It preserves adopted requirements and calls for an explicit team decision to narrow them, although its opening enforcement count and some table assertions exceed the supplied evidence."
+}

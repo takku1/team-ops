@@ -1,0 +1,35 @@
+{
+  "case": "lead-late-worker-result",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 15.5,
+  "subject_cost_usd": 0.0645692,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer records the late attempt-1 done event as unverified history that cannot change task state, and it keeps attempt 2 as the sole owner. It says silence is not proof the worker stopped, fences attempt 1 with a stop message plus snapshot and diff, names unconfirmed-stop reassignment as the contributing factor, and requires one deciding check on the current quiescent artifact before acceptance; the only gap is that deduplication of repeated completion events is implied rather than stated explicitly."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12430719999999999
+}

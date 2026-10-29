@@ -1,0 +1,35 @@
+{
+  "case": "lead-repair-history-survives-worker",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 13.2,
+  "subject_cost_usd": 0.0621743,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer refuses the NEW-1 rename and keeps the issue as I-12 at repair count 2. It requires the failed approaches in any fresh worker's brief and picks a bounded read-only diagnosis that also tests whether the check itself is valid, instead of a third blind build. It does not invent a budget figure, defines a concrete budget-exhaustion fallback with a resumable record, and honestly says nothing was dispatched because no I-12 artifacts exist in the workspace."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1170403
+}

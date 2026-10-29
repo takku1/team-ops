@@ -1,0 +1,31 @@
+{
+  "case": "holdout2-tool-gain-no-baseline",
+  "arm": "solo",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 2,
+  "elapsed_seconds": 12.6,
+  "subject_cost_usd": 0.0447951,
+  "skills_invoked": [],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer correctly refuses to conclude anything from 34/40 alone. It asks for a paired run of the same 40 tasks without the tool, flags the noise of a 40-task sample, and suggests checking the traces for tool use. It omits three things the rubric requires: cost per accepted task, an explicit count of failed or errored runs, and a check of whether the 40 tasks were used to tune the agent or tool. It also never asks for matched settings beyond keeping the same tasks."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.09834570000000001
+}

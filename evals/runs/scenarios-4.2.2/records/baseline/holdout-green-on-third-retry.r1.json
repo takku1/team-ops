@@ -1,0 +1,33 @@
+{
+  "case": "holdout-green-on-third-retry",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 10.5,
+  "subject_cost_usd": 0.048986600000000005,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer correctly refuses to treat the retry-green as done. It proposes evidence to separate flake from regression: failed-run logs, test history on `main`, looped runs on branch vs `main`, and a diff check. It also asks for an owned issue linking the failed runs, and it neither deletes nor quarantines the test. However, it never names who decides risk acceptance; it says only that 'merging is reasonable' if the flake predates the change, which leaves a rubric element unmet."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.10570120000000001
+}

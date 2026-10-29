@@ -1,0 +1,35 @@
+{
+  "case": "lead-duplicate-check-owner",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 22.4,
+  "subject_cost_usd": 0.06470329999999999,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer makes the lead the single owner of one full-suite run on a frozen, recorded current revision. It rejects the previous-revision green and limits the builder to focused checks and the reviewer to read-only review with named check requests. It fabricates no results, spawns no new supervisor, and requires a matching revision record, green counts and log location before acceptance. One weakness is that it doesn't explicitly route the full-run record back to the reviewer, and its allowance to skip a full rerun after a review-driven repair is a judgment call rather than a coverage violation."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12412989999999999
+}

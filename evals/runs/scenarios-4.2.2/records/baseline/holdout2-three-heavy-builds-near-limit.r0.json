@@ -1,0 +1,33 @@
+{
+  "case": "holdout2-three-heavy-builds-near-limit",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 9.7,
+  "subject_cost_usd": 0.0504586,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer avoids running all three builds at once, caps concurrency at two (about 12 GB of 16 GB), and declines extra LLM workers because of the usage limit, so it respects both constraints. However, running two 6 GB builds at once is not one build lane per resource, and it never plans for a worker killed by the usage limit to be retried from resumable state as an environment failure; it only covers falling back to serial builds after an OOM."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.10607720000000001
+}

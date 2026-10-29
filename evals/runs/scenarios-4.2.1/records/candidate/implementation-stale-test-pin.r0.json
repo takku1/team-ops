@@ -1,0 +1,36 @@
+{
+  "case": "implementation-stale-test-pin",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 8,
+  "elapsed_seconds": 17.1,
+  "subject_cost_usd": 0.0753568,
+  "skills_invoked": [],
+  "tool_calls": 7,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": {
+    "passed": true,
+    "output": "pinned=True others_kept=True production_unchanged=True status_updated=True suite_exit=0\n"
+  },
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The run cites KM-12 as evidence, pins `lookup(0x4B) == 0x49` as strictly as before, leaves the other tests and production code unchanged, removes the open entry from STATUS.md, and runs the suite (oracle: pinned=True, production_unchanged=True, status_updated=True, suite_exit=0). However, it never ran the tests before editing, so it did not reproduce the failure as the rubric requires, and it relied on the tracker without independently confirming the old behavior."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1396512
+}

@@ -1,0 +1,31 @@
+{
+  "case": "lead-duplicate-check-owner",
+  "arm": "solo",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 14.7,
+  "subject_cost_usd": 0.0505286,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer names one final verification owner (the main session) to run the full suite once on a frozen current revision. It explicitly rejects reusing the previous-revision green and contrasts the reviewer's targeted risk-area checks with three identical 20-minute runs. It also sets evidence-based acceptance criteria (command, revision ID, exit code, counts, log path, explained skips, review and run on the same revision) without spawning a new supervisor or fabricating results."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1085392
+}

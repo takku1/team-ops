@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The supplied ADR has the required MADR elements: title, accepted status, context, drivers, all four considered options, and a justified Postgres SKIP LOCKED decision. It records honest negatives including primary database load and queue maintenance responsibilities, and does not claim the file was successfully saved."
+}

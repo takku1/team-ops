@@ -1,0 +1,35 @@
+{
+  "case": "lead-repair-history-survives-worker",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 13.1,
+  "subject_cost_usd": 0.0614358,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer rejects NEW-1 and the fresh implementer and keeps the I-12 identity and failed-approach history. It reuses the existing worker for a bounded, diagnose-only pass with explicit exit criteria: one bounded repair only on new evidence, otherwise ESCALATE with a resumable artifact. It claims no extra budget and admits it found no tracker, though it never mentions continuing independent authorized work."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.11948239999999999
+}

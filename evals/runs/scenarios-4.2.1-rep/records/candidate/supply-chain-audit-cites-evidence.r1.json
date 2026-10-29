@@ -1,0 +1,35 @@
+{
+  "case": "supply-chain-audit-cites-evidence",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 4,
+  "elapsed_seconds": 16.8,
+  "subject_cost_usd": 0.07003899999999999,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:secure-review\"}"
+  ],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer covers most of the rubric. It ranks the 30-day Critical first, says no provenance means no evidenced SLSA v1.0 Build L1/L2 and that SBOM and signing are separate controls, marks planned scanning as unimplemented, and declines to assume repo vars are exposed without checking access. It falls short in three places: it treats the 7-day suite default as binding ('23 days overdue') without confirming the org adopted that SLA, it gives no SSDF version, and it assigns no remediation owner to any finding (only 'implementation owners' generically)."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.13886959999999998
+}

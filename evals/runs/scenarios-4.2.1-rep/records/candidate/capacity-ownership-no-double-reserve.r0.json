@@ -1,0 +1,33 @@
+{
+  "case": "capacity-ownership-no-double-reserve",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 14.1,
+  "subject_cost_usd": 0.0565466,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer correctly computes 40 \u00d7 0.75 = 30 h, rejects the double-subtracted 20 h and the \u00d76 multiplier, and reserves human review and integration time. It also defines worker write scopes, names the maintainer as sole owner without inventing a team, and treats reserve and percentage figures as placeholders to measure. However, it never addresses backup or bus-factor risk for a solo maintainer, which the rubric explicitly requires alongside accountability."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1141932
+}

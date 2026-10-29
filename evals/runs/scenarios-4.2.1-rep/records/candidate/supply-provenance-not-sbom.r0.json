@@ -1,0 +1,35 @@
+{
+  "case": "supply-provenance-not-sbom",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 5,
+  "elapsed_seconds": 18.0,
+  "subject_cost_usd": 0.0650339,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:secure-review\"}"
+  ],
+  "tool_calls": 3,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer declines to certify L2 and explains that the signature and SBOM do not substitute for provenance. It names the framework as SLSA v1.0 Build track, reports the evidenced level as none, and lists the unknown requirements without fabricating any inspection (it says the workspace was empty). It treats library compatibility ranges as normal and keeps them separate from lockfile-based CI resolution, flagging frozen-install enforcement only as an unverified item, and it maps to NIST SSDF without claiming NIST mandates any SLA."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1262045
+}

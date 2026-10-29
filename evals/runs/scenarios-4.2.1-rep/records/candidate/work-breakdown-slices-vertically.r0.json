@@ -1,0 +1,35 @@
+{
+  "case": "work-breakdown-slices-vertically",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 28.8,
+  "subject_cost_usd": 0.07683820000000001,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The plan is built from vertical slices with checkable deciding checks and explicit dependencies. S1 is an end-to-end refund that writes the audit row in the same transaction and verifies a 403 for unpermitted users. Later slices add over-refund and concurrency tests, append-only grants, and a fault-injection idempotency test. The provider unknown is a 1-day spike (R0a) with explicit questions, including whether the refund call accepts an idempotency key, and it requires observed sandbox behavior rather than docs; the answer makes no fabricated claims and is honest that the workspace was empty."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1440008
+}

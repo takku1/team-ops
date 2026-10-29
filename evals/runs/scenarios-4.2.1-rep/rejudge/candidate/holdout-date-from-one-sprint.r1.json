@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The answer explicitly rejects a calibrated 90% date from one sprint and labels its 4\u20138 sprint scenario range as judgment rather than measured percentiles. It identifies ticket-size variation, scope growth, and capacity risks, proposes comparable throughput history and resampling, and sets re-forecasting after the next sprint."
+}

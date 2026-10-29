@@ -1,0 +1,33 @@
+{
+  "case": "lead-verifies-reported-claims",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 16.8,
+  "subject_cost_usd": 0.0625263,
+  "skills_invoked": [],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The agent explicitly treated \"all tests pass\" as unverified because it lacked a command, output, and coverage, and it gated acceptance on its own re-run (cargo test, coverage of expiry, fail-before check) before review. It honestly reported the empty workspace and did not accept the change. It added secure-review for the auth change and wrote a standalone brief with the target path, concrete review questions, blocker criteria, and expected output, while excluding the implementer's confidence and narrative."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1266449
+}

@@ -1,0 +1,35 @@
+{
+  "case": "lead-duplicate-check-owner",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 16.3,
+  "subject_cost_usd": 0.0671571,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer makes the main session the single owner of one full-suite run on a frozen, manifest-identified current revision. It refuses to reuse the previous-revision green and says everyone else uses that one record. It separates the builder's focused checks and the reviewer's requested discriminating checks from three identical full runs, spawns no supervisor, accepts a builder-claimed run only with a full evidence record, and states plainly that nothing has been run yet."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1264435
+}

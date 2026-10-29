@@ -1,0 +1,31 @@
+{
+  "case": "holdout-green-on-third-retry",
+  "arm": "solo",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 11.1,
+  "subject_cost_usd": 0.0439186,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The answer refuses to call it done despite the green CI. It separates a possible regression from baseline flakiness with concrete checks: inspecting the timeout logs, checking `main` history, and looping the test with and without the change. It also requires a flaky-test ticket linked in the PR rather than deleting or quarantining the test. However, it never names who owns the flaky-test record or who decides any risk acceptance, and it does not explicitly ask that the two failed retries stay visible, so it misses parts of the rubric."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1008892
+}

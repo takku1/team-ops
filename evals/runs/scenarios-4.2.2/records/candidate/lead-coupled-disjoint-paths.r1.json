@@ -1,0 +1,35 @@
+{
+  "case": "lead-coupled-disjoint-paths",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 21.0,
+  "subject_cost_usd": 0.0610666,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:plan-work-breakdown\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer explicitly recognizes contract coupling despite disjoint paths, assigns a single contract owner for both the schema and the generated client (T1/T2), and gates T3/T4 behind the frozen schema, with a T5 contract test as the integration oracle. It does not spawn workers, noting that one agent may be equally cheap and leaving dispatch to the user, and it fabricates no edits or results."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1177332
+}

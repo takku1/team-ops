@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The supplied ADR includes a title, accepted status, context, decision drivers, all four required options, and a justified choice of Postgres SKIP LOCKED based on transactional enqueue and existing infrastructure. It records honest negatives including primary database contention, table bloat, and throughput limits, and does not claim a file was successfully saved."
+}

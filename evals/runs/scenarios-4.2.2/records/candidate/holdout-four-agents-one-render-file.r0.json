@@ -1,0 +1,33 @@
+{
+  "case": "holdout-four-agents-one-render-file",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 4,
+  "elapsed_seconds": 11.0,
+  "subject_cost_usd": 0.0531351,
+  "skills_invoked": [],
+  "tool_calls": 3,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The agent correctly noted the workspace was empty without fabricating edits, flagged that several agents editing `src/render.rs` would conflict, and kept JSON tests plus an optional read-only reviewer. However, it still split implementation across three parallel writers (cli.rs, render.rs, tests) behind an up-front interface contract rather than giving this small, coupled change to one owner, and only hinted it might reduce agents later."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1093657
+}

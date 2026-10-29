@@ -1,0 +1,38 @@
+{
+  "case": "implementation-zero-limit",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 9,
+  "elapsed_seconds": 17.7,
+  "subject_cost_usd": 0.08132450000000001,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-implementation-loop\"}"
+  ],
+  "tool_calls": 7,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": {
+    "passed": true,
+    "output": "----------------------------------------------------------------------\nRan 4 tests in 0.000s\n\nOK\n\n"
+  },
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The agent ran the tests before the edit, which showed test_zero failing. It then made a scoped one-line change to parser.py that preserves the None default and the negative-value rejection, and reran the suite, which passed 4 tests, matching the oracle. No tests were weakened, no unrelated scaffolding was added, and the final report matches the executed commands, including the caveat about untested non-numeric inputs."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.13829450000000001
+}

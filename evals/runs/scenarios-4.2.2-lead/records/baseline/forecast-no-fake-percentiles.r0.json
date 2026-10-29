@@ -1,0 +1,35 @@
+{
+  "case": "forecast-no-fake-percentiles",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 17.4,
+  "subject_cost_usd": 0.0683333,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer rejects the P85 claim by stating that a PERT mean is not a percentile and that summing means doesn't give one. It gives labeled, uncalibrated scenarios (3/9/12.5/36 days), notes that dependence widens the spread rather than assuming independence, refuses to give a confidence level, and offers Monte Carlo only as a clearly conditional, unrun option. It also separates the work forecast from the commitment with an explicit end buffer, and treats calibration from actuals (task 1 duration, re-forecast points) as follow-up, though it never explicitly says to gather comparable history from past work."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.13571129999999998
+}

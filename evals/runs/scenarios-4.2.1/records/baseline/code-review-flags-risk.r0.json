@@ -1,0 +1,33 @@
+{
+  "case": "code-review-flags-risk",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 11.7,
+  "subject_cost_usd": 0.0552306,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The review says 'Block. Do not merge.' and lists SQL injection (with a parameterized-query fix) and the missing authentication/authorization check as blocking findings. It also rejects 'tests later' by listing specific tests required 'at minimum, before merge', and it keeps blocking items separate from should-fix items such as the KeyError, pagination and naming."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1143006
+}

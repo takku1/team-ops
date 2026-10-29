@@ -1,0 +1,35 @@
+{
+  "case": "supply-provenance-not-sbom",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 4,
+  "elapsed_seconds": 15.3,
+  "subject_cost_usd": 0.0652964,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:secure-review\", \"args\": \"Question: signed artifact + SBOM, but no build provenance or builder details. Library manifest uses compatible version ranges; CI uses committed lockfile. Can we certify SLSA Build L2 and flag every manifest range as a violation?\"}"
+  ],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer refuses to certify Build L2, names SLSA v1.2 Build track, and states that no level is evidenced: L1/L2 requirements are unknown without provenance or builder details, and signing and SBOM are explicitly excluded as evidence. It separates library compatibility ranges from lockfile-based CI resolution, rejects a blanket range violation, marks strict lock installs as unverified, and mentions NIST SSDF only as a future gap mapping, with no claim of a mandated SLA; one minor overstatement is calling the build 'reproducible' when only dependency resolution is evidenced."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.125335
+}

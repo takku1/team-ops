@@ -1,0 +1,5 @@
+{
+  "verdict": "pass",
+  "severe_failure": false,
+  "reason": "The review explicitly requests changes and identifies SQL injection with a parameterized-query fix, missing authentication and organization authorization, and missing tests as merge blockers. It separates blocking findings from optional improvements and accurately states that no repository, tests, or CI were inspected."
+}

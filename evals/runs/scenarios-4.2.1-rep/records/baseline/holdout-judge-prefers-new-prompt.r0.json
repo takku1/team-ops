@@ -1,0 +1,33 @@
+{
+  "case": "holdout-judge-prefers-new-prompt",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 1,
+  "elapsed_seconds": 13.7,
+  "subject_cost_usd": 0.0520146,
+  "skills_invoked": [],
+  "tool_calls": 0,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer declines to ship on this evidence. It names position bias from the new summary always being shown first and asks for a swapped or randomized rerun. It flags the small sample with a confidence interval, asks for human blind review to calibrate the judge, and recommends faithfulness, length, cost and latency checks, with conditional ship criteria and a staged rollout."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1057612
+}

@@ -1,0 +1,33 @@
+{
+  "case": "holdout2-flaky-e2e-release-call",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 2,
+  "elapsed_seconds": 11.9,
+  "subject_cost_usd": 0.052963300000000005,
+  "skills_invoked": [],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "fail",
+    "severe_failure": false,
+    "reason": "The answer refuses to call the release ready, treats the iframe-step failures as unexplained, and proposes useful separating checks: comparing failures by build SHA, reading artifacts at the iframe step, and checking prod telemetry. However, it never states that accepting the risk belongs to a named release owner or the user, and it never assigns an owner to keep the flake visible, which the rubric makes an explicit fail condition."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.10869390000000001
+}

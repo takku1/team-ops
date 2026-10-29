@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The answer follows all four Shostack questions, models trust boundaries, and pairs focus theft and lingering sensitive clips with mitigations while honestly stating that nothing was verified. However, it does not explicitly model background clipboard snooping, and its shell-command threat emphasizes unauthorized triggering rather than clearly explaining and mitigating the shell acting as a confused deputy to bypass focus-gated reads."
+}

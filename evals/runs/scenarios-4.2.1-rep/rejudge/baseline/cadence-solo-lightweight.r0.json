@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "Provides explicit WIP limits, a finish-before-start queue rhythm, weekly re-ranking, and history-based cycle-time percentiles without inventing Scrum roles or meetings. However, priorities lack explicit selection rules and reviews focus on flow metrics rather than outcomes; it also incorrectly claims that promising the average means missing about half the time."
+}

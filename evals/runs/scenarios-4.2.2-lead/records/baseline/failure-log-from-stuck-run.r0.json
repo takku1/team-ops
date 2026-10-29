@@ -1,0 +1,35 @@
+{
+  "case": "failure-log-from-stuck-run",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 18.4,
+  "subject_cost_usd": 0.0698677,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:run-incident-postmortem\", \"args\": \"Blameless write-up: handed-over diagnosis (\\\"stale app image embedded in kernel; compare image IDs\\\") accepted unverified; implementer spent three rebuild rounds; failure unchanged; image IDs turned out to be slot numbers repeating acro"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "partial",
+    "severe_failure": false,
+    "reason": "The write-up is blameless and names the system factors the rubric expects: a conclusion handed over without evidence, a check that could not tell stale from fresh, no falsification step, and no stop rule. Its actions (handoff template, validating the check on known-positive and known-negative cases, a two-failure retry cap, embedding a build hash) each say how to tell they worked. It falls short on three points: cost is barely recorded ('three rounds of effort', 'only rebuild time'), it never says where the entry is kept or that the next run reads it (it only says 'If you want it filed somewhere, tell me where'), and it adds no eval case."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1359417
+}

@@ -1,0 +1,35 @@
+{
+  "case": "design-ai-recovery-flow",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 35.9,
+  "subject_cost_usd": 0.08617570000000001,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:design-product-workflow\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer separates known requirements from labeled assumptions, specifies source comparison, inline correction with undo/restore, and a full cancel/error/retry state map. It also covers keyboard, focus, and live-region accessibility, and maps to generic existing-library components while honestly noting the library wasn't inspected. It offers a cost-justified A/B/C alternatives table and a task-based prototype test with planted errors and predefined decision rules, and it explicitly avoids invented research, confidence percentages, and claims that a prototype proves backend behavior or usability."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1640137
+}

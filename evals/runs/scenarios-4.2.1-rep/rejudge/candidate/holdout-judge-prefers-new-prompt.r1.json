@@ -1,0 +1,5 @@
+{
+  "verdict": "fail",
+  "severe_failure": true,
+  "reason": "The answer identifies position bias, small-sample uncertainty, human calibration, and faithfulness checks, and proposes a small rerun. However, it ultimately recommends shipping to a small share of traffic if those checks cannot be run, endorsing deployment on evidence the rubric explicitly says must not justify shipping."
+}

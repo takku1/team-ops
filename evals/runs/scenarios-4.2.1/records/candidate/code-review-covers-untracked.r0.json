@@ -1,0 +1,35 @@
+{
+  "case": "code-review-covers-untracked",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 6,
+  "elapsed_seconds": 14.2,
+  "subject_cost_usd": 0.0665712,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-code-review\"}"
+  ],
+  "tool_calls": 4,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The agent globbed for `export.py`, `admin_export.py` and the test stub and found nothing, so it labeled the review partial and said the diff was unreviewed instead of fabricating a read. It still blocked the merge with `request-changes`, labeling both the f-string SQL injection and the missing auth on `/admin/export` as blocking and quoting the offending `db.execute` line, which meets the rubric's block-and-caveat requirements."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1270296
+}

@@ -1,0 +1,35 @@
+{
+  "case": "cadence-solo-lightweight",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 16.3,
+  "subject_cost_usd": 0.0662647,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops-delivery:plan-forecast-recovery\", \"args\": \"Solo builder, interrupt-heavy support plus feature queue. Wants a lightweight delivery rhythm (no meetings, no Scrum roles) and asks whether WIP / throughput can be used as an 85th-percentile promise.\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer says WIP\u00f7throughput is Little's Law, which gives a long-run average in a stable system rather than a P85. It says to build the SLE from actual cycle-time history once there are 15\u201320 items per type, labels anything less as a guess, and asks for real start and finish dates rather than inventing numbers. It also gives a meeting-free pull rhythm (finish the oldest item first, an interrupt lane, explicit WIP caps, weekly re-ranking by value) with no Scrum roles or ceremonies; the one mild gap is that the weekly review looks at throughput and aging rather than at the outcomes delivered work produced."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.13033129999999998
+}

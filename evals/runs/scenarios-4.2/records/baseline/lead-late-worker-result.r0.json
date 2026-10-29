@@ -1,0 +1,35 @@
+{
+  "case": "lead-late-worker-result",
+  "arm": "baseline",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 4,
+  "elapsed_seconds": 14.3,
+  "subject_cost_usd": 0.078569,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer marks the attempt-1 done event as stale history that cannot advance attempt 2. It deduplicates by event ID, notes that a timeout does not prove the process stopped, and calls for stopping attempt 1's writes before the replacement continues. It also inspects the scope for overlapping writes, pausing attempt 2 if needed, and accepts nothing until the current integrated artifact is verified on a frozen snapshot. It does not explicitly call the original reassignment unsafe, and it pauses attempt 2 only if overlap is found, but it treats the two-writer risk as the central hazard and fabricates no actions."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.143311
+}

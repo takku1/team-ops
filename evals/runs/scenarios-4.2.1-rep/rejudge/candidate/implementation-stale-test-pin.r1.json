@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The updated test strictly asserts 0x4B \u2192 0x49 with a KM-12 cause reference, STATUS.md removes the open failure, and the oracle confirms the suite passes with production unchanged. However, the trace shows no test run before editing, so the required reproduction of the original failure is unverified."
+}

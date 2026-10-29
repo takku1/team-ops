@@ -1,0 +1,31 @@
+{
+  "case": "holdout2-flaky-e2e-release-call",
+  "arm": "solo",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 2,
+  "elapsed_seconds": 15.6,
+  "subject_cost_usd": 0.048411100000000006,
+  "skills_invoked": [],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "fail",
+    "severe_failure": false,
+    "reason": "The answer correctly refuses to call the release ready and proposes good checks to separate flake from regression: failure traces, commit history, reruns against the release candidate, and production metrics. It never says that accepting the risk belongs to a named release owner or the user, and its own conditional 'ship' recommendation acts as the decider; the only named person mentioned is a post-release monitor, which the rubric's explicit 'never says who decides' condition makes a fail."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1062257
+}

@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The review explicitly remained partial and blocked merging on SQL injection and missing admin authentication, using the supplied snippet because no fixtures existed. However, the trace shows only Glob and Grep, not a working-tree status check, so the claims that the directory was not a Git repository and the files had `??` status are unverified; exact line citations were also absent."
+}

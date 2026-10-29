@@ -1,0 +1,36 @@
+{
+  "case": "lead-duplicate-check-owner",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 5,
+  "elapsed_seconds": 22.3,
+  "subject_cost_usd": 0.07410370000000001,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}",
+    "{\"skill\": \"team-ops:build-definition-of-done\"}"
+  ],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer names the main session as the single owner of the full-suite run on a frozen, identified current tree, and it explicitly refuses to reuse the previous-revision green except as a failure baseline. It separates the builder's focused checks and the reviewer's targeted discriminating checks (routed through the owner) from three duplicate full runs, spawns no supervisor, and claims no results it didn't produce."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.13158630000000002
+}

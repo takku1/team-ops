@@ -1,0 +1,35 @@
+{
+  "case": "adr-uses-madr",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 8,
+  "elapsed_seconds": 26.7,
+  "subject_cost_usd": 0.10125990000000001,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:plan-design-review\", \"args\": \"Write the ADR: move job queue from Redis lists to Postgres (SKIP LOCKED). Reasons: already run Postgres, need transactional enqueue with writes, ~200 jobs/s. Considered RabbitMQ and SQS.\"}"
+  ],
+  "tool_calls": 6,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The final answer has the full MADR shape: title, status, context and problem, decision drivers, all four options (Postgres SKIP LOCKED, Redis lists, RabbitMQ, SQS) with pros and cons, a justified decision, and consequences with honest negatives such as queue load competing on Postgres, table bloat, and self-owned retry and dead-letter handling. The agent reported plainly that the Write failed and no file was saved, and it labeled the content as general knowledge and listed the benchmarks as unverified follow-ups, so it fabricated no evidence."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1651179
+}

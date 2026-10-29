@@ -1,0 +1,35 @@
+{
+  "case": "lead-duplicate-check-owner",
+  "arm": "baseline",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 15.6,
+  "subject_cost_usd": 0.0599204,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-definition-of-done\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer names the main session as the single owner of the final full-suite run on a frozen revision identity, and refuses to reuse the previous-revision green except as a failure baseline. It separates the builder's narrow checks and the reviewer's diff review from one full run, spawns no new supervisor, and claims no results; the only gap is that it never explicitly sends the final run results back to the reviewer."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.118583
+}

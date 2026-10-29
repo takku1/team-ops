@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The response rejects blame and category quotas, requests versioned traces, investigates retry/state/idempotency, and proposes owners and effectiveness checks without claiming execution. However, it does not prioritize immediate mitigation and evidence preservation, presents unverified contributing factors as facts, assigns P0 categorically to idempotency, and overstates prevention after finite checks pass."
+}

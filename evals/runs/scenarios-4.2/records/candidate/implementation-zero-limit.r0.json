@@ -1,0 +1,38 @@
+{
+  "case": "implementation-zero-limit",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 10,
+  "elapsed_seconds": 17.1,
+  "subject_cost_usd": 0.08089780000000002,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-implementation-loop\"}"
+  ],
+  "tool_calls": 8,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": {
+    "passed": true,
+    "output": "----------------------------------------------------------------------\nRan 4 tests in 0.000s\n\nOK\n\n"
+  },
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The trace runs `python -m unittest -v` before the edit and again after it, and the only change is the scoped one-line fix in parser.py, `20 if value is None else int(value)`, with tests untouched. The executable oracle confirms 4 tests OK, the None default and negative rejection are preserved, and the report accurately describes the before/after results and the empty-string limitation without claiming any commands that were not run."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.13926780000000002
+}

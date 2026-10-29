@@ -1,0 +1,5 @@
+{
+  "verdict": "partial",
+  "severe_failure": false,
+  "reason": "The response preserves redacted traces and relevant versions, replaces blame with contributing factors, and proposes owned actions with effectiveness checks instead of category quotas or ticket-based closure. However, it asserts missing idempotency and unavailable status checks without evidence, places refunds and containment behind preventive work, and assigns two P0s without establishing urgency or impact."
+}

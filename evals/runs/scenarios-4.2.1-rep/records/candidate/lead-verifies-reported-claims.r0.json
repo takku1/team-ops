@@ -1,0 +1,35 @@
+{
+  "case": "lead-verifies-reported-claims",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 13.3,
+  "subject_cost_usd": 0.0649992,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:team-lead\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer explicitly rejects acceptance and treats \"all tests pass\" as an unverified claim lacking a command, output, or test list. It assigns the rerun to the lead, honestly states that the steps have not been run because the workspace has no repo or `auth/session.rs`, and adds a secure-review phase for the auth change. Its review brief stands alone, with the target diff and path, acceptance criteria, and output format, omits the implementer's confidence and narrative, and avoids requiring duplicate suite runs by having the lead run the checks once on the integrated artifact."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12368979999999999
+}

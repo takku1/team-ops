@@ -1,0 +1,35 @@
+{
+  "case": "code-review-covers-untracked",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 4,
+  "elapsed_seconds": 17.4,
+  "subject_cost_usd": 0.063582,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-code-review\"}"
+  ],
+  "tool_calls": 2,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The agent globbed the workspace, found it empty and not a git repo, and explicitly labeled the review partial with no fabricated reads or test results. It still treated the untracked admin_export.py as in scope and blocked the merge (request-changes), citing the quoted f-string line and labeling both the SQL injection and the missing auth check as blocking."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1219166
+}

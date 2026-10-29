@@ -1,0 +1,35 @@
+{
+  "case": "definition-of-done-enforced-vs-claimed",
+  "arm": "candidate",
+  "repeat": 0,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 16.5,
+  "subject_cost_usd": 0.0654645,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-definition-of-done\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The answer compares each adopted DoD criterion against the described CI and settings in a claimed/configured/enforced table, and names the missing lint, integration, dependency-scanning and staging/smoke checks with concrete remedies (required scanner job with recorded waivers, branch protection, automated staging deploy with a blocking smoke test). It explicitly calls the PR docs checkbox attestation only and adds a path-based check, is honest that branch protection and workflows were not inspected (marking those unknown), and frames amending the DoD as an explicit decision with a recorded owner rather than silently dropping items."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.1362543
+}

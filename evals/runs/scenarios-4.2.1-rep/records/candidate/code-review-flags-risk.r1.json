@@ -1,0 +1,35 @@
+{
+  "case": "code-review-flags-risk",
+  "arm": "candidate",
+  "repeat": 1,
+  "subject_model": "sonnet",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "exit_code": 0,
+  "subtype": "success",
+  "num_turns": 3,
+  "elapsed_seconds": 16.7,
+  "subject_cost_usd": 0.065922,
+  "skills_invoked": [
+    "{\"skill\": \"team-ops:build-code-review\"}"
+  ],
+  "tool_calls": 1,
+  "plugins_loaded": [
+    "team-ops",
+    "team-ops-delivery",
+    "cc-plugin-agents-md",
+    "cc-plugin-telemetry",
+    "cc-plugin-plugin-authoring"
+  ],
+  "environment_error": false,
+  "oracle": null,
+  "stderr_tail": "",
+  "judge": {
+    "verdict": "pass",
+    "severe_failure": false,
+    "reason": "The review returns request-changes and names all three required defects as blocking: SQL injection with a parameterized-query fix, missing authentication/authorization on the admin endpoint, and \"tests later\" rejected with specific tests listed. It labels blocking findings separately from questions and nits, says plainly that the review is partial because only the snippet was available, and claims no unverified actions."
+  },
+  "judge_model": "opus",
+  "total_cost_usd": 0.12418059999999999
+}
